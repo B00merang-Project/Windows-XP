@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Windows XP Luna
+Comment=Windows XP Luna UI for Linux OSes
+Comment=Author : Christian Medel (Elbullazul)
+Version=v0.1
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Windows XP Luna
+MetacityTheme=Windows XP Luna
+ButtonLayout=:minimize,maximize,close

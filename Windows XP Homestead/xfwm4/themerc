@@ -1,0 +1,18 @@
+# zonColor Themes Pack Project - http://www.fandigital.com
+# -------------------------------------------------------------------
+# zonColor Xfwm-Theme
+
+active_text_color=white
+active_text_shadow_color=black
+title_shadow_active=true
+inactive_text_color=white
+#inactive_text_shadow_color=%WINDOW+UNFOCUSED+BG%
+#title_shadow_inactive=%WINDOW+UNFOCUSED+TEXTSHADOW+ON%
+#button_layout=%WINDOW+BUTTON+LAYOUT%
+#show_app_icon=%WINDOW+APP+ICON+ON%
+full_width_title=true
+title_vertical_offset_active=0
+title_vertical_offset_inactive=0
+button_offset=0
+button_spacing=2
+title_horizontal_offset=-10
