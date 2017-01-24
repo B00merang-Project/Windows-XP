@@ -1,7 +1,6 @@
-/*# name: Windows XP Embedded
-  # author: Christian Medel (Elbullazul)
-  # date: January March 11th, 2016
-  # description: Windows Embedded theme*/
+/* # name: Windows XP Modular Theme Architecture
+   # author: Christian Medel (Elbullazul)
+   # date: January 2017 */
 
 /* default color scheme */
 @define-color bg_color #ECE9D8;
