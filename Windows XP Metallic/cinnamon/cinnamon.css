@@ -271,11 +271,13 @@ StScrollBar StButton#vhandle:hover {
 #panelLeft .applet-box:first-child {
     border-image: url('menu-box.png') 7 0 0 0;
     border-right-width: 10px;
-    font-size: 12pt;
-    font-style: italic;
     color: white;
     text-shadow: 1px 1px black;
+    font-size: 12pt;
+    font-style: italic;
     font-weight: bold;
+	font-family: tahoma;
+    padding-right: 10px;
 }
 
 #panelLeft .applet-box:first-child:hover {

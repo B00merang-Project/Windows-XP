@@ -276,6 +276,8 @@ StScrollBar StButton#vhandle:hover {
     font-size: 12pt;
     font-style: italic;
     font-weight: bold;
+	font-family: tahoma;
+    padding-right: 15px;
 }
 
 #panelLeft .applet-box:first-child:hover {

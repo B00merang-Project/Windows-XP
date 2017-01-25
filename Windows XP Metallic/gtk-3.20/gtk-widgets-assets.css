@@ -1,0 +1,416 @@
+/*************************
+ * Check and Radio items *
+ *************************/
+check {
+  padding: 4px;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked.png")); }
+  checkbutton.flat, .header-bar check.titlebutton button,
+  headerbar.titlebar check.titlebutton button, .floating-bar checkbutton {
+    icon-shadow: none; }
+
+.view check:selected, calendar check:selected,
+list-row:selected check {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-unchecked.png")); }
+  .view check:selected:backdrop, calendar check:backdrop:selected,
+  list-row:selected check:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked.png")); }
+
+check:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-hover.png")); }
+  check:hoverbutton.flat, .header-bar check.titlebutton button:hover,
+  headerbar.titlebar check.titlebutton button:hover, .floating-bar checkbutton:hover {
+    icon-shadow: none; }
+
+.view check:hover:selected, calendar check:hover:selected,
+list-row:selected check:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-unchecked-hover.png")); }
+  .view check:hover:selected:backdrop, calendar check:hover:backdrop:selected,
+  list-row:selected check:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-hover.png")); }
+
+check:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-active.png")); }
+  check:active button.flat, .header-bar check.titlebutton button:active,
+  headerbar.titlebar check.titlebutton button:active, .floating-bar checkbutton:active {
+    icon-shadow: none; }
+
+.view check:active:selected, calendar check:active:selected,
+list-row:selected check:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-unchecked-active.png")); }
+  .view check:active:selected:backdrop, calendar check:active:backdrop:selected,
+  list-row:selected check:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-active.png")); }
+
+check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-insensitive.png")); }
+  check:disabledbutton.flat, .header-bar check.titlebutton button:disabled,
+  headerbar.titlebar check.titlebutton button:disabled, .floating-bar checkbutton:disabled {
+    icon-shadow: none; }
+
+.view check:disabled:selected, calendar check:disabled:selected,
+list-row:selected check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-unchecked-insensitive.png")); }
+  .view check:disabled:selected:backdrop, calendar check:disabled:backdrop:selected,
+  list-row:selected check:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-insensitive.png")); }
+
+check:indeterminated {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed.png")); }
+  check:indeterminatedbutton.flat, .header-bar check.titlebutton button:indeterminated,
+  headerbar.titlebar check.titlebutton button:indeterminated, .floating-bar checkbutton:indeterminated {
+    icon-shadow: none; }
+
+.view check:indeterminated:selected, calendar check:indeterminated:selected,
+list-row:selected check:indeterminated {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed.png")); }
+  .view check:indeterminated:selected:backdrop, calendar check:indeterminated:backdrop:selected,
+  list-row:selected check:indeterminated:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed.png")); }
+
+check:indeterminated:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-hover.png")); }
+  check:indeterminated:hoverbutton.flat, .header-bar check.titlebutton button:indeterminated:hover,
+  headerbar.titlebar check.titlebutton button:indeterminated:hover, .floating-bar checkbutton:indeterminated:hover {
+    icon-shadow: none; }
+
+.view check:indeterminated:hover:selected, calendar check:indeterminated:hover:selected,
+list-row:selected check:indeterminated:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed-hover.png")); }
+  .view check:indeterminated:hover:selected:backdrop, calendar check:indeterminated:hover:backdrop:selected,
+  list-row:selected check:indeterminated:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-hover.png")); }
+
+check:indeterminated:selected {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-active.png")); }
+  check:indeterminated:selectedbutton.flat, .header-bar check.titlebutton button:indeterminated:selected,
+  headerbar.titlebar check.titlebutton button:indeterminated:selected, .floating-bar checkbutton:indeterminated:selected {
+    icon-shadow: none; }
+
+.view check:indeterminated:selected:selected, calendar check:indeterminated:selected,
+list-row:selected check:indeterminated:selected {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed-active.png")); }
+  .view check:indeterminated:selected:selected:backdrop, calendar check:indeterminated:backdrop:selected,
+  list-row:selected check:indeterminated:selected:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-active.png")); }
+
+check:indeterminated:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-insensitive.png")); }
+  check:indeterminated:disabledbutton.flat, .header-bar check.titlebutton button:indeterminated:disabled,
+  headerbar.titlebar check.titlebutton button:indeterminated:disabled, .floating-bar checkbutton:indeterminated:disabled {
+    icon-shadow: none; }
+
+.view check:indeterminated:disabled:selected, calendar check:indeterminated:disabled:selected,
+list-row:selected check:indeterminated:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed-insensitive.png")); }
+  .view check:indeterminated:disabled:selected:backdrop, calendar check:indeterminated:disabled:backdrop:selected,
+  list-row:selected check:indeterminated:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-insensitive.png")); }
+
+check:checked {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked.png")); }
+  check:checkedbutton.flat, .header-bar check.titlebutton button:checked,
+  headerbar.titlebar check.titlebutton button:checked, .floating-bar checkbutton:checked {
+    icon-shadow: none; }
+
+.view check:checked:selected, calendar check:checked:selected,
+list-row:selected check:checked {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-checked.png")); }
+  .view check:checked:selected:backdrop, calendar check:checked:backdrop:selected,
+  list-row:selected check:checked:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked.png")); }
+
+check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-insensitive.png")); }
+  check:checked:disabledbutton.flat, .header-bar check.titlebutton button:checked:disabled,
+  headerbar.titlebar check.titlebutton button:checked:disabled, .floating-bar checkbutton:checked:disabled {
+    icon-shadow: none; }
+
+.view check:checked:disabled:selected, calendar check:checked:disabled:selected,
+list-row:selected check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-checked-insensitive.png")); }
+  .view check:checked:disabled:selected:backdrop, calendar check:checked:disabled:backdrop:selected,
+  list-row:selected check:checked:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-insensitive.png")); }
+
+check:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-hover.png")); }
+  check:checked:hoverbutton.flat, .header-bar check.titlebutton button:checked:hover,
+  headerbar.titlebar check.titlebutton button:checked:hover, .floating-bar checkbutton:checked:hover {
+    icon-shadow: none; }
+
+.view check:checked:hover:selected, calendar check:checked:hover:selected,
+list-row:selected check:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-checked-hover.png")); }
+  .view check:checked:hover:selected:backdrop, calendar check:checked:hover:backdrop:selected,
+  list-row:selected check:checked:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-hover.png")); }
+
+check:checked:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-active.png")); }
+  check:checked:active button.flat, .header-bar check.titlebutton button:checked:active,
+  headerbar.titlebar check.titlebutton button:checked:active, .floating-bar checkbutton:checked:active {
+    icon-shadow: none; }
+
+.view check:checked:active:selected, calendar check:checked:active:selected,
+list-row:selected check:checked:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-checked-active.png")); }
+  .view check:checked:active:selected:backdrop, calendar check:checked:active:backdrop:selected,
+  list-row:selected check:checked:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-active.png")); }
+
+menu menuitem,
+menu menuitem check {
+  -gtk-icon-source: none;
+  icon-shadow: none; }
+  menu menuitem,
+menu menuitem check:active, menu menuitem,
+menu menuitem check:checked {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-checked.png")); }
+    menu menuitem,
+menu menuitem check:active:hover, menu menuitem,
+menu menuitem check:checked:hover {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-checked-hover.png")); }
+    menu menuitem,
+menu menuitem check:active:disabled, menu menuitem,
+menu menuitem check:checked:disabled {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-checked-insensitive.png")); }
+  menu menuitem,
+menu menuitem check:indeterminated {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-mixed.png")); }
+    menu menuitem,
+menu menuitem check:indeterminated:hover {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-mixed-hover.png")); }
+    menu menuitem,
+menu menuitem check:indeterminated:disabled {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-mixed-insensitive.png")); }
+
+radio {
+  padding: 4px;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked.png")); }
+  radiobutton.flat, .header-bar radio.titlebutton button,
+  headerbar.titlebar radio.titlebutton button, .floating-bar radiobutton {
+    icon-shadow: none; }
+
+.view radio:selected, calendar radio:selected,
+list-row:selected radio {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-unchecked.png")); }
+  .view radio:selected:backdrop, calendar radio:backdrop:selected,
+  list-row:selected radio:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked.png")); }
+
+radio:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-hover.png")); }
+  radio:hoverbutton.flat, .header-bar radio.titlebutton button:hover,
+  headerbar.titlebar radio.titlebutton button:hover, .floating-bar radiobutton:hover {
+    icon-shadow: none; }
+
+.view radio:hover:selected, calendar radio:hover:selected,
+list-row:selected radio:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-unchecked-hover.png")); }
+  .view radio:hover:selected:backdrop, calendar radio:hover:backdrop:selected,
+  list-row:selected radio:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-hover.png")); }
+
+radio:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-active.png")); }
+  radio:active button.flat, .header-bar radio.titlebutton button:active,
+  headerbar.titlebar radio.titlebutton button:active, .floating-bar radiobutton:active {
+    icon-shadow: none; }
+
+.view radio:active:selected, calendar radio:active:selected,
+list-row:selected radio:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-unchecked-active.png")); }
+  .view radio:active:selected:backdrop, calendar radio:active:backdrop:selected,
+  list-row:selected radio:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-active.png")); }
+
+radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-insensitive.png")); }
+  radio:disabledbutton.flat, .header-bar radio.titlebutton button:disabled,
+  headerbar.titlebar radio.titlebutton button:disabled, .floating-bar radiobutton:disabled {
+    icon-shadow: none; }
+
+.view radio:disabled:selected, calendar radio:disabled:selected,
+list-row:selected radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-unchecked-insensitive.png")); }
+  .view radio:disabled:selected:backdrop, calendar radio:disabled:backdrop:selected,
+  list-row:selected radio:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-insensitive.png")); }
+
+radio:indeterminated {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed.png")); }
+  radio:indeterminatedbutton.flat, .header-bar radio.titlebutton button:indeterminated,
+  headerbar.titlebar radio.titlebutton button:indeterminated, .floating-bar radiobutton:indeterminated {
+    icon-shadow: none; }
+
+.view radio:indeterminated:selected, calendar radio:indeterminated:selected,
+list-row:selected radio:indeterminated {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed.png")); }
+  .view radio:indeterminated:selected:backdrop, calendar radio:indeterminated:backdrop:selected,
+  list-row:selected radio:indeterminated:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed.png")); }
+
+radio:indeterminated:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-hover.png")); }
+  radio:indeterminated:hoverbutton.flat, .header-bar radio.titlebutton button:indeterminated:hover,
+  headerbar.titlebar radio.titlebutton button:indeterminated:hover, .floating-bar radiobutton:indeterminated:hover {
+    icon-shadow: none; }
+
+.view radio:indeterminated:hover:selected, calendar radio:indeterminated:hover:selected,
+list-row:selected radio:indeterminated:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed-hover.png")); }
+  .view radio:indeterminated:hover:selected:backdrop, calendar radio:indeterminated:hover:backdrop:selected,
+  list-row:selected radio:indeterminated:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-hover.png")); }
+
+radio:indeterminated:selected {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-active.png")); }
+  radio:indeterminated:selectedbutton.flat, .header-bar radio.titlebutton button:indeterminated:selected,
+  headerbar.titlebar radio.titlebutton button:indeterminated:selected, .floating-bar radiobutton:indeterminated:selected {
+    icon-shadow: none; }
+
+.view radio:indeterminated:selected:selected, calendar radio:indeterminated:selected,
+list-row:selected radio:indeterminated:selected {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed-active.png")); }
+  .view radio:indeterminated:selected:selected:backdrop, calendar radio:indeterminated:backdrop:selected,
+  list-row:selected radio:indeterminated:selected:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-active.png")); }
+
+radio:indeterminated:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-insensitive.png")); }
+  radio:indeterminated:disabledbutton.flat, .header-bar radio.titlebutton button:indeterminated:disabled,
+  headerbar.titlebar radio.titlebutton button:indeterminated:disabled, .floating-bar radiobutton:indeterminated:disabled {
+    icon-shadow: none; }
+
+.view radio:indeterminated:disabled:selected, calendar radio:indeterminated:disabled:selected,
+list-row:selected radio:indeterminated:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed-insensitive.png")); }
+  .view radio:indeterminated:disabled:selected:backdrop, calendar radio:indeterminated:disabled:backdrop:selected,
+  list-row:selected radio:indeterminated:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-insensitive.png")); }
+
+radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked.png")); }
+  radio:checkedbutton.flat, .header-bar radio.titlebutton button:checked,
+  headerbar.titlebar radio.titlebutton button:checked, .floating-bar radiobutton:checked {
+    icon-shadow: none; }
+
+.view radio:checked:selected, calendar radio:checked:selected,
+list-row:selected radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-checked.png")); }
+  .view radio:checked:selected:backdrop, calendar radio:checked:backdrop:selected,
+  list-row:selected radio:checked:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked.png")); }
+
+radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-insensitive.png")); }
+  radio:checked:disabledbutton.flat, .header-bar radio.titlebutton button:checked:disabled,
+  headerbar.titlebar radio.titlebutton button:checked:disabled, .floating-bar radiobutton:checked:disabled {
+    icon-shadow: none; }
+
+.view radio:checked:disabled:selected, calendar radio:checked:disabled:selected,
+list-row:selected radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-checked-insensitive.png")); }
+  .view radio:checked:disabled:selected:backdrop, calendar radio:checked:disabled:backdrop:selected,
+  list-row:selected radio:checked:disabled:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-insensitive.png")); }
+
+radio:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-hover.png")); }
+  radio:checked:hoverbutton.flat, .header-bar radio.titlebutton button:checked:hover,
+  headerbar.titlebar radio.titlebutton button:checked:hover, .floating-bar radiobutton:checked:hover {
+    icon-shadow: none; }
+
+.view radio:checked:hover:selected, calendar radio:checked:hover:selected,
+list-row:selected radio:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-checked-hover.png")); }
+  .view radio:checked:hover:selected:backdrop, calendar radio:checked:hover:backdrop:selected,
+  list-row:selected radio:checked:hover:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-hover.png")); }
+
+radio:checked:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-active.png")); }
+  radio:checked:active button.flat, .header-bar radio.titlebutton button:checked:active,
+  headerbar.titlebar radio.titlebutton button:checked:active, .floating-bar radiobutton:checked:active {
+    icon-shadow: none; }
+
+.view radio:checked:active:selected, calendar radio:checked:active:selected,
+list-row:selected radio:checked:active {
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-checked-active.png")); }
+  .view radio:checked:active:selected:backdrop, calendar radio:checked:active:backdrop:selected,
+  list-row:selected radio:checked:active:backdrop {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-active.png")); }
+
+menu menuitem,
+menu menuitem radio {
+  -gtk-icon-source: none;
+  icon-shadow: none; }
+  menu menuitem,
+menu menuitem radio:active, menu menuitem,
+menu menuitem radio:checked {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-checked.png")); }
+    menu menuitem,
+menu menuitem radio:active:hover, menu menuitem,
+menu menuitem radio:checked:hover {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-checked-hover.png")); }
+    menu menuitem,
+menu menuitem radio:active:disabled, menu menuitem,
+menu menuitem radio:checked:disabled {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-checked-insensitive.png")); }
+  menu menuitem,
+menu menuitem radio:indeterminated {
+    -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-mixed.png")); }
+    menu menuitem,
+menu menuitem radio:indeterminated:hover {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-mixed-hover.png")); }
+    menu menuitem,
+menu menuitem radio:indeterminated:disabled {
+      -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-mixed-insensitive.png")); }
+
+.view check, .view radio,
+list-row check, list-row radio {
+  icon-shadow: none; }
+  .view check:selected, calendar check:selected, .view check:hover, .view radio:selected, calendar radio:selected, .view radio:hover,
+  list-row check:selected,
+  list-row check:hover, list-row radio:selected, list-row radio:hover {
+    icon-shadow: none; }
+
+.content-view {
+    background-color: #e0dbc0; }
+
+.view.content-view check {
+  icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-selectionmode.png"));
+    background-color: transparent; }
+
+.view.content-view check:hover {
+  icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-hover-selectionmode.png"));
+    background-color: transparent; }
+
+.view.content-view check:active {
+  icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-active-selectionmode.png"));
+    background-color: transparent; }
+
+.view.content-view check:checked {
+  icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-selectionmode.png"));
+    background-color: transparent; }
+
+.view.content-view check:checked:hover {
+  icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-hover-selectionmode.png"));
+    background-color: transparent; }
+
+.view.content-view check:checked:active {
+  icon-shadow: none;
+  -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-active-selectionmode.png"));
+    background-color: transparent; }
+
+GtkCheckButton.text-button, GtkRadioButton.text-button {
+    padding: 1px 2px 4px;
+  outline-offset: 0; }
+  GtkCheckButton.text-button:disabled, GtkCheckButton.text-button:disabled:active, GtkCheckButton.text-button:disabled:indeterminated, GtkRadioButton.text-button:disabled, GtkRadioButton.text-button:disabled:active, GtkRadioButton.text-button:disabled:indeterminated {
+    color: #a1a192; }
+
