@@ -289,7 +289,8 @@ button.flat:active {
                                       shade(@button_bg_color, 0.7),
                                       shade(@button_bg_color, 0.75)
                                       );
-}/****************
+}
+/****************
  * cell and row *
  ****************/
 .cell {
