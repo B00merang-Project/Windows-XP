@@ -1132,6 +1132,17 @@ GtkPopover {
     box-shadow: 0 2px 3px alpha(black, 0.5);
 }
 
+GtkPopover .button.flat:hover,
+GtkPopover .button.flat:active {
+    border-width: 0;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    background-image: none;
+    box-shadow: none;
+}
+
 GtkPopover.osd {
     box-shadow: 0 2px 7px 3px alpha(black, 0.5);
 }
@@ -1934,7 +1945,6 @@ GtkProgressBar {
     border-color: shade(@theme_bg_color, 0.7);
     color: shade(@theme_bg_color, 0.7);
 }
-
 
 .primary-toolbar .button .separator,
 .primary-toolbar .button.separator,
@@ -2871,7 +2881,7 @@ GtkColorButton.button {
 .toolbar .button.raised.linked,
 .toolbar .raised.linked .button,
 .toolbar .linked .button {
-    box-shadow: inset 0 0 shade(@toolbar_bg_color, 0.9);
+    box-shadow: inset 0 0 shade(@dark_bg_color, 0.9);
 }
 
 .primary-toolbar .button.raised.linked:active,
@@ -2879,7 +2889,7 @@ GtkColorButton.button {
 .toolbar .button.raised.linked:active,
 .toolbar .raised.linked .button:active,
 .toolbar .linked .button:active {
-    box-shadow: inset 0 0 shade(@toolbar_bg_color, 0.9),
+    box-shadow: inset 0 0 shade(@dark_bg_color, 0.9),
                 inset 0 0 alpha(@dark_shadow, 0.07),
                 inset 0 0 alpha(@dark_shadow, 0.08),
                 inset 0 0 alpha(@dark_shadow, 0.05);
@@ -2890,7 +2900,7 @@ GtkColorButton.button {
 .toolbar .button.raised.linked:insensitive,
 .toolbar .raised.linked .button:insensitive,
 .toolbar .linked .button:insensitive {
-    box-shadow: inset 0 0 shade(@toolbar_bg_color, 0.85);
+    box-shadow: inset 0 0 shade(@dark_bg_color, 0.85);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -3034,13 +3044,13 @@ GtkColorButton.button {
 .header-bar .button.raised.linked,
 .header-bar .raised.linked .button,
 .header-bar .linked .button {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9);
+    box-shadow: inset -1px 0 shade(@dark_bg_color, 0.9);
 }
 
 .header-bar .button.raised.linked:active,
 .header-bar .raised.linked .button:active,
 .header-bar .linked .button:active {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9),
+    box-shadow: inset -1px 0 shade(@dark_bg_color, 0.9),
                 inset 1px 0 alpha(@dark_shadow, 0.07),
                 inset 0 1px alpha(@dark_shadow, 0.08),
                 inset 0 -1px alpha(@dark_shadow, 0.05);
@@ -3049,7 +3059,7 @@ GtkColorButton.button {
 .header-bar .button.raised.linked:insensitive,
 .header-bar .raised.linked .button:insensitive,
 .header-bar .linked .button:insensitive {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.85);
+    box-shadow: inset -1px 0 shade(@dark_bg_color, 0.85);
 }
 
 /* remove box shadow from last-child and only-child */

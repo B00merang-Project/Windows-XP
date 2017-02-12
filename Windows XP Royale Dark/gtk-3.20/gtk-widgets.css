@@ -2105,6 +2105,7 @@ headerbar.titlebar button separator,
     border-color: shade(@titlebar_bg_color, 0.85);
 }
 
+
 menuitem separator,
 .separator {
     -GtkMenuItem-horizontal-padding: 0;
@@ -3085,7 +3086,7 @@ toolbar.primary-toolbar .raised.linked button,
 toolbar button.raised.linked,
 toolbar .raised.linked button,
 toolbar .linked button {
-    box-shadow: inset 0 0 shade(@toolbar_bg_color, 0.9);
+    box-shadow: inset 0 0 shade(@dark_bg_color, 0.9);
 }
 
 toolbar.primary-toolbar button.raised.linked:active,
@@ -3093,7 +3094,7 @@ toolbar.primary-toolbar button.raised.linked:active,
 toolbar button.raised.linked:active,
 toolbar .raised.linked button:active,
 toolbar .linked button:active {
-    box-shadow: inset 0 0 shade(@toolbar_bg_color, 0.9),
+    box-shadow: inset 0 0 shade(@dark_bg_color, 0.9),
                 inset 0 0 alpha(@dark_shadow, 0.07),
                 inset 0 0 alpha(@dark_shadow, 0.08),
                 inset 0 0 alpha(@dark_shadow, 0.05);
@@ -3104,7 +3105,7 @@ toolbar.primary-toolbar .raised.linked button:disabled,
 toolbar button.raised.linked:disabled,
 toolbar .raised.linked button:disabled,
 toolbar .linked button:disabled {
-    box-shadow: inset 0 0 shade(@toolbar_bg_color, 0.85);
+    box-shadow: inset 0 0 shade(@dark_bg_color, 0.85);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -3248,13 +3249,13 @@ toolbar .linked button:disabled:only-child {
 headerbar button.raised.linked,
 headerbar .raised.linked button,
 headerbar .linked button {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9);
+    box-shadow: inset -1px 0 shade(@dark_bg_color, 0.9);
 }
 
 headerbar button.raised.linked:active,
 headerbar .raised.linked button:active,
 headerbar .linked button:active {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9),
+    box-shadow: inset -1px 0 shade(@dark_bg_color, 0.9),
                 inset 1px 0 alpha(@dark_shadow, 0.07),
                 inset 0 1px alpha(@dark_shadow, 0.08),
                 inset 0 -1px alpha(@dark_shadow, 0.05);
@@ -3263,7 +3264,7 @@ headerbar .linked button:active {
 headerbar button.raised.linked:disabled,
 headerbar .raised.linked button:disabled,
 headerbar .linked button:disabled {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.85);
+    box-shadow: inset -1px 0 shade(@dark_bg_color, 0.85);
 }
 
 /* remove box shadow from last-child and only-child */
