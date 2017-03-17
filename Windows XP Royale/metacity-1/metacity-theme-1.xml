@@ -146,15 +146,15 @@ Regular Frames
 </draw_ops>
 
 <draw_ops name="frame_bottom_focused">
-  <image filename="border-focused-left-corner.png" x="0" y="0" width="4" height="object_height"/>
+  <image filename="border-focused-leftcorner.png" x="0" y="0" width="4" height="object_height"/>
   <image filename="border-focused-bottom.png" x="4" y="0" width="width - 4" height="object_height"/>
-  <image filename="border-focused-right-corner.png" x="width - object_width" y="0" width="object_width" height="object_height"/>
+  <image filename="border-focused-rightcorner.png" x="width - object_width" y="0" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="frame_bottom_unfocused">
-  <image filename="border-unfocused-left-corner.png" x="0" y="0" width="4" height="object_height"/>
+  <image filename="border-unfocused-leftcorner.png" x="0" y="0" width="4" height="object_height"/>
   <image filename="border-unfocused-bottom.png" x="4" y="0" width="width - 4" height="object_height"/>
-  <image filename="border-unfocused-right-corner.png" x="width - object_width" y="0" width="object_width" height="object_height"/>
+  <image filename="border-unfocused-rightcorner.png" x="width - object_width" y="0" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="tiled_unfocused">
