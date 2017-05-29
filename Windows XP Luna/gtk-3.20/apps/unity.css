@@ -1,5 +1,5 @@
 UnityDecoration {
-    -UnityDecoration-extents: 28px 1px 1px 1px;
+    -UnityDecoration-extents: 28px 4px 4px 4px;
     -UnityDecoration-input-extents: 10px;
 
     -UnityDecoration-shadow-offset-x: 1px;
@@ -37,21 +37,25 @@ UnityDecoration .top:backdrop {
     color: mix(#fff, @titlebar_bg_color, 0.7);
 }
 
-UnityDecoration .left,
-UnityDecoration .right,
-UnityDecoration.bottom {
-    background-color: @titlebar_bg_color;
+UnityDecoration .left {
+    background-image: url('../assets/border-focused-left.png');
 }
+UnityDecoration .right {
+    background-image: url('../assets/border-focused-right.png');
 
-UnityDecoration .left:backdrop,
-UnityDecoration .right:backdrop,
-UnityDecoration.bottom:backdrop {
-    background-color: @titlebar_bg_color;
 }
-
 UnityDecoration .bottom {
-    background-image: none;
-    background-color: @theme_bg_color;
+    background-image: url('../assets/border-focused-bottom.png');
+}
+ 
+UnityDecoration .left:backdrop {
+    background-image: url('../assets/border-unfocused-right.png');
+}
+UnityDecoration .right:backdrop {
+    background-image: url('../assets/border-unfocused-left.png');
+}
+UnityDecoration .bottom:backdrop {
+    background-image: url('../assets/border-unfocused-bottom.png');
 }
 
 UnityPanelWidget,

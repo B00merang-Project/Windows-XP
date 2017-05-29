@@ -1,3 +1,4 @@
+
 * {
     -GtkArrow-arrow-scaling: 0.5;
     -GtkButton-child-displacement-x: 0;
@@ -18,8 +19,8 @@
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
     -GtkPaned-handle-size: 4;
-    -GtkProgressBar-min-horizontal-bar-height: 12;
-    -GtkProgressBar-min-vertical-bar-width: 12;
+    -GtkProgressBar-min-horizontal-bar-height: 18;
+    -GtkProgressBar-min-vertical-bar-width: 18;
     -GtkRange-slider-width: 14;
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 0;
@@ -56,7 +57,7 @@
     background-color: @theme_bg_color;
     color: @theme_fg_color;
 }
- 
+
 * {
     /* inherit colors from parent */
     color: inherit;
@@ -2109,7 +2110,7 @@ NautilusWindow .list-row:hover {
 
 /* nemo sidebar padding */
 NemoWindow .sidebar .cell {
-  padding: 2px 2px; 
+  padding: 2px 2px;
 }
 
 /* sidebar padding for 3.18 */
@@ -2334,6 +2335,10 @@ GtkSidebarRow .sidebar-label:dir(rtl) {
 GtkStatusbar {
     padding: 4px;
     color: @theme_fg_color;
+}
+
+GtkStatusbar .frame {
+    border: none;
 }
 
 /**********
@@ -3906,7 +3911,7 @@ GtkBubbleWindow .toolbar {
     border-style: solid;
     border-radius: 4px;
     border-color: #012f54;
-    background: linear-gradient(to bottom, #696969, #4f4f4f);
+    background: linear-gradient(to bottom, #5e5e5e, #3a3a3a);
     box-shadow: inset 0 0 1px 0 #686868;
     color: white;
     icon-shadow: none;
@@ -3929,7 +3934,7 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
-    background: linear-gradient(to bottom, #333333, #585858);
+    background: linear-gradient(to bottom, #2c2c2c, #4a4a4a);
     color: white;
     icon-shadow: none;
 }
@@ -3967,7 +3972,7 @@ GtkBubbleWindow .toolbar {
 /* Server-side decoration (SSD) */
 .window-frame.ssd {
     border-radius: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18); 
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
 }
 
 .window-frame.ssd,
@@ -3978,12 +3983,12 @@ GtkBubbleWindow .toolbar {
 /* Client-side Decorations (CSD)*/
 .window-frame.csd.tooltip {
     border-radius: 0;
-    box-shadow: none; 
+    box-shadow: none;
 }
 
 .window-frame.csd.message-dialog {
     border-radius: 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
 }
 
 .window-frame.solid-csd {
@@ -3991,7 +3996,7 @@ GtkBubbleWindow .toolbar {
      border-radius: 0;
      margin: 2px;
      background-color: @titlebar_bg_color;
-     box-shadow: none; 
+     box-shadow: none;
 }
 /**************
  * over under *
