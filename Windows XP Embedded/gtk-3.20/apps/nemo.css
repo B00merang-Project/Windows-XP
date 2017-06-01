@@ -12,7 +12,7 @@
 }
 
 /* nemo sidebar padding */
-NemoWindow .sidebar .cell {
+.nemo-window .sidebar .cell {
     padding: 2px 2px; 
 }
 
