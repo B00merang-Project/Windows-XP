@@ -1,34 +1,11 @@
-
 * {
-    -GtkArrow-arrow-scaling: 0.5;
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 1;
-    -GtkButton-interior-focus: true;
-    -GtkButtonBox-child-min-height: 24;
-    -GtkButtonBox-child-internal-pad-y: 1;
-
-    -GtkCheckButton-indicator-size: 14;
-    -GtkCheckMenuItem-indicator-size: 14;
-
-    -GtkExpander-expander-size: 8;
-    -GtkHTML-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkMenu-horizontal-padding: 0;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 0;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true;
-    -GtkScrollbar-min-slider-length: 80;
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkStatusbar-shadow-type: none;
-    -GtkTextView-error-underline-color: @error_color;
-    -GtkToolItemGroup-expander-size: 8;
-    -WnckTasklist-fade-overlay-rect: 0;
+    -GtkScrolledwindow-scrollbar-spacing: 0;
+    -GtkScrolledwindow-scrollbars-within-bevel: 1;
+    -textview-error-underline-color: @error_color;
+    -GtkToolbutton-icon-spacing: 6;
+    -GtkTreeview-expander-size: 8;
 
     background-clip: padding-box;
 
@@ -316,9 +293,7 @@ row { padding: 4px;
 row:selected,
 row:selected:hover,
 row:selected:focus {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
+    border: none;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
@@ -589,6 +564,13 @@ treeview entry {
 	padding: 0 6px;
 }
 
+entry entry {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+}
+
 
 /************
  * expander *
@@ -640,15 +622,18 @@ list-row:selected {
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
+    box-shadow: none;
 }
 
-statusbar frame {
-    border-width: 0;
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
 }
 
 /*******************
@@ -1047,10 +1032,7 @@ combobox:drop(active) {
  ********/
 treemenu menu,
 toolbutton menu,
-combobox  menu {
-    background-color: @menu_bg_color;
-}
-
+combobox  menu,
 menu,
 toolbar menu,
 headerbar  menu,
@@ -1058,6 +1040,7 @@ headerbar  menu,
 .primary-toolbar button menu,
 toolbar .primary-toolbar menu,
 headerbar .primary-toolbar menu {
+    margin: 4px;    /* avoid minify of menu */
     padding: 4px;
     border-radius: 0;
     border: 3px solid transparent;
@@ -1086,10 +1069,18 @@ menu button {
     font: initial;
 }
 
-/* ubuntu software center menu */
-#toolbar-popup {
-    background-color: @menu_bg_color;
-    color: @menu_fg_color;
+menu > arrow.top,
+.menu > arrow.top {
+    margin-top: -3px;
+    border-bottom: 1px solid shade(@theme_bg_color, 0.9);
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+menu > arrow.bottom,
+.menu > arrow.bottom {
+    margin-bottom: -3px;
+    border-top: 1px solid shade(@theme_bg_color, 0.9);
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 /***********
@@ -1341,7 +1332,7 @@ notebook {
     padding: 0;
     background-clip: border-box;
     border-color: shade(@bg_color, 0.82);
-    border-width: 1px;
+    border-width: 0;
     border-style: solid;
 }
 
@@ -2085,9 +2076,7 @@ scrollbar {
   border: 0 none transparent;
   margin: 0;
   padding: 0; }
-  * {
-    -GtkScrollbar-has-backward-stepper: true;
-    -GtkScrollbar-has-forward-stepper: true; }
+
   scrollbar.horizontal {
     background: linear-gradient(to top,
                                       @bg_color,
@@ -3630,9 +3619,14 @@ button.file image:last-child {
     border-width: 0 1px 1px 1px;
     border-radius: 0 0 2px 2px;
     padding: 8px;
+    box-shadow: none;
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_text_color;
+}
+
+.app-notification border {
+    border: none;
 }
 
 /*******
