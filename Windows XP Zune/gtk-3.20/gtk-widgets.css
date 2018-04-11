@@ -1,33 +1,11 @@
 * {
-    -GtkArrow-arrow-scaling: 0.5;
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 1;
-    -GtkButton-interior-focus: true;
-    -GtkButtonBox-child-min-height: 24;
-    -GtkButtonBox-child-internal-pad-y: 1;
-
-    -GtkCheckButton-indicator-size: 14;
-    -GtkCheckMenuItem-indicator-size: 14;
-
-    -GtkExpander-expander-size: 8;
-    -GtkHTML-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkMenu-horizontal-padding: 0;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 0;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true;
-    -GtkScrollbar-min-slider-length: 80;
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkStatusbar-shadow-type: none;
-    -GtkTextView-error-underline-color: @error_color;
-    -GtkToolItemGroup-expander-size: 8;
-    -WnckTasklist-fade-overlay-rect: 0;
+    -GtkScrolledwindow-scrollbar-spacing: 0;
+    -GtkScrolledwindow-scrollbars-within-bevel: 1;
+    -textview-error-underline-color: @error_color;
+    -GtkToolbutton-icon-spacing: 6;
+    -GtkTreeview-expander-size: 8;
 
     background-clip: padding-box;
 
@@ -185,9 +163,6 @@ assistant .sidebar {
  * button *
  **********/
 button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
-
     padding: 6px 6px;
     border-width: 1px;
     border-radius: 2px;
@@ -539,6 +514,8 @@ combobox toolbar combobox button.combo:disabled {
     border-top-left-radius: 0;
 }
 
+
+
 /*********
  * entry *
  *********/
@@ -590,6 +567,7 @@ entry entry {
     background-color: transparent;
     background-image: none;
 }
+
 
 /************
  * expander *
@@ -993,9 +971,6 @@ image:disabled {
 }
 
 .floating-bar button {
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -1059,7 +1034,7 @@ headerbar  menu,
 .primary-toolbar button menu,
 toolbar .primary-toolbar menu,
 headerbar .primary-toolbar menu {
-    margin: 4px;
+    margin: 4px;    /* avoid minify of menu */
     padding: 4px;
     border-radius: 0;
     border: 3px solid transparent;
@@ -1153,7 +1128,6 @@ treemenu menuitem {
 
 menu menuitem,
 menu > menuitem {
-    -GtkMenuItem-arrow-scaling: 0.5;
     padding: 3px 3px;
     border-width: 0;
     border-style: solid;
@@ -1370,9 +1344,10 @@ notebook > header > frame {
 }
 
 notebook > stack:not(:only-child) {
-  background-color: @theme_bg_color;
-  border: 1px solid shade(@theme_bg_color, 0.7);
-  box-shadow: none; }
+    background-color: @theme_bg_color;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+    box-shadow: none;
+}
 
 notebook tab {
     background-image: none;
@@ -2095,9 +2070,7 @@ scrollbar {
   border: 0 none transparent;
   margin: 0;
   padding: 0; }
-  * {
-    -GtkScrollbar-has-backward-stepper: true;
-    -GtkScrollbar-has-forward-stepper: true; }
+
   scrollbar.horizontal {
     background: linear-gradient(to top,
                                       @bg_color,
@@ -2159,14 +2132,14 @@ scrollbar {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color); 
+    border-right: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       @bg_color,
                                       shade(@bg_color, 0.98),
                                       shade(@bg_color, 0.9)
                                       ); }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color); 
+    border-bottom: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to top,
                                       @bg_color,
                                       shade(@bg_color, 0.98),
@@ -2327,6 +2300,7 @@ combobox.separator {
     background-image: none;
     background-color: transparent;
 }
+
 
 /***********
  * sidebar *
@@ -2697,12 +2671,23 @@ headerbar .title {
     font-weight: bold;
     color: white;
     padding: 0 12px;
+    text-shadow: 1px 1px black;
+}
+
+headerbar:backdrop .title {
+    text-shadow: none;
+    color: alpha(white, 0.6);
 }
 
 headerbar .subtitle {
     font-size: smaller;
     padding: 0 12px;
     color: white;
+}
+
+headerbar:backdrop .subtitle {
+    text-shadow: none;
+    color: alpha(white, 0.6);
 }
 
 headerbar combobox,
@@ -3520,8 +3505,6 @@ tooltip * {
  * treeview *
  ************/
 treeview {
-    -treeview-vertical-separator: 0;
-    -GtkWidget-focus-line-width: 1;
 }
 
 treeview.dnd {
@@ -3639,6 +3622,7 @@ button.file image:last-child {
     border-width: 0 1px 1px 1px;
     border-radius: 0 0 2px 2px;
     padding: 8px;
+    box-shadow: none;
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_text_color;
@@ -4119,7 +4103,7 @@ GtkBubbleWindow toolbar {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 7px 100%;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }
@@ -4127,7 +4111,7 @@ GtkBubbleWindow toolbar {
 .titlebar:backdrop {
     background-color: transparent;
     background-image: url('assets/titlebar-unfocused-middle.png');
-    background-size: 100% 100%;
+    background-size: 7px 100%;
 }
 
 .titlebar .title {
@@ -4138,25 +4122,25 @@ GtkBubbleWindow toolbar {
     padding: 2px;
     border-style: solid;
     border-radius: 4px;
-    border-color: #012f54;
+    border-color: #242424;
     background: linear-gradient(to bottom, #5e5e5e, #3a3a3a);
     box-shadow: inset 0 0 1px 0 #246ba3;
     color: white;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .titlebar .titlebutton:hover,
 .titlebar .titlebutton:hover:focus {
     background-image: none;
     background-color: transparent;
-    border-color: #012f54;
+    border-color: #242424;
     color: white;
 }
 
 .titlebar .titlebutton:active,
 .titlebar .titlebutton:active:hover {
     background-image: none;
-    border-color: #012f54;
+    border-color: #242424;
     color: white;
     box-shadow: none;
 }
@@ -4165,7 +4149,7 @@ GtkBubbleWindow toolbar {
     background-image: none;
     background: linear-gradient(to bottom, #2c2c2c, #4a4a4a);
     color: white;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .titlebar .titlebutton.close {
@@ -4188,7 +4172,7 @@ decoration {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 7px 100%;
     color: @titlebar_fg_color;
 }
 
@@ -4208,7 +4192,7 @@ headerbar.default-decoration,
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 7px 100%;
 }
 
 .csd headerbar:backdrop,
@@ -4236,10 +4220,12 @@ decoration:backdrop {
     transition: 200ms ease-out;
 }
 
-.tiled decoration,
-.maximized decoration,
-.fullscreen decoration,
-.ssd decoration.maximized {
+.maximized headerbar,
+.maximized headerbar:backdrop,
+.tiled .titlebar:not(headerbar),
+.tiled .titlebar:backdrop:not(headerbar),
+.maximized .titlebar:not(headerbar),
+.maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0;
 }
 

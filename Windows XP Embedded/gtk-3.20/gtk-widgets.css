@@ -163,9 +163,6 @@ assistant .sidebar {
  * button *
  **********/
 button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
-
     padding: 6px 6px;
     border-width: 1px;
     border-radius: 2px;
@@ -974,9 +971,6 @@ image:disabled {
 }
 
 .floating-bar button {
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -1134,7 +1128,6 @@ treemenu menuitem {
 
 menu menuitem,
 menu > menuitem {
-    -GtkMenuItem-arrow-scaling: 0.5;
     padding: 3px 3px;
     border-width: 0;
     border-style: solid;
@@ -1351,9 +1344,10 @@ notebook > header > frame {
 }
 
 notebook > stack:not(:only-child) {
-  background-color: @theme_bg_color;
-  border: 1px solid shade(@theme_bg_color, 0.7);
-  box-shadow: none; }
+    background-color: @theme_bg_color;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+    box-shadow: none;
+}
 
 notebook tab {
     background-image: none;
@@ -2138,14 +2132,14 @@ scrollbar {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color); 
+    border-right: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       @bg_color,
                                       shade(@bg_color, 0.98),
                                       shade(@bg_color, 0.9)
                                       ); }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color); 
+    border-bottom: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to top,
                                       @bg_color,
                                       shade(@bg_color, 0.98),
@@ -2677,6 +2671,7 @@ headerbar .title {
     font-weight: bold;
     color: white;
     padding: 0 12px;
+    text-shadow: 1px 1px black;
 }
 
 headerbar .subtitle {
@@ -3500,8 +3495,6 @@ tooltip * {
  * treeview *
  ************/
 treeview {
-    -treeview-vertical-separator: 0;
-    -GtkWidget-focus-line-width: 1;
 }
 
 treeview.dnd {
@@ -4100,7 +4093,7 @@ GtkBubbleWindow toolbar {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 9px 100%;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }
@@ -4108,7 +4101,7 @@ GtkBubbleWindow toolbar {
 .titlebar:backdrop {
     background-color: transparent;
     background-image: url('assets/titlebar-unfocused-middle.png');
-    background-size: 100% 100%;
+    background-size: 9px 100%;
 }
 
 .titlebar .title {
@@ -4123,7 +4116,7 @@ GtkBubbleWindow toolbar {
     background-image: linear-gradient(to bottom, #246ba3, #014174);
     box-shadow: inset 0 0 1px 0 #246ba3;
     color: white;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .titlebar .titlebutton:hover,
@@ -4146,7 +4139,7 @@ GtkBubbleWindow toolbar {
     background-image: none;
     background-image: linear-gradient(to bottom, #014174, #246ba3);
     color: white;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .titlebar .titlebutton.close {
@@ -4169,7 +4162,7 @@ decoration {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 9px 100%;
     color: @titlebar_fg_color;
 }
 
@@ -4189,7 +4182,7 @@ headerbar.default-decoration,
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 9px 100%;
 }
 
 .csd headerbar:backdrop,
@@ -4217,11 +4210,16 @@ decoration:backdrop {
     transition: 200ms ease-out;
 }
 
-.tiled decoration,
-.maximized decoration,
-.fullscreen decoration,
-.ssd decoration.maximized {
+.maximized headerbar,
+.maximized headerbar:backdrop,
+.tiled .titlebar:not(headerbar),
+.tiled .titlebar:backdrop:not(headerbar),
+.maximized .titlebar:not(headerbar),
+.maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0;
+    background-color: transparent;
+    background-image: url('assets/titlebar-focused-middle.png');
+    background-size: 9px 100%;
 }
 
 .popup decoration {

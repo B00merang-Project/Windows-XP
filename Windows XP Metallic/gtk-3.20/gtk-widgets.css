@@ -1,33 +1,11 @@
 * {
-    -GtkArrow-arrow-scaling: 0.5;
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 1;
-    -GtkButton-interior-focus: true;
-    -GtkButtonBox-child-min-height: 24;
-    -GtkButtonBox-child-internal-pad-y: 1;
-
-    -GtkCheckButton-indicator-size: 14;
-    -GtkCheckMenuItem-indicator-size: 14;
-
-    -GtkExpander-expander-size: 8;
-    -GtkHTML-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkMenu-horizontal-padding: 0;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 0;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true;
-    -GtkScrollbar-min-slider-length: 80;
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkStatusbar-shadow-type: none;
-    -GtkTextView-error-underline-color: @error_color;
-    -GtkToolItemGroup-expander-size: 8;
-    -WnckTasklist-fade-overlay-rect: 0;
+    -GtkScrolledwindow-scrollbar-spacing: 0;
+    -GtkScrolledwindow-scrollbars-within-bevel: 1;
+    -textview-error-underline-color: @error_color;
+    -GtkToolbutton-icon-spacing: 6;
+    -GtkTreeview-expander-size: 8;
 
     background-clip: padding-box;
 
@@ -184,9 +162,6 @@ assistant .sidebar {
  * button *
  **********/
 button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
-
     padding: 6px 10px;
     border-width: 1px;
     border-radius: 2px;
@@ -226,13 +201,13 @@ button:active:hover:focus {
     box-shadow: inset 0 0 1px 2px alpha(#379aff, 0.8);
 }
 
-button:insensitive {
+button:disabled {
     border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
 }
 
-button:active *:insensitive {
+button:active *:disabled {
     border-color: shade(@theme_bg_color, 0.75);
     background-color: shade(@theme_bg_color, 0.80);
     background-image: none;
@@ -987,9 +962,6 @@ image:disabled {
 }
 
 .floating-bar button {
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -1146,7 +1118,6 @@ treemenu menuitem {
 
 menu menuitem,
 menu > menuitem {
-    -GtkMenuItem-arrow-scaling: 0.5;
     padding: 3px 3px;
     border-width: 0;
     border-style: solid;
@@ -1363,9 +1334,10 @@ notebook > header > frame {
 }
 
 notebook > stack:not(:only-child) {
-  background-color: @theme_bg_color;
-  border: 1px solid shade(@theme_bg_color, 0.7);
-  box-shadow: none; }
+    background-color: @theme_bg_color;
+    border: 1px solid shade(@theme_bg_color, 0.8);
+    box-shadow: none;
+}
 
 notebook tab {
     background-image: none;
@@ -2105,17 +2077,17 @@ scrollbar {
     border-image: url("Scrollbars/slider-horiz.png");
     border-image-slice: 3 3 3 3;
     border-image-repeat: stretch;
-    background: url("Scrollbars/handle-horiz.png") no-repeat center center, linear-gradient(to top, #e0e0e0); }
+    background: url("Scrollbars/handle-horiz.png") no-repeat center center, image(#e0e0e0); }
     scrollbar.horizontal slider:hover {
       border-image: url("Scrollbars/slider-horiz-prelight.png");
       border-image-slice: 3 3 3 3;
       border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz-prelight.png") no-repeat center center, linear-gradient(to top, #e4e4e4); }
+      background: url("Scrollbars/handle-horiz-prelight.png") no-repeat center center, image(#e4e4e4); }
     scrollbar.horizontal slider:hover:active {
       border-image: url("Scrollbars/slider-horiz-active.png");
       border-image-slice: 3 3 3 3;
       border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz-active.png") no-repeat center center, linear-gradient(to top, #d1d1d1); }
+      background: url("Scrollbars/handle-horiz-active.png") no-repeat center center, image(#d1d1d1); }
   scrollbar.vertical {
     background: linear-gradient(to left,
                                       shade(@bg_color, 1.1),
@@ -2126,17 +2098,17 @@ scrollbar {
     border-image: url("Scrollbars/slider-vert.png");
     border-image-slice: 3 3 3 3;
     border-image-repeat: stretch;
-    background: url("Scrollbars/handle-vert.png") no-repeat center center, linear-gradient(to top, #e0e0e0); }
+    background: url("Scrollbars/handle-vert.png") no-repeat center center, image(#e0e0e0); }
     scrollbar.vertical slider:hover {
       border-image: url("Scrollbars/slider-vert-prelight.png");
       border-image-slice: 3 3 3 3;
       border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert-prelight.png") no-repeat center center, linear-gradient(to top, #e4e4e4); }
+      background: url("Scrollbars/handle-vert-prelight.png") no-repeat center center, image(#e4e4e4); }
     scrollbar.vertical slider:hover:active {
       border-image: url("Scrollbars/slider-vert-active.png");
       border-image-slice: 3 3 3 3;
       border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert-active.png") no-repeat center center, linear-gradient(to top, #d1d1d1); }
+      background: url("Scrollbars/handle-vert-active.png") no-repeat center center, image(#d1d1d1); }
   scrollbar.horizontal slider {
     min-width: 10px;
     min-height: 10px; }
@@ -2154,13 +2126,13 @@ scrollbar {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color); 
+    border-right: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       shade(@bg_color, 1.1),
                                       shade(@bg_color, 1.05)
                                       ); }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color); 
+    border-bottom: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       shade(@bg_color, 1.1),
                                       shade(@bg_color, 1.05)
@@ -2176,7 +2148,7 @@ scrollbar {
       border-image: url("Scrollbars/slider-vert.png");
       border-image-slice: 3 3 3 3;
       border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
+      background: url("Scrollbars/handle-vert.png") no-repeat center center, image(#cadbf3); }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider.horizontal {
       margin: 0;
       min-width: 16px;
@@ -2188,7 +2160,7 @@ scrollbar {
       border-image: url("Scrollbars/slider-horiz.png");
       border-image-slice: 3 3 3 3;
       border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
+      background: url("Scrollbars/handle-horiz.png") no-repeat center center, image(#cadbf3); }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     opacity: 1; }
   scrollbar button:active, scrollbar button:hover, scrollbar button:disabled, scrollbar button {
@@ -2684,14 +2656,24 @@ headerbar button.image-button {
 
 headerbar .title {
     font-weight: bold;
-    color: white;
+    color: @titlebar_fg_color;
     padding: 0 12px;
+    text-shadow: 1px 1px alpha(black, 0.3);
+}
+
+headerbar:backdrop .title {
+    color: alpha(@titlebar_fg_color, 0.3);
+    text-shadow: none;
 }
 
 headerbar .subtitle {
     font-size: smaller;
     padding: 0 12px;
-    color: white;
+    color: @titlebar_fg_color;
+}
+
+headerbar:backdrop .subtitle {
+    color: alpha(@titlebar_fg_color, 0.3);
 }
 
 headerbar combobox,
@@ -3431,8 +3413,6 @@ tooltip * {
  * treeview *
  ************/
 treeview {
-    -treeview-vertical-separator: 0;
-    -GtkWidget-focus-line-width: 1;
 }
 
 treeview.dnd {
@@ -4030,15 +4010,15 @@ GtkBubbleWindow toolbar {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
+    background-size: 1px 100%;
+    color: @titlebar_fg_color;
     text-shadow: none;
 }
 
 .titlebar:backdrop {
     background-color: transparent;
     background-image: url('assets/titlebar-unfocused-middle.png');
-    background-size: 100% 100%;
+    background-size: 1px 100%;
 }
 
 .titlebar .title {
@@ -4053,7 +4033,7 @@ GtkBubbleWindow toolbar {
     background: linear-gradient(to bottom, #ffffff, #a2a4c6);
     box-shadow: inset 0 0 1px 0 #d0d1e8;
     color: #252536;
-    icon-shadow: -1px 1px white;
+    -gtk-icon-shadow: -1px 1px white;
 }
 
 .titlebar .titlebutton:hover,
@@ -4061,7 +4041,7 @@ GtkBubbleWindow toolbar {
     background: none;
     border-color: #4a4960;
     color: #252536;
-    icon-shadow: -1px 1px white;
+    -gtk-icon-shadow: -1px 1px white;
 }
 
 .titlebar .titlebutton:active,
@@ -4076,7 +4056,7 @@ GtkBubbleWindow toolbar {
     background-image: none;
     background: linear-gradient(to bottom, #f3f2f6, #a9adb9);
     color: #252536;
-    icon-shadow: -1px 1px #ececf0;
+    -gtk-icon-shadow: -1px 1px #ececf0;
 }
 
 .titlebar .titlebutton.close {
@@ -4099,7 +4079,7 @@ decoration {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 1px 100%;
     color: @titlebar_fg_color;
 }
 
@@ -4119,7 +4099,7 @@ headerbar.default-decoration,
     border-radius: 8px 8px 0 0;
     background-color: transparent;
     background-image: url('assets/titlebar-focused-middle.png');
-    background-size: 100% 100%;
+    background-size: 1px 100%;
 }
 
 .csd headerbar:backdrop,
@@ -4147,10 +4127,12 @@ decoration:backdrop {
     transition: 200ms ease-out;
 }
 
-.tiled decoration,
-.maximized decoration,
-.fullscreen decoration,
-.ssd decoration.maximized {
+.maximized headerbar,
+.maximized headerbar:backdrop,
+.tiled .titlebar:not(headerbar),
+.tiled .titlebar:backdrop:not(headerbar),
+.maximized .titlebar:not(headerbar),
+.maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0;
 }
 
