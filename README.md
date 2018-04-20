@@ -1,7 +1,17 @@
 # WinXP-themes
 
-Reborn XP themes, with new development strategy for easier maintenance
-![winxp](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-11-29-11-13-38-1-orig_orig.png)
+### All 7 of Windows XP themes available for Linux
+- Luna
+- Homestead
+- Metallic
+- Royale
+- Royale Dark
+- Embedded
+- Zune
+
+*For classic theme, see the [Windows Server 2003](https://github.com/B00merang-Project/Redmond-Server-Themes) theme*
+
+![winxp](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-11-28-18-52-39-orig_orig.png)
 
 Available themes:
 - Luna
@@ -18,4 +28,4 @@ Available themes:
 
 **License :** GPL v3
 
-**More info :** http://b00merang.weebly.com/windows-xp-themes.html
+**More info :** https://b00merang.weebly.com/windows-xp.html
