@@ -2125,14 +2125,12 @@ scrollbar {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       @bg_color,
                                       shade(@bg_color, 0.98),
                                       shade(@bg_color, 0.9)
                                       ); }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to top,
                                       @bg_color,
                                       shade(@bg_color, 0.98),
@@ -2265,7 +2263,7 @@ headerbar.titlebar button.separator {
 /* titlebutton separator */
 .titlebar separator.titlebutton {
     padding: 0px;
-    background-image: image(shade(@titlebar_bg_color, 0.9));
+    background-image: image(alpha(@titlebar_fg_color, 0.3));
 }
 
 /* x-bar button separator disabled */

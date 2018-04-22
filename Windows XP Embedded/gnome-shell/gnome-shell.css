@@ -363,13 +363,17 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .panel-status-button,
-.panel-button {
+.panel-button,
+#panel .panel-button,
+#panel.solid .panel-button {
     -natural-hpadding: 5px;
     -minimum-hpadding: 5px;
     font-weight: bold;
     border: 1px solid transparent;
     transition-duration: 150;
     box-shadow: none;
+    color: white;
+    text-shadow: none;
 }
 
 .panel-status-button:hover,
@@ -1039,14 +1043,9 @@ border-radius: 0px;
 }
 
 .switcher-list {
-    background-color: #2d75ad;
-    background-gradient-direction: vertical;
-    background-gradient-start: #2d75ad;
-    background-gradient-end: #013b6b;
     border-radius: 4px;
     padding: 20px;
     border: solid 1px black;
-    box-shadow: 2px solid rgba(0,0,0,0.4) 2px 2px;
     color: black;
     border-image: url('tab.png') 4 4 4 4;
 }
