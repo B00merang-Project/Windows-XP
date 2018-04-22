@@ -19,45 +19,53 @@ stage {
     color: rgba(0,0,0,0.5);
 }
 
+StScrollBar
+{
+  padding: 0px;
+}
+
 StScrollView.vfade {
   -st-vfade-offset: 0px;
 }
 
-StScrollView StScrollBar {
-    min-width: 17px;
-    min-height: 17px;
+StScrollView StScrollBar
+{
+  min-width: 16px;
+  min-height: 16px;
 }
 
-StScrollBar {
-    padding: 0px;
-}
 
 StScrollBar StBin#trough {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 2px;
 }
 
-StScrollBar StButton#hhandle,
-StScrollBar StButton#vhandle,
+StScrollBar StButton#vhandle
+{
+    background-color: #2f2f2f;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+
+StScrollBar StButton#hhandle
+{
+    background-color: #2f2f2f;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+
 StScrollBar StButton#hhandle:hover,
-StScrollBar StButton#vhandle:hover {
-    border-image: url('outset-shadow.png') 3;
+StScrollBar StButton#vhandle:hover
+{
+    background-color: #666666;
 }
-
-.menu-applications-box StButton#vhandle {
-    background: url('handle-vert.png') no-repeat center center;
-}
-
-.menu-applications-box StButton#vhandle:hover {
-    background: url('handle-vert.png') no-repeat center center;
-}
-
 
 .dash-label {
-    border: 1px solid rgba(57,156,238,1.0);
+    border: 1px solid rgba(64,64,64,1.0);
     border-radius: 0px;
     padding: 2px 12px;
-    background-gradient-end: rgba(57,156,238,0.9);
-    background-gradient-start: rgba(57,156,238,0.9);
+    background-gradient-end: rgba(64,64,64,0.9);
+    background-gradient-start: rgba(64,64,64,0.9);
     background-gradient-direction: vertical;
     color: #fff;
     font-size: 8.5pt;
@@ -150,9 +158,10 @@ StScrollBar StButton#vhandle:hover {
     -arrow-border-width: 0px;
 }
 
-/* Cinnamon 3.2 fix */
+/* Cinnamon 3.2 fixup */
 .popup-menu,
 .menu {
+    background-color: #fff;
     border: solid 4px black;
     border-image: url('popupmenu.png') 8 8 8 8;
     color: #000;
@@ -184,9 +193,9 @@ StScrollBar StButton#vhandle:hover {
 .popup-combo-menu {
     background-color: rgba(0,0,0,0.9);
     padding: 1em 0em;
-    color: #000;
+    color: #ffffff;
     font-size: 10.5pt;
-    border: 1px solid #bc540d;
+    border: 1px solid #00A7FB;
     border-radius: 0px 0px 8px 0px;
 }
 /* The remaining popup-menu sizing is all done in ems, so that if you
@@ -227,10 +236,10 @@ StScrollBar StButton#vhandle:hover {
     height: 1em;
     min-width: 15em;
     -slider-height: 0.3em;
-    -slider-background-color: #666666;
+    -slider-background-color: transparent;
     -slider-border-color: #555555;
     -slider-active-background-color: #bc540d;
-    -slider-active-border-color: #DDDDDD;
+    -slider-active-border-color: transparent;
     -slider-border-width: 1px;
     -slider-handle-radius: 0.5em;
 }
@@ -265,7 +274,6 @@ StScrollBar StButton#vhandle:hover {
 .nm-menu-item-icons {
     spacing: .5em;
 }
-
 .system-menu-action,
 .system-menu-action:hover,
 .system-menu-action:active {
@@ -296,14 +304,6 @@ StScrollBar StButton#vhandle:hover {
     outline: 1px rgba(0,0,0,1);
 }
 
-#panelLeft, #panelCenter {
-    spacing: 4px;
-}
-
-#panelRight {
-    border-image: url('panel-right.png') 7 0 0 0;
-}
-
 #panelLeft .applet-box:first-child {
     border-image: url('menu-box.png') 7 0 0 0;
     border-right-width: 10px;
@@ -320,22 +320,31 @@ StScrollBar StButton#vhandle:hover {
     border-image: url('menu-active.png') 7 0 0 0;
 }
 
+#panelLeft, #panelCenter {
+    spacing: 4px;
+}
+
+#panelRight {
+    border-image: url('panel-right.png') 7 0 0 0;
+
+}
+
 #panelLeft:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,0,0,0.05);
-    background-gradient-end: rgba(255,0,0,0.4);    
+    background-gradient-end: rgba(255,0,0,0.4);        
 }
 
 #panelCenter:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0,255,0,0.05);
-    background-gradient-end: rgba(0,255,0,0.4);    
+    background-gradient-end: rgba(0,255,0,0.4);        
 }
 
 #panelRight:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0,0,255,0.05);
-    background-gradient-end: rgba(0,0,255,0.4);    
+    background-gradient-end: rgba(0,0,255,0.4);        
 }
 
 #panelLeft:ltr {
@@ -465,10 +474,10 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .window-caption#selected {
-    background-color: #000;
-    border-radius: 0px;
+       background-color: #000;
+        border-radius: 0px;
     color: #fff;
-    spacing: 25px;
+        spacing: 25px;
 }
 
 .workspace-controls {
@@ -476,10 +485,10 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .workspace-thumbnails-background {
-    border: 1px #399cee;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 0px;
+        border: 1px #399cee;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
     border-radius:  0px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 8px;
@@ -492,7 +501,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .workspace-thumbnails {
-    spacing: 14px;
+        spacing: 14px;
 }
 
 .workspace-add-button {
@@ -547,8 +556,8 @@ StScrollBar StButton#vhandle:hover {
 .window-close-area {
   background-image: url("trash-icon.png");
     background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid #399cee;
-    border-bottom: 0px;
+     border: 2px solid #399cee;
+        border-bottom: 0px;
     border-radius: 0px;
     height: 120px;
     width: 400px;
@@ -594,15 +603,15 @@ StScrollBar StButton#vhandle:hover {
 /* ===================================================================
 * Desklets (desklet.js)
 * ===================================================================*/
-.desklet {    
+.desklet {        
 color: #eee;  
 }
 
 .desklet-with-borders {
 border: 1px solid #444;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
+      border-bottom: 0px;
+          border-left: 0px;
+          border-right: 0px;
     background-color: #232323;
     border-radius: 0px;
 color: #eee;  
@@ -610,11 +619,11 @@ color: #eee;
 
 .desklet-with-borders-and-header {
 border: 1px solid #444;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
+      border-bottom: 0px;
+          border-left: 0px;
+          border-right: 0px;
     background-color: #232323;
-    color: #eee;   
+color: #eee;   
     border-radius-bottomleft: 0px;
     border-radius-bottomright: 0px;
 }
@@ -625,9 +634,9 @@ border: 1px solid #444;
     font-size: 10.5pt;
  
 border: 1px solid #444;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
+      border-bottom: 0px;
+          border-left: 0px;
+          border-right: 0px;
     background-color: #232323;
     border-radius: 0px;
 color: #eee;  
@@ -645,9 +654,9 @@ color: #eee;
 .photoframe-box {
 padding: 6px;
 border: 1px solid #444;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
+      border-bottom: 0px;
+          border-left: 0px;
+          border-right: 0px;
     background-color: #232323;
     border-radius: 0px;
  
@@ -672,11 +681,11 @@ border-radius: 0px;
 
 #LookingGlassDialog {
   background-gradient-direction: vertical;
-    background-gradient-start:  #000000;
-    background-gradient-end: #2f343d;
+          background-gradient-start:  #000000;
+          background-gradient-end: #2f343d;
     spacing: 4px;
     padding: 4px;
-    border: 2px solid #399cee;
+        border: 2px solid #399cee;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -838,20 +847,20 @@ border-radius: 0px;
 }
 
 .calendar-day-base:hover {
-    background-color: #bc540d;
-    color: #000;
+    background-color: #399cee;
+    color: #fff;
 }
 
 .calendar-day-base:active {
 }
 
 .calendar-day-heading {
-    color: #000;
+    color: #4c4c4c;
     padding-top: 1em;
 }
 
 .calendar-week-number {
-    color: #000;
+    color: #4c4c4c;
 }
 
 /* Hack used in lieu of border-collapse - see calendar.js */
@@ -875,7 +884,7 @@ border-radius: 0px;
 .calendar-today {
     color: #ffffff;
     font-weight: bold;
-    background-color: #bc540d;
+    background-color: rgba(57,156,238,1);
     border-radius: 2px;
 }
 
@@ -1093,7 +1102,6 @@ border-radius: 0px;
 .switcher-list .item-box:selected {
     border-radius: 0px;
     border: 4px solid #379aff;
-    background-color: transparent;
 }
 
 .switcher-list .thumbnail-box {
@@ -1151,8 +1159,8 @@ border-radius: 0px;
 .modal-dialog {
     font-size: 10pt;
     border-radius: 2px;
-    background-color: #2d75ad;
-    border: 2px solid #013b6b;
+    background-color: #171717;
+    border: 2px solid #404040;
     color: #fff;
     padding-right: 42px;
     padding-left: 42px;
@@ -1165,9 +1173,7 @@ border-radius: 0px;
 }
 
 .modal-dialog-button {
-    border-radius: 4px;
     font-size: 10pt;
-    color: black;
     margin-left: 10px;
     margin-right: 10px;
     padding: 4px 32px 5px;
@@ -1178,7 +1184,7 @@ border-radius: 0px;
 
 .modal-dialog-button:active,
 .modal-dialog-button:checked {
-    color: black;
+    color: white;
     border-image: url('buttons/button-focused-pressed.png') 5;
 }
 
@@ -1497,9 +1503,9 @@ border-radius: 0px;
 
 
 #keyboard {
-    background-gradient-direction: vertical;
-    background-gradient-start: #000;
-    background-gradient-end: #000;
+        background-gradient-direction: vertical;
+          background-gradient-start: #000;
+          background-gradient-end: #000;
  
 }
 
@@ -1525,7 +1531,7 @@ border: 1px #717171;
 border-bottom: 0px;
 border-left: 0px;
 border-right: 0px;
-    color: #eaeaea;
+      color: #eaeaea;
 }
 
 .keyboard-key:grayed {
@@ -1546,8 +1552,8 @@ border-radius: 1px;
     background-gradient-end: #399cee;
 border: 1px #76d2ec;
   border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px; 
+      border-left: 0px;
+      border-right: 0px; 
 border-radius: 1px;
     color: #fff;
  
@@ -1559,8 +1565,8 @@ border-radius: 1px;
     background-gradient-end: #399cee;
 border: 1px #76d2ec;
   border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px; 
+      border-left: 0px;
+      border-right: 0px; 
 border-radius: 1px;
     color: #fff;
  
@@ -1611,13 +1617,13 @@ border-radius: 1px;
 }
 
 .menu-favorites-button:hover {
-    background-color: #335ea8;
+    background-color: #b35108;
 }
 
 .menu-places-box {  
-    margin: auto;
-    padding: 8px;
-    border: 0px solid #666;  
+      margin: auto;
+      padding: 8px;
+      border: 0px solid #666;  
 }
 
 .menu-places-button {
@@ -1645,7 +1651,7 @@ border-radius: 1px;
 }
 
 .menu-applications-box StScrollView {
-    border: 0px solid #305496;
+    border: 0px solid #1f1f1f;
     border-image: none;
     border-right-width: 0px;
 }
@@ -1677,15 +1683,15 @@ border-radius: 1px;
 .menu-application-button-selected {
     padding: 7px;
     color: white;
-    background-color: #335ea8;
+    background-color: #b35108;
 }
 
 .menu-application-button-label:ltr { 
-    padding-left: 5px;
+      padding-left: 5px;
 }
 
 .menu-application-button-label:rtl { 
-    padding-right: 5px;
+      padding-right: 5px;
 }
 
 .menu-category-button {
@@ -1701,15 +1707,15 @@ border-radius: 1px;
 .menu-category-button-selected {
     padding: 7px;
     color: white;
-    background-color: #335ea8;
+    background-color: #b35108;
 }
 
 .menu-category-button-label:ltr { 
-    padding-left: 5px    
+    padding-left: 5px       
 }
 
 .menu-category-button-label:rtl { 
-    padding-right: 5px    
+    padding-right: 5px       
 }
 
 /* Name and description of the currently hovered item in the menu
@@ -1745,7 +1751,7 @@ border-radius: 1px;
 
 .menu-search-box {
    padding-left: 20px;
-   padding-bottom: 10px;
+   padding-bottom: 1px;
 }
 
 .menu-search-entry-icon {
@@ -1805,18 +1811,18 @@ border-radius: 1px;
  * Sound Applet (status/volume.js)
  * ===================================================================*/
 .sound-button-container {
-    padding-right: 2px;
-    padding-left: 2px;
-    background-color: #232527;
+padding-right: 2px;
+padding-left: 2px;
+background-color: #232527;
     border: 2px solid #656565;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    box-shadow:  0px -1px 0px 0px rgba(51,51,51,1);
+ box-shadow:  0px -1px 0px 0px rgba(51,51,51,1);
 }
 .sound-button {
-    width: 26px;
-    height: 20px;
+        width: 26px;
+        height: 20px;
     padding: 5px;
     color: #fff;    
     background-color: #000;
@@ -1835,40 +1841,40 @@ border-radius: 1px;
 }
 
 .sound-button StIcon {
-    icon-size: 1em;
+icon-size: 1em;
 }
 .sound-track-infos {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 .sound-track-info {
-    padding-top: 2px;
-    padding-bottom: 2px;
+padding-top: 2px;
+padding-bottom: 2px;
 }
 .sound-track-info StIcon {
-    icon-size: 1em;
+icon-size: 1em;
 }
 .sound-track-info StLabel {
-    padding-left: 5px;
-    padding-right: 5px;
+padding-left: 5px;
+padding-right: 5px;
 }
 .sound-track-box {
-    padding-left: 18px;
-    padding-right: 18px;
-    max-width: 220px;
+padding-left: 18px;
+padding-right: 18px;
+max-width: 220px;
 }
 .sound-volume-menu-item {
-    padding: .4em 1.75em;
+padding: .4em 1.75em;
 }
 .sound-volume-menu-item StIcon {
-    icon-size: 1.14em;
-    padding-left: 8px;
+icon-size: 1.14em;
+padding-left: 8px;
 }
 .sound-playback-control {
-    padding-top: 5px;
-    padding-bottom: 10px;
+padding-top: 5px;
+padding-bottom: 10px;
 }
 
 /* ===================================================================
@@ -1880,26 +1886,26 @@ border-radius: 1px;
 }
  
 .workspace-button {
-    width: 20px;
-     height: 10px;
-    padding: 2px;
+       width: 20px;
+         height: 10px;
+      padding: 2px;
     border-radius: 0px;
-    background-color: rgba(255,255,255,0.0);
-    color: #fff;
-    transition-duration: 250;
+        background-color: rgba(255,255,255,0.0);
+        color: #fff;
+        transition-duration: 250;
 }
 
 .workspace-button:outlined {
-    padding: 2px;
-    background-color: #000;
-    border-radius: 0px;
+      padding: 2px;
+       background-color: #000;
+        border-radius: 0px;
     color: #399cee;
 }
 
 .workspace-button:hover {
-    padding: 2px;
-    background-color: #000;
-    border-radius: 0px;
+      padding: 2px;
+       background-color: #000;
+        border-radius: 0px;
     color: #399cee;
 }
 
@@ -1993,16 +1999,16 @@ border-radius: 1px;
 
 .applet-box {
     padding-left: 6px;
-    padding-right: 6px;
+        padding-right: 6px;
     transition-duration: 300;
 }
 .applet-box:hover {
-    background-color: rgba(25,25,25,0.2);
+       background-color: rgba(25,25,25,0.2);
     color:  white;
     transition-duration: 100;
 }
 .applet-box:active {
-    background-color: rgba(25,25,25,0.4);
+       background-color: transparent;
     color:  white;
     transition-duration: 100;
  
@@ -2033,14 +2039,14 @@ border-radius: 1px;
     color: #fff;
     font-size: 25pt;    
     text-align: center;
-    background: #013b6b;
-    border: 2px solid #399cee;
+    background: #404040;
+    border: 2px solid #1f1f1f;
     border-radius: 4px;
     padding: 0.5em 1em;
 }
 
 .expo-workspaces-name-entry {
-    padding: 5px;
+     padding: 5px;
     padding-bottom: 7px;
     color: gray;
     border: 1px solid gray;
@@ -2179,23 +2185,23 @@ The colour parameters are red, green, blue, and transparency or a name */
 }
 
 .numa-alert {
-    color: #fff;
-    border-top: 3px;
-    border-bottom: 0px;
+        color: #fff;
+        border-top: 3px;
+        border-bottom: 0px;
     background-gradient-direction: vertical;
     background-gradient-end: rgba(57,156,238,0.1);
     background-gradient-start: rgba(57,156,238,0.1);
-    border-radius: 0px;
+        border-radius: 0px;
 }
 
 .numa-limit-exceeded {
-    color: #fff;
-    border-top: 3px;
-    border-bottom: 0px;
+        color: #fff;
+        border-top: 3px;
+        border-bottom: 0px;
     background-gradient-direction: vertical;
     background-gradient-end: rgba(57,156,238,0.1);
     background-gradient-start: rgba(57,156,238,0.1);
-    border-radius: 0px;
+           border-radius: 0px;
 }
 
 /* ===================================================================
@@ -2219,7 +2225,7 @@ The colour parameters are red, green, blue, and transparency or a name */
  * (if CinnXPStarkMenu is used, change some stuff, else use default)
  * ===================================================================*/
 .right-buttons-box {
-    background-color: #2e75ad;
+    background-color: #666666;
     padding: 8px;
 }
 .starkmenu-background {
@@ -2229,21 +2235,21 @@ The colour parameters are red, green, blue, and transparency or a name */
     padding: 54px 1px 29px 1px;
 }
 .starkmenu-selected-app-box {
-    color: white; /* Information, which is shown, if you select apps*/
+    color: black; /* Information, which is shown, if you select apps*/
 }
 .starkmenu-favorites-box {  
-    background-color: #013c6b;
-    border: 0px solid #013c6b;
+    background-color: #2f2f2f;
+    border: 0px solid #2f2f2f;
 }
 .starkmenu-applications-box {
     padding: 0px 0px 0px 0px;
 }
 .starkmenu-applications-inner-box {
-    background-color: #2e75ad;
+    background-color: #666666;
 }
 .starkmenu-applications-box StScrollView {
-    background-color: #013c6b;
-    color: white;
+    background-color: #2f2f2f;
+    color: black;
 }
 .starkmenu-search-box {
     padding-bottom: 5px;
