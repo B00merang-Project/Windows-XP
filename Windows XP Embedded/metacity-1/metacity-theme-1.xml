@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Windows 10 Theme</name>
+  <name>Windows XP Embedded</name>
   <author>Elbullazul</author>
-  <copyright>2015 Elbullazul</copyright>
+  <copyright>2015-2018, B00merang Project</copyright>
   <date>Sept 9, 2015</date>
-  <description>Windows 10 window border for Windows 10 Theme</description>
+  <description>Metacity theme for Windows XP Embedded theme</description>
 </info>
 
 <constant name="IconTitleSpacing" value="0"/>
