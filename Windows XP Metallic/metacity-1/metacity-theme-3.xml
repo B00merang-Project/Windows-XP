@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Lunacity Blue</name>
-  <author>Cuvou.com</author>
-  <copyright>2007 Casey Kirsle</copyright>
-  <date>Sept 4, 2007</date>
-  <description>A true Windows XP experience.</description>
+  <name>Windows XP Metallic</name>
+  <author>Elbullazul</author>
+  <copyright>2018, B00merang Project</copyright>
+  <date>August 10, 2018</date>
+  <description>Metacity theme for Windows XP Metallic theme</description>
 </info>
 
 <constant name="IconTitleSpacing" value="0"/>
