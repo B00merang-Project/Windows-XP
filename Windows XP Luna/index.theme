@@ -1,12 +1,14 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=Windows XP Luna
-Comment=Windows XP Luna theme for Linux OSes; based on the MTAC architecture
+Comment=Windows XP Luna theme for Linux OSes
 Comment=Author : Christian Medel (Elbullazul)
-Version=rolling
+Version=2.0
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Windows XP Luna
 MetacityTheme=Windows XP Luna
+IconTheme=Windows XP
+CursorTheme=DMZ-White
 ButtonLayout=:minimize,maximize,close
