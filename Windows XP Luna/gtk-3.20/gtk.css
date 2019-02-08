@@ -15,7 +15,7 @@
 @define-color unfocused_fg_color @fg_color;
 @define-color unfocused_base_color @base_color;
 @define-color unfocused_text_color @text_color;
-@define-color unfocused_selected_bg_color #6c6c6c;
+@define-color unfocused_selected_bg_color #1466c9;
 @define-color unfocused_selected_fg_color shade(@unfocused_text_color, 0.8);
 @define-color unfocused_disabled_bg_color mix(@fg_color, @bg_color, 0.98);
 @define-color unfocused_disabled_fg_color mix(@fg_color, @bg_color, 0.75);
