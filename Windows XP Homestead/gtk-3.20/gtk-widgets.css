@@ -1999,10 +1999,10 @@ filechooser placessidebar.sidebar row, filechooser placessidebar.sidebar view ro
   border: none;
   color: @sidebar_fg_color; }
   .nautilus-window placessidebar.sidebar row.sidebar-row:hover {
-    color: @theme_selected_fg_color;
+    color: @sidebar_fg_color;
     background-color: mix(@sidebar_bg_color, @light_shadow, 0.15); }
   .nautilus-window placessidebar.sidebar row.sidebar-row:checked, .nautilus-window placessidebar.sidebar row.sidebar-row:selected {
-    color: @theme_selected_fg_color;
+    color: @sidebar_fg_color;
     background-color: mix(@sidebar_bg_color, @light_shadow, 0.3); }
 
 .sidebar frame, .sidebar.frame {
