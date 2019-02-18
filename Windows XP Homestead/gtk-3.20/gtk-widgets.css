@@ -2489,9 +2489,6 @@ toolbar {
 .stack-switcher button {
   min-width: 80px; }
 
-stackswitcher button.text-button {
-  min-width: 80px; }
-
 tooltip {
   border-radius: 2px;
   box-shadow: none; }
