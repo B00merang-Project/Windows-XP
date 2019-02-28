@@ -973,6 +973,11 @@ button.circular, button.circular-button {
   border-radius: 50%;
   -gtk-outline-radius: 50%; }
 
+printdialog paper {
+  border: 1px solid @borders;
+  background: @light_shadow;
+  padding: 0; }
+
 menu, .menu {
   margin: 4px;
   padding: 0;
@@ -3058,6 +3063,40 @@ panel-toplevel.background na-tray-applet {
       color: @theme_selected_bg_color;
       border: none;
       background-color: shade(@taskbar_bg_color, 0.93); }
+
+#XfceNotifyWindow .osd {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  border-radius: 2px;
+  border: none; }
+#XfceNotifyWindow.osd label#summary {
+  font-weight: bold; }
+#XfceNotifyWindow.osd button {
+  padding: 6px 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  color: @theme_fg_color;
+  border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
+  background-color: @theme_base_color;
+  background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
+  box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
+  -gtk-outline-radius: 2px; }
+  #XfceNotifyWindow.osd button:hover, #XfceNotifyWindow.osd button:focus {
+    box-shadow: inset 0 0 1px 2px #ffc73c;
+    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3); }
+  #XfceNotifyWindow.osd button:active, #XfceNotifyWindow.osd button:checked {
+    border-color: shade(@borders, 0.3);
+    background-color: shade(@theme_bg_color, 0.95);
+    background-image: linear-gradient(to bottom, shade(#f7f7f7, 0.6), shade(#f7f7f7, 0.7), shade(#f7f7f7, 0.75)); }
+    #XfceNotifyWindow.osd button:active:disabled, #XfceNotifyWindow.osd button:checked:disabled {
+      color: mix(@theme_fg_color, @theme_unfocused_disabled_fg_color, 0.1);
+      border-color: mix(@theme_fg_color, @theme_disabled_bg_color, 0.5);
+      background-color: shade(@theme_disabled_bg_color, 0.9); }
+  #XfceNotifyWindow.osd button:disabled {
+    color: @theme_disabled_fg_color;
+    border-color: shade(@borders, 0.75);
+    background-color: @theme_disabled_bg_color; }
 
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
