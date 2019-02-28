@@ -3064,39 +3064,39 @@ panel-toplevel.background na-tray-applet {
       border: none;
       background-color: shade(@taskbar_bg_color, 0.93); }
 
-#XfceNotifyWindow .osd {
+#XfceNotifyWindow.osd {
   background-color: @theme_bg_color;
   color: @theme_fg_color;
   border-radius: 2px;
   border: none; }
-#XfceNotifyWindow.osd label#summary {
-  font-weight: bold; }
-#XfceNotifyWindow.osd button {
-  padding: 6px 6px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  color: @theme_fg_color;
-  border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-  background-color: @theme_base_color;
-  background-image: linear-gradient(to top, #90acd0, #90acd0 1px, transparent 1px), linear-gradient(to right, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to left, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to bottom, #d4dfed 1px, #f9fbfd 1px, #f9fbfd 2px, #f3f6fa 2px, #f3f6fa 3px, transparent 3px), linear-gradient(to top, #91add0 1px, #d0dceb 40%, #e3eaf3 45%, #e9eff6 50%, #f1f5f9 60%, #fdfdfe);
-  box-shadow: 0px 1px rgba(255, 255, 255, 0.6), 1px 0px rgba(255, 255, 255, 0.2), 0px -1px rgba(0, 0, 0, 0.04), -1px 0px rgba(0, 0, 0, 0.03);
-  -gtk-outline-radius: 2px; }
-  #XfceNotifyWindow.osd button:hover, #XfceNotifyWindow.osd button:focus {
-    box-shadow: inset 0 0 1px 2px #ffc73c;
-    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3); }
-  #XfceNotifyWindow.osd button:active, #XfceNotifyWindow.osd button:checked {
-    border-color: shade(@borders, 0.3);
-    background-color: shade(@theme_bg_color, 0.95);
-    background-image: linear-gradient(to bottom, #d4dfed 1px, #6f94c2 1px, #6f94c2 2px, transparent 2px), linear-gradient(to right, #6f94c2 1px, transparent 1px), linear-gradient(to left, #6f94c2 1px, transparent 1px), linear-gradient(to top, #f9fbfd 1px, #f3f6fa 1px, #f3f6fa 2px, #fdfdfe 2px, #e3eaf3 50%, #91add0 95%); }
-    #XfceNotifyWindow.osd button:active:disabled, #XfceNotifyWindow.osd button:checked:disabled {
-      color: mix(@theme_fg_color, @theme_unfocused_disabled_fg_color, 0.1);
-      border-color: mix(@theme_fg_color, @theme_disabled_bg_color, 0.5);
-      background-color: shade(@theme_disabled_bg_color, 0.9); }
-  #XfceNotifyWindow.osd button:disabled {
-    color: @theme_disabled_fg_color;
-    border-color: shade(@borders, 0.75);
-    background-color: @theme_disabled_bg_color; }
+  #XfceNotifyWindow.osd label#summary {
+    font-weight: bold; }
+  #XfceNotifyWindow.osd button {
+    padding: 6px 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    color: @theme_fg_color;
+    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
+    background-color: @theme_base_color;
+    background-image: linear-gradient(to top, #90acd0, #90acd0 1px, transparent 1px), linear-gradient(to right, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to left, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to bottom, #d4dfed 1px, #f9fbfd 1px, #f9fbfd 2px, #f3f6fa 2px, #f3f6fa 3px, transparent 3px), linear-gradient(to top, #91add0 1px, #d0dceb 40%, #e3eaf3 45%, #e9eff6 50%, #f1f5f9 60%, #fdfdfe);
+    box-shadow: 0px 1px rgba(255, 255, 255, 0.6), 1px 0px rgba(255, 255, 255, 0.2), 0px -1px rgba(0, 0, 0, 0.04), -1px 0px rgba(0, 0, 0, 0.03);
+    -gtk-outline-radius: 2px; }
+    #XfceNotifyWindow.osd button:hover, #XfceNotifyWindow.osd button:focus {
+      box-shadow: inset 0 0 1px 2px #ffc73c;
+      border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3); }
+    #XfceNotifyWindow.osd button:active, #XfceNotifyWindow.osd button:checked {
+      border-color: shade(@borders, 0.3);
+      background-color: shade(@theme_bg_color, 0.95);
+      background-image: linear-gradient(to bottom, #d4dfed 1px, #6f94c2 1px, #6f94c2 2px, transparent 2px), linear-gradient(to right, #6f94c2 1px, transparent 1px), linear-gradient(to left, #6f94c2 1px, transparent 1px), linear-gradient(to top, #f9fbfd 1px, #f3f6fa 1px, #f3f6fa 2px, #fdfdfe 2px, #e3eaf3 50%, #91add0 95%); }
+      #XfceNotifyWindow.osd button:active:disabled, #XfceNotifyWindow.osd button:checked:disabled {
+        color: mix(@theme_fg_color, @theme_unfocused_disabled_fg_color, 0.1);
+        border-color: mix(@theme_fg_color, @theme_disabled_bg_color, 0.5);
+        background-color: shade(@theme_disabled_bg_color, 0.9); }
+    #XfceNotifyWindow.osd button:disabled {
+      color: @theme_disabled_fg_color;
+      border-color: shade(@borders, 0.75);
+      background-color: @theme_disabled_bg_color; }
 
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
