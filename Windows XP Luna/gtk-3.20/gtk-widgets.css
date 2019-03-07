@@ -202,7 +202,7 @@ button {
   border-radius: 2px;
   color: @theme_fg_color;
   border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-  background-color: @theme_base_color;
+  background-color: @theme_bg_color;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
   -gtk-outline-radius: 2px; }
   button:hover, button:focus {
@@ -228,7 +228,7 @@ button.flat {
   background-image: none; }
   button.flat:hover {
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3);
-    background-color: @theme_base_color;
+    background-color: @theme_bg_color;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
   button.flat:active, button.flat:checked {
     border-color: shade(@borders, 0.3);
@@ -660,19 +660,19 @@ entry {
   padding: 6px 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: shade(@theme_selected_bg_color, 1.5);
+  border-color: @theme_fg_color;
   border-radius: 0px;
   color: @theme_text_color;
   caret-color: currentColor;
   background-color: @theme_base_color; }
   entry:active, entry:focus {
-    border-color: shade(@theme_selected_bg_color, 1.35); }
+    border-color: shade(@theme_bg_color, 0.75); }
   entry:selected, entry:selected:focus, entry selection, entry selection:focus {
     color: @theme_selected_fg_color;
     background-color: @theme_selected_bg_color; }
   entry:disabled {
     color: @theme_disabled_text_color;
-    border-color: mix(@theme_disabled_bg_color, @theme_selected_bg_color, 0.25); }
+    border-color: mix(@theme_disabled_bg_color, shade(@theme_bg_color, 0.75), 0.25); }
   entry.read-only {
     background-color: mix(@theme_bg_color, @theme_disabled_bg_color, 0.1); }
   entry > image.left {
@@ -2243,7 +2243,7 @@ headerbar, headerbar:not(.titlebar) {
     border-radius: 2px;
     color: @headerbar_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @headerbar_bg_color;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
     -gtk-outline-radius: 2px; }
     headerbar button:hover, headerbar button:focus, headerbar:not(.titlebar) button:hover, headerbar:not(.titlebar) button:focus {
@@ -2283,7 +2283,7 @@ toolbar {
     background-image: none; }
     toolbar button.flat:hover {
       border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3);
-      background-color: @theme_base_color;
+      background-color: @toolbar_bg_color;
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
     toolbar button.flat:active, toolbar button.flat:checked {
       border-color: shade(@borders, 0.3);
@@ -2315,7 +2315,7 @@ toolbar {
     border-radius: 2px;
     color: @toolbar_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @toolbar_bg_color;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
     -gtk-outline-radius: 2px; }
     .primary-toolbar button:hover, .primary-toolbar button:focus, .primary-toolbar .raised button:hover, .primary-toolbar .raised button:focus {
@@ -2352,7 +2352,7 @@ toolbar {
     border-radius: 2px;
     color: @toolbar_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @toolbar_bg_color;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
     -gtk-outline-radius: 2px; }
     .inline-toolbar toolbar button:hover, .inline-toolbar toolbar button:focus {
@@ -3068,7 +3068,7 @@ panel-toplevel.background na-tray-applet {
     border-radius: 2px;
     color: @theme_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @theme_bg_color;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
     -gtk-outline-radius: 2px; }
     #XfceNotifyWindow.osd button:hover, #XfceNotifyWindow.osd button:focus {

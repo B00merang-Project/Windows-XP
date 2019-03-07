@@ -202,7 +202,7 @@ button {
   border-radius: 2px;
   color: @theme_fg_color;
   border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-  background-color: @theme_base_color;
+  background-color: @theme_bg_color;
   background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
   box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
   -gtk-outline-radius: 2px; }
@@ -230,7 +230,7 @@ button.flat {
   box-shadow: none; }
   button.flat:hover {
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3);
-    background-color: @theme_base_color;
+    background-color: @theme_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15); }
   button.flat:active, button.flat:checked {
@@ -663,7 +663,7 @@ entry {
   padding: 6px 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: shade(@theme_bg_color, 0.85);
+  border-color: @theme_fg_color;
   border-radius: 0px;
   color: @theme_text_color;
   caret-color: currentColor;
@@ -2248,7 +2248,7 @@ headerbar, headerbar:not(.titlebar) {
     border-radius: 2px;
     color: @headerbar_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @headerbar_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
     -gtk-outline-radius: 2px; }
@@ -2290,7 +2290,7 @@ toolbar {
     box-shadow: none; }
     toolbar button.flat:hover {
       border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.3);
-      background-color: @theme_base_color;
+      background-color: @toolbar_bg_color;
       background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
       box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15); }
     toolbar button.flat:active, toolbar button.flat:checked {
@@ -2323,7 +2323,7 @@ toolbar {
     border-radius: 2px;
     color: @toolbar_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @toolbar_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
     -gtk-outline-radius: 2px; }
@@ -2361,7 +2361,7 @@ toolbar {
     border-radius: 2px;
     color: @toolbar_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @toolbar_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
     -gtk-outline-radius: 2px; }
@@ -3078,7 +3078,7 @@ panel-toplevel.background na-tray-applet {
     border-radius: 2px;
     color: @theme_fg_color;
     border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
-    background-color: @theme_base_color;
+    background-color: @theme_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
     -gtk-outline-radius: 2px; }
