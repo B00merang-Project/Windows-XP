@@ -197,11 +197,9 @@ button:visited {
 
 button {
   padding: 6px 6px;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
   border-radius: 2px;
   color: @theme_fg_color;
-  border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
   background-color: @theme_bg_color;
   background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
   box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
@@ -236,7 +234,7 @@ button.flat {
   button.flat:active, button.flat:checked {
     border-color: shade(@borders, 0.3);
     background-color: shade(@theme_bg_color, 0.95);
-    background-image: linear-gradient(to bottom, #d4dfed 1px, #6f94c2 1px, #6f94c2 2px, transparent 2px), linear-gradient(to right, #6f94c2 1px, transparent 1px), linear-gradient(to left, #6f94c2 1px, transparent 1px), linear-gradient(to top, #f9fbfd 1px, #f3f6fa 1px, #f3f6fa 2px, #fdfdfe 2px, #e3eaf3 50%, #91add0 95%); }
+    background-image: linear-gradient(to bottom, shade(#f7f7f7, 0.6), shade(#f7f7f7, 0.7), shade(#f7f7f7, 0.75)); }
   button.flat:disabled {
     border-color: transparent;
     color: alpha(@theme_fg_color, 0.8);
@@ -668,8 +666,6 @@ entry {
   color: @theme_text_color;
   caret-color: currentColor;
   background-color: @theme_base_color; }
-  entry:active, entry:focus {
-    border-color: shade(@theme_bg_color, 0.75); }
   entry:selected, entry:selected:focus, entry selection, entry selection:focus {
     color: @theme_selected_fg_color;
     background-color: @theme_selected_bg_color; }
@@ -1100,9 +1096,9 @@ modelbutton.flat, menuitem.button.flat, .menuitem.button.flat {
     background-color: @theme_selected_bg_color; }
   modelbutton.flat > image, menuitem.button.flat > image, .menuitem.button.flat > image {
     padding-right: 4px; }
-  modelbutton.flat.flat arrow.left, menuitem.button.flat.flat arrow.left, .menuitem.button.flat.flat arrow.left {
+  modelbutton.flat arrow.left, menuitem.button.flat arrow.left, .menuitem.button.flat arrow.left {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  modelbutton.flat.flat arrow.right, menuitem.button.flat.flat arrow.right, .menuitem.button.flat.flat arrow.right {
+  modelbutton.flat arrow.right, menuitem.button.flat arrow.right, .menuitem.button.flat arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 notebook {
@@ -1144,10 +1140,6 @@ notebook {
       margin: 0;
       background-image: none;
       background-color: @theme_base_color; }
-    notebook tab button, notebook tab button:hover, notebook tab button:focus, notebook tab button:active, notebook tab button:checked, notebook tab button:active:hover, notebook tab button:checked:hover, notebook tab button:backdrop, notebook tab:checked button, notebook tab:checked button:hover, notebook tab:checked button:focus, notebook tab:checked button:active, notebook tab:checked button:checked, notebook tab:checked button:active:hover, notebook tab:checked button:checked:hover, notebook tab:checked button:backdrop {
-      border-color: transparent;
-      background-color: transparent;
-      color: @theme_fg_color; }
   notebook > header {
     padding: 1px;
     background-color: @theme_bg_color; }
@@ -1158,6 +1150,8 @@ notebook {
         border-bottom: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0; }
+        notebook > header.top > tabs > tab:hover {
+          box-shadow: inset 0 2px #ffc73c; }
         notebook > header.top > tabs > tab:checked {
           margin-top: -1px;
           margin-bottom: -2px;
@@ -1171,6 +1165,8 @@ notebook {
         border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0; }
+        notebook > header.bottom > tabs > tab:hover {
+          box-shadow: inset 0 -2px #ffc73c; }
         notebook > header.bottom > tabs > tab:checked {
           margin-bottom: -1px;
           margin-top: -2px;
@@ -1184,6 +1180,8 @@ notebook {
         border-left: none;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; }
+        notebook > header.right > tabs > tab:hover {
+          box-shadow: inset -2px 0 #ffc73c; }
         notebook > header.right > tabs > tab:checked {
           margin-right: -1px;
           margin-left: -2px;
@@ -1197,6 +1195,8 @@ notebook {
         border-right: none;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0; }
+        notebook > header.left > tabs > tab:hover {
+          box-shadow: inset 2px 0 #ffc73c; }
         notebook > header.left > tabs > tab:checked {
           margin-left: -1px;
           margin-right: -2px;
@@ -2243,11 +2243,9 @@ headerbar, headerbar:not(.titlebar) {
     border-radius: 0; }
   headerbar button, headerbar:not(.titlebar) button {
     padding: 6px 6px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     border-radius: 2px;
     color: @headerbar_fg_color;
-    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     background-color: @headerbar_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
@@ -2296,7 +2294,7 @@ toolbar {
     toolbar button.flat:active, toolbar button.flat:checked {
       border-color: shade(@borders, 0.3);
       background-color: shade(@theme_bg_color, 0.95);
-      background-image: linear-gradient(to bottom, #d4dfed 1px, #6f94c2 1px, #6f94c2 2px, transparent 2px), linear-gradient(to right, #6f94c2 1px, transparent 1px), linear-gradient(to left, #6f94c2 1px, transparent 1px), linear-gradient(to top, #f9fbfd 1px, #f3f6fa 1px, #f3f6fa 2px, #fdfdfe 2px, #e3eaf3 50%, #91add0 95%); }
+      background-image: linear-gradient(to bottom, shade(#f7f7f7, 0.6), shade(#f7f7f7, 0.7), shade(#f7f7f7, 0.75)); }
     toolbar button.flat:disabled {
       border-color: transparent;
       color: alpha(@toolbar_fg_color, 0.8);
@@ -2318,11 +2316,9 @@ toolbar {
     background-color: @theme_unfocused_bg_color; }
   .primary-toolbar button, .primary-toolbar .raised button {
     padding: 6px 6px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     border-radius: 2px;
     color: @toolbar_fg_color;
-    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     background-color: @toolbar_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
@@ -2356,11 +2352,9 @@ toolbar {
     border-radius: 0; }
   .inline-toolbar toolbar button {
     padding: 6px 6px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     border-radius: 2px;
     color: @toolbar_fg_color;
-    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     background-color: @toolbar_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
@@ -3085,11 +3079,9 @@ panel-toplevel.background na-tray-applet {
     font-weight: bold; }
   #XfceNotifyWindow.osd button {
     padding: 6px 6px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     border-radius: 2px;
     color: @theme_fg_color;
-    border-color: mix(shade(@borders, 0.3), @theme_selected_bg_color, 0.25);
     background-color: @theme_bg_color;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #ebebeb 50%, #dddddd 51%, #aeaeae 100%);
     box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15);
