@@ -1123,11 +1123,6 @@ notebook {
       margin: 0;
       background-image: none;
       background-color: @theme_base_color; }
-    notebook tab button, notebook tab button:backdrop, notebook tab:checked button, notebook tab:checked button:backdrop {
-      border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      color: @theme_fg_color; }
   notebook > header {
     padding: 1px;
     background-color: @theme_bg_color; }
