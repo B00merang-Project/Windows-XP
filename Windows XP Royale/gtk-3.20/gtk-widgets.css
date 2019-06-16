@@ -105,39 +105,28 @@ assistant .sidebar {
   color: @theme_fg_color;
   background-color: @theme_bg_color; }
 
-button:link > label, button:visited > label,
-*:link,
-button:link,
-button:visited {
+button:link > label, button:visited > label, *:link, button:link, button:visited {
   color: @link_color; }
-  button:link > label:visited, button:visited > label:visited,
-  *:link:visited,
-  button:visited {
+  button:link > label:visited, button:visited > label:visited, *:link:visited, button:visited {
     color: mix(@link_color, @theme_fg_color, 0.2); }
-    *:selected button:link > label:visited, *:selected button:visited > label:visited, *:selected
-    *:link:visited, *:selected
-    button:visited:link, *:selected
-    button:visited {
+    *:selected button:link > label:visited, *:selected button:visited > label:visited,
+    *:selected *:link:visited,
+    *:selected button:visited:link,
+    *:selected button:visited {
       color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.4); }
-  button:link > label:hover, button:visited > label:hover,
-  *:link:hover,
-  button:hover:link,
-  button:hover:visited {
+  button:link > label:hover, button:visited > label:hover, *:link:hover, button:hover:link, button:hover:visited {
     color: shade(@link_color, 1.1); }
-    *:selected button:link > label:hover, *:selected button:visited > label:hover, *:selected
-    *:link:hover, *:selected
-    button:hover:link, *:selected
-    button:hover:visited {
+    *:selected button:link > label:hover, *:selected button:visited > label:hover,
+    *:selected *:link:hover,
+    *:selected button:hover:link,
+    *:selected button:hover:visited {
       color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.9); }
-  button:link > label:active, button:visited > label:active,
-  *:link:active,
-  button:active:link,
-  button:active:visited {
+  button:link > label:active, button:visited > label:active, *:link:active, button:active:link, button:active:visited {
     color: @link_color; }
-    *:selected button:link > label:active, *:selected button:visited > label:active, *:selected
-    *:link:active, *:selected
-    button:active:link, *:selected
-    button:active:visited {
+    *:selected button:link > label:active, *:selected button:visited > label:active,
+    *:selected *:link:active,
+    *:selected button:active:link,
+    *:selected button:active:visited {
       color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.8); }
   button:link > label:backdrop:backdrop:hover, button:visited > label:backdrop:backdrop:hover, button:link > label:backdrop:backdrop:hover:selected, button:visited > label:backdrop:backdrop:hover:selected, button:link > label:backdrop, button:visited > label:backdrop,
   *:link:backdrop:backdrop:hover,
@@ -153,10 +142,10 @@ button:visited {
   button:link > label:selected, button:visited > label:selected, *:selected button:link > label, *:selected button:visited > label,
   *:link:selected,
   button:selected:link,
-  button:selected:visited, *:selected
-  *:link, *:selected
-  button:link, *:selected
-  button:visited {
+  button:selected:visited,
+  *:selected *:link,
+  *:selected button:link,
+  *:selected button:visited {
     color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.8); }
 
 button:link, button:visited {
@@ -2741,18 +2730,15 @@ panel-toplevel.background na-tray-applet {
       background-color: @theme_selected_bg_color; }
   .mate-panel-menu-bar #tasklist-button {
     color: @taskbar_fg_color;
-    background-color: @taskbar_bg_color;
-    border-radius: 0;
-    border: none; }
+    background-image: url("../cinnamon/normal.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
     .mate-panel-menu-bar #tasklist-button:hover {
-      border: none;
-      background-color: shade(@taskbar_bg_color, 1.1); }
+      background-image: url("../cinnamon/hover.png"); }
     .mate-panel-menu-bar #tasklist-button:active, .mate-panel-menu-bar #tasklist-button:checked {
-      color: @theme_selected_fg_color;
-      border: none;
-      box-shadow: none;
-      background-image: none;
-      background-color: @theme_selected_bg_color; }
+      background-image: url("../cinnamon/active.png"); }
+      .mate-panel-menu-bar #tasklist-button:active:hover, .mate-panel-menu-bar #tasklist-button:checked:hover {
+        background-image: url("../cinnamon/active-hover.png"); }
   .mate-panel-menu-bar PanelSeparator {
     color: shade(@taskbar_bg_color, 0.7);
     padding-top: 4px;
@@ -2786,21 +2772,36 @@ panel-toplevel.background na-tray-applet {
     background-color: alpha(@selected_bg_color, 0.2); }
 
 .xfce4-panel.panel {
-  background-color: @taskbar_bg_color; }
+  background-color: @taskbar_bg_color;
+  background-image: url("../cinnamon/panel.png");
+  background-size: 1px 100%;
+  border: none; }
   .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
     color: @taskbar_fg_color;
-    background-color: @taskbar_bg_color;
-    border-radius: 0;
-    border: none; }
+    background-color: transparent;
+    background-image: url("../cinnamon/panel.png");
+    background-size: 1px 100%;
+    box-shadow: none;
+    border: none;
+    margin: 0px;
+    border-radius: 0px; }
     .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
-      border: none;
-      background-color: shade(@taskbar_bg_color, 1.1); }
+      background-color: transparent;
+      background-image: url("../cinnamon/hover.png"); }
     .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:active, .xfce4-panel.panel button.sidebar-button:checked {
-      color: @theme_selected_fg_color;
-      border: none;
-      box-shadow: none;
-      background-image: none;
-      background-color: @theme_selected_bg_color; }
+      background-color: transparent;
+      background-image: url("../cinnamon/active.png"); }
+  .xfce4-panel.panel .tasklist button {
+    color: @taskbar_fg_color;
+    background-image: url("../cinnamon/normal.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .xfce4-panel.panel .tasklist button:hover {
+      background-image: url("../cinnamon/hover.png"); }
+    .xfce4-panel.panel .tasklist button:active, .xfce4-panel.panel .tasklist button:checked {
+      background-image: url("../cinnamon/active.png"); }
+      .xfce4-panel.panel .tasklist button:active:hover, .xfce4-panel.panel .tasklist button:checked:hover {
+        background-image: url("../cinnamon/active-hover.png"); }
 
 #XfceNotifyWindow.osd {
   background-color: @theme_bg_color;
