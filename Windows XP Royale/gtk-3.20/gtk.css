@@ -2618,36 +2618,29 @@ decoration {
     background-color: alpha(white, 0.95);
     box-shadow: none; }
 
-messagedialog {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px; }
-  messagedialog .background.csd {
-    border-radius: 6px;
-    color: #000000;
-    background-color: #EBE9ED; }
-  messagedialog decoration {
-    border-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    box-shadow: 0 1px 2px alpha(black, 0.2); }
-  messagedialog .titlebar.horizontal {
-    background-color: #EBE9ED; }
-  messagedialog.csd .dialog-action-area button {
-    padding: 10px;
-    border-radius: 0;
-    border-bottom-style: none; }
-    messagedialog.csd .dialog-action-area button:last-child {
-      border-right-width: 0;
-      border-radius: 0px;
-      border-bottom-right-radius: 6px; }
-    messagedialog.csd .dialog-action-area button:first-child {
-      border-left-width: 0;
-      border-radius: 0px;
-      border-bottom-left-radius: 6px; }
-    messagedialog.csd .dialog-action-area button:only-child {
-      border-radius: 0px;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px; }
+messagedialog .background.csd {
+  border-radius: 6px 6px 0 0;
+  color: #000000;
+  background-color: #EBE9ED; }
+messagedialog decoration {
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 1px 2px alpha(#000000, 0.2); }
+messagedialog .titlebar.horizontal {
+  background-color: #EBE9ED; }
+messagedialog.csd .dialog-action-area button {
+  margin: 0;
+  padding: 10px;
+  border-radius: 0;
+  border-bottom-style: none;
+  -gtk-outline-radius: 0; }
+  messagedialog.csd .dialog-action-area button:last-child {
+    border-right-width: 0;
+    border-radius: 0px; }
+  messagedialog.csd .dialog-action-area button:first-child {
+    border-left-width: 0;
+    border-radius: 0px; }
+  messagedialog.csd .dialog-action-area button:only-child {
+    border-radius: 0px; }
 
 .titlebar {
   border-bottom: none;
