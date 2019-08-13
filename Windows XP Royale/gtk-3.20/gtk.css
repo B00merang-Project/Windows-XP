@@ -649,8 +649,6 @@ entry {
   entry:disabled {
     color: mix(#000000, #EBE9ED, 0.5);
     border-color: mix(mix(#000000, #EBE9ED, 0.95), shade(#EBE9ED, 0.75), 0.25); }
-  entry.read-only {
-    background-color: mix(#EBE9ED, mix(#000000, #EBE9ED, 0.95), 0.1); }
   entry > image.left {
     padding-right: 5px; }
   entry > image.right {
@@ -1057,7 +1055,7 @@ menuitem accelerator {
   menuitem accelerator:hover {
     color: alpha(#FFFFFF, 0.8); }
   menuitem accelerator:disabled {
-    color: mix(#000000, #EBE9ED, 0.5); }
+    color: mix(#000000, #FFFFFF, 0.5); }
 
 popover, popover.background {
   padding: 2px;
@@ -1715,30 +1713,19 @@ separator {
   combobox separator {
     border: none; }
 
-spinbutton:not(.vertical) selection, spinbutton:not(.vertical) selection:focus {
-  color: #FFFFFF;
-  background-color: #335EA8; }
-spinbutton button:disabled, spinbutton entry:disabled {
-  color: mix(#000000, #EBE9ED, 0.5); }
-  spinbutton button:disabled:backdrop, spinbutton entry:disabled:backdrop {
-    color: mix(#000000, #EBE9ED, 0.75); }
-spinbutton.horizontal entry {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 7px 15px; }
-  spinbutton.horizontal entry:focus {
-    box-shadow: none; }
-spinbutton.horizontal button.down {
-  border-right-width: 0;
-  border-left-width: 0;
-  border-radius: 0; }
-spinbutton.horizontal button.up {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
-spinbutton.vertical entry {
-  border-radius: 0; }
-  spinbutton.vertical entry:focus {
-    box-shadow: none; }
+spinbutton.horizontal {
+  border: 1px solid #000000; }
+  spinbutton.horizontal:backdrop {
+    border-color: #000000; }
+  spinbutton.horizontal entry {
+    border: none;
+    padding: 7px 15px; }
+  spinbutton.horizontal button {
+    border-width: 0;
+    border-radius: 0;
+    border-left-width: 1px; }
+    spinbutton.horizontal button:focus {
+      box-shadow: none; }
 spinbutton.vertical button.up {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -1885,7 +1872,7 @@ headerbar, headerbar:not(.titlebar) {
     background-color: #EBE9ED; }
   .titlebar headerbar, .titlebar headerbar:backdrop, .titlebar headerbar:not(.titlebar), .titlebar headerbar:not(.titlebar):backdrop {
     background-color: transparent; }
-  .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop, .tiled headerbar:not(.titlebar), .tiled headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar), .maximized headerbar:not(.titlebar):backdrop {
+  .tiled headerbar:backdrop, .tiled headerbar, .tiled-top headerbar:backdrop, .tiled-top headerbar, .tiled-right headerbar:backdrop, .tiled-right headerbar, .tiled-bottom headerbar:backdrop, .tiled-bottom headerbar, .tiled-left headerbar:backdrop, .tiled-left headerbar, .maximized headerbar:backdrop, .maximized headerbar, .fullscreen headerbar:backdrop, .fullscreen headerbar, .tiled headerbar:not(.titlebar):backdrop, .tiled headerbar:not(.titlebar), .tiled-top headerbar:not(.titlebar):backdrop, .tiled-top headerbar:not(.titlebar), .tiled-right headerbar:not(.titlebar):backdrop, .tiled-right headerbar:not(.titlebar), .tiled-bottom headerbar:not(.titlebar):backdrop, .tiled-bottom headerbar:not(.titlebar), .tiled-left headerbar:not(.titlebar):backdrop, .tiled-left headerbar:not(.titlebar), .maximized headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar), .fullscreen headerbar:not(.titlebar):backdrop, .fullscreen headerbar:not(.titlebar) {
     border-radius: 0; }
   headerbar button, headerbar:not(.titlebar) button {
     padding: 6px 6px;
@@ -1989,18 +1976,17 @@ toolbar {
       border-color: shade(shade(#EBE9ED, 0.9), 0.75);
       background-color: mix(#000000, #EBE9ED, 0.95); }
 
-.inline-toolbar toolbar {
-  -GtkToolbar-button-relief: normal;
+.inline-toolbar {
   padding: 1px;
   border-width: 1px;
   border-style: solid;
   border-color: mix(shade(#EBE9ED, 0.9), #EBE9ED, 0.5);
   border-radius: 0;
   background-color: #EBE9ED; }
-  .inline-toolbar toolbar:last-child {
-    border-width: 0 1px 1px 1px;
-    border-radius: 0; }
-  .inline-toolbar toolbar button {
+  .inline-toolbar:backdrop {
+    border-color: shade(#EBE9ED, 0.9);
+    background-color: #EBE9ED; }
+  .inline-toolbar toolbutton > button {
     padding: 6px 6px;
     border-style: solid;
     border-width: 1px;
@@ -2011,155 +1997,183 @@ toolbar {
     background-image: linear-gradient(to top, #90acd0, #90acd0 1px, transparent 1px), linear-gradient(to right, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to left, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to bottom, #d4dfed 1px, #f9fbfd 1px, #f9fbfd 2px, #f3f6fa 2px, #f3f6fa 3px, transparent 3px), linear-gradient(to top, #91add0 1px, #d0dceb 40%, #e3eaf3 45%, #e9eff6 50%, #f1f5f9 60%, #fdfdfe);
     box-shadow: 0px 1px rgba(255, 255, 255, 0.6), 1px 0px rgba(255, 255, 255, 0.2), 0px -1px rgba(0, 0, 0, 0.04), -1px 0px rgba(0, 0, 0, 0.03);
     -gtk-outline-radius: 2px; }
-    .inline-toolbar toolbar button:hover, .inline-toolbar toolbar button:focus {
+    .inline-toolbar toolbutton > button:hover, .inline-toolbar toolbutton > button:focus {
       box-shadow: inset 0 0 1px 2px #ffc73c;
       border-color: mix(shade(shade(#EBE9ED, 0.9), 0.3), #335EA8, 0.3); }
-    .inline-toolbar toolbar button:active, .inline-toolbar toolbar button:checked {
+    .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
       border-color: shade(shade(#EBE9ED, 0.9), 0.3);
       background-color: shade(#EBE9ED, 0.95);
       background-image: linear-gradient(to bottom, #d4dfed 1px, #6f94c2 1px, #6f94c2 2px, transparent 2px), linear-gradient(to right, #6f94c2 1px, transparent 1px), linear-gradient(to left, #6f94c2 1px, transparent 1px), linear-gradient(to top, #f9fbfd 1px, #f3f6fa 1px, #f3f6fa 2px, #fdfdfe 2px, #e3eaf3 50%, #91add0 95%); }
-      .inline-toolbar toolbar button:active:disabled, .inline-toolbar toolbar button:checked:disabled {
+      .inline-toolbar toolbutton > button:active:disabled, .inline-toolbar toolbutton > button:checked:disabled {
         color: mix(#000000, mix(#000000, #EBE9ED, 0.75), 0.1);
         border-color: mix(#000000, mix(#000000, #EBE9ED, 0.95), 0.5);
         background-color: shade(mix(#000000, #EBE9ED, 0.95), 0.9); }
-    .inline-toolbar toolbar button:disabled {
+    .inline-toolbar toolbutton > button:disabled {
       color: mix(#000000, #EBE9ED, 0.5);
       border-color: shade(shade(#EBE9ED, 0.9), 0.75);
       background-color: mix(#000000, #EBE9ED, 0.95); }
 
-.linked button, .linked .raised button, .inline-toolbar .linked button, .inline-toolbar .linked .raised button, .primary-toolbar .linked button, .primary-toolbar .linked .raised button, .osd .linked button, .osd .linked .raised button, .inline-toolbar .osd .linked button, .inline-toolbar .osd .linked .raised button, .primary-toolbar .osd .linked button, .primary-toolbar .osd .linked .raised button {
+.linked button, .linked .raised button, .primary-toolbar .linked button, .primary-toolbar .linked .raised button {
   border-radius: 0;
   border-left-width: 0; }
-  .linked button:first-child, .linked .raised button:first-child, .inline-toolbar .linked button:first-child, .inline-toolbar .linked .raised button:first-child, .primary-toolbar .linked button:first-child, .primary-toolbar .linked .raised button:first-child, .osd .linked button:first-child, .osd .linked .raised button:first-child, .inline-toolbar .osd .linked button:first-child, .inline-toolbar .osd .linked .raised button:first-child, .primary-toolbar .osd .linked button:first-child, .primary-toolbar .osd .linked .raised button:first-child {
+  .linked button:first-child, .linked .raised button:first-child, .primary-toolbar .linked button:first-child, .primary-toolbar .linked .raised button:first-child {
     border-left-width: 1px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px; }
-  .linked button:last-child, .linked .raised button:last-child, .inline-toolbar .linked button:last-child, .inline-toolbar .linked .raised button:last-child, .primary-toolbar .linked button:last-child, .primary-toolbar .linked .raised button:last-child, .osd .linked button:last-child, .osd .linked .raised button:last-child, .inline-toolbar .osd .linked button:last-child, .inline-toolbar .osd .linked .raised button:last-child, .primary-toolbar .osd .linked button:last-child, .primary-toolbar .osd .linked .raised button:last-child {
+  .linked button:last-child, .linked .raised button:last-child, .primary-toolbar .linked button:last-child, .primary-toolbar .linked .raised button:last-child {
     border-left-width: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px; }
-  .linked button:only-child, .linked .raised button:only-child, .inline-toolbar .linked button:only-child, .inline-toolbar .linked .raised button:only-child, .primary-toolbar .linked button:only-child, .primary-toolbar .linked .raised button:only-child, .osd .linked button:only-child, .osd .linked .raised button:only-child, .inline-toolbar .osd .linked button:only-child, .inline-toolbar .osd .linked .raised button:only-child, .primary-toolbar .osd .linked button:only-child, .primary-toolbar .osd .linked .raised button:only-child {
+  .linked button:only-child, .linked .raised button:only-child, .primary-toolbar .linked button:only-child, .primary-toolbar .linked .raised button:only-child {
     border-width: 1px;
     border-radius: 2px; }
-  .linked button:checked, .linked button:last-child:checked, .linked .raised button:checked, .linked .raised button:last-child:checked, .inline-toolbar .linked button:checked, .inline-toolbar .linked button:last-child:checked, .inline-toolbar .linked .raised button:checked, .inline-toolbar .linked .raised button:last-child:checked, .primary-toolbar .linked button:checked, .primary-toolbar .linked button:last-child:checked, .primary-toolbar .linked .raised button:checked, .primary-toolbar .linked .raised button:last-child:checked, .osd .linked button:checked, .osd .linked button:last-child:checked, .osd .linked .raised button:checked, .osd .linked .raised button:last-child:checked, .inline-toolbar .osd .linked button:checked, .inline-toolbar .osd .linked button:last-child:checked, .inline-toolbar .osd .linked .raised button:checked, .inline-toolbar .osd .linked .raised button:last-child:checked, .primary-toolbar .osd .linked button:checked, .primary-toolbar .osd .linked button:last-child:checked, .primary-toolbar .osd .linked .raised button:checked, .primary-toolbar .osd .linked .raised button:last-child:checked {
-    box-shadow: -1px 0 shade(shade(#EBE9ED, 0.9), 0.3); }
-  .linked button:first-child:checked, .linked .raised button:first-child:checked, .inline-toolbar .linked button:first-child:checked, .inline-toolbar .linked .raised button:first-child:checked, .primary-toolbar .linked button:first-child:checked, .primary-toolbar .linked .raised button:first-child:checked, .osd .linked button:first-child:checked, .osd .linked .raised button:first-child:checked, .inline-toolbar .osd .linked button:first-child:checked, .inline-toolbar .osd .linked .raised button:first-child:checked, .primary-toolbar .osd .linked button:first-child:checked, .primary-toolbar .osd .linked .raised button:first-child:checked {
-    box-shadow: none; }
-.linked entry, .inline-toolbar .linked entry, .primary-toolbar .linked entry, .osd .linked entry, .inline-toolbar .osd .linked entry, .primary-toolbar .osd .linked entry {
+.linked entry, .primary-toolbar .linked entry {
   border-radius: 0;
   border-left-width: 0; }
-  .linked entry:first-child, .inline-toolbar .linked entry:first-child, .primary-toolbar .linked entry:first-child, .osd .linked entry:first-child, .inline-toolbar .osd .linked entry:first-child, .primary-toolbar .osd .linked entry:first-child {
+  .linked entry:first-child, .primary-toolbar .linked entry:first-child {
     border-left-width: 1px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px; }
-  .linked entry:last-child, .inline-toolbar .linked entry:last-child, .primary-toolbar .linked entry:last-child, .osd .linked entry:last-child, .inline-toolbar .osd .linked entry:last-child, .primary-toolbar .osd .linked entry:last-child {
+  .linked entry:last-child, .primary-toolbar .linked entry:last-child {
     border-left-width: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }
-  .linked entry:only-child, .inline-toolbar .linked entry:only-child, .primary-toolbar .linked entry:only-child, .osd .linked entry:only-child, .inline-toolbar .osd .linked entry:only-child, .primary-toolbar .osd .linked entry:only-child {
+  .linked entry:only-child, .primary-toolbar .linked entry:only-child {
     border-width: 1px;
     border-radius: 0px; }
-  .linked entry:focus, .linked entry:last-child:focus, .inline-toolbar .linked entry:focus, .inline-toolbar .linked entry:last-child:focus, .primary-toolbar .linked entry:focus, .primary-toolbar .linked entry:last-child:focus, .osd .linked entry:focus, .osd .linked entry:last-child:focus, .inline-toolbar .osd .linked entry:focus, .inline-toolbar .osd .linked entry:last-child:focus, .primary-toolbar .osd .linked entry:focus, .primary-toolbar .osd .linked entry:last-child:focus {
-    box-shadow: -1px 0 shade(#335EA8, 1.3); }
-  .linked entry:first-child:focus, .inline-toolbar .linked entry:first-child:focus, .primary-toolbar .linked entry:first-child:focus, .osd .linked entry:first-child:focus, .inline-toolbar .osd .linked entry:first-child:focus, .primary-toolbar .osd .linked entry:first-child:focus {
-    box-shadow: none; }
-.linked combobox box.linked button, .inline-toolbar .linked combobox box.linked button, .primary-toolbar .linked combobox box.linked button, .osd .linked combobox box.linked button, .inline-toolbar .osd .linked combobox box.linked button, .primary-toolbar .osd .linked combobox box.linked button {
+.linked combobox box.linked button, .primary-toolbar .linked combobox box.linked button {
   border-radius: 0;
   border-left-width: 0; }
-.linked combobox:first-child box.linked button, .inline-toolbar .linked combobox:first-child box.linked button, .primary-toolbar .linked combobox:first-child box.linked button, .osd .linked combobox:first-child box.linked button, .inline-toolbar .osd .linked combobox:first-child box.linked button, .primary-toolbar .osd .linked combobox:first-child box.linked button {
+.linked combobox:first-child box.linked button, .primary-toolbar .linked combobox:first-child box.linked button {
   border-left-width: 1px;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px; }
-.linked combobox:last-child box.linked button, .inline-toolbar .linked combobox:last-child box.linked button, .primary-toolbar .linked combobox:last-child box.linked button, .osd .linked combobox:last-child box.linked button, .inline-toolbar .osd .linked combobox:last-child box.linked button, .primary-toolbar .osd .linked combobox:last-child box.linked button {
+.linked combobox:last-child box.linked button, .primary-toolbar .linked combobox:last-child box.linked button {
   border-left-width: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px; }
-.linked combobox:only-child box.linked button, .inline-toolbar .linked combobox:only-child box.linked button, .primary-toolbar .linked combobox:only-child box.linked button, .osd .linked combobox:only-child box.linked button, .inline-toolbar .osd .linked combobox:only-child box.linked button, .primary-toolbar .osd .linked combobox:only-child box.linked button {
+.linked combobox:only-child box.linked button, .primary-toolbar .linked combobox:only-child box.linked button {
   border-width: 1px;
   border-radius: 2px; }
-
-.vertical.linked button, .osd .vertical.linked button {
+.linked spinbutton, .primary-toolbar .linked spinbutton {
+  border-radius: 0;
+  border-left-width: 0; }
+  .linked spinbutton:first-child, .primary-toolbar .linked spinbutton:first-child {
+    border-left-width: 1px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  .linked spinbutton:last-child, .primary-toolbar .linked spinbutton:last-child {
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .linked spinbutton:only-child, .primary-toolbar .linked spinbutton:only-child {
+    border-width: 1px;
+    border-radius: 2px; }
+.linked.vertical button, .primary-toolbar .linked.vertical button {
   border-left-width: 1px;
   border-top-width: 0;
   border-radius: 0; }
-  .vertical.linked button:first-child, .osd .vertical.linked button:first-child {
+  .linked.vertical button:first-child, .primary-toolbar .linked.vertical button:first-child {
     border-top-width: 1px;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
-  .vertical.linked button:last-child, .osd .vertical.linked button:last-child {
+  .linked.vertical button:last-child, .primary-toolbar .linked.vertical button:last-child {
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px; }
-  .vertical.linked button:only-child, .osd .vertical.linked button:only-child {
-    border-top-width: 1px; }
-  .vertical.linked button:checked, .vertical.linked button:last-child:checked, .osd .vertical.linked button:checked, .osd .vertical.linked button:last-child:checked {
-    box-shadow: 0 -1px shade(shade(#EBE9ED, 0.9), 0.3); }
-  .vertical.linked button:first-child:focus, .osd .vertical.linked button:first-child:focus {
-    box-shadow: none; }
-.vertical.linked entry, .osd .vertical.linked entry {
+  .linked.vertical button:only-child, .primary-toolbar .linked.vertical button:only-child {
+    border-width: 1px;
+    border-radius: 2px; }
+.linked.vertical entry, .primary-toolbar .linked.vertical entry {
   border-left-width: 1px;
   border-top-width: 0;
   border-radius: 0; }
-  .vertical.linked entry:first-child, .osd .vertical.linked entry:first-child {
+  .linked.vertical entry:first-child, .primary-toolbar .linked.vertical entry:first-child {
     border-top-width: 1px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
-  .vertical.linked entry:last-child, .osd .vertical.linked entry:last-child {
+  .linked.vertical entry:last-child, .primary-toolbar .linked.vertical entry:last-child {
     border-top-width: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px; }
-  .vertical.linked entry:only-child, .osd .vertical.linked entry:only-child {
-    border-top-width: 1px; }
-  .vertical.linked entry:focus, .vertical.linked entry:last-child:focus, .osd .vertical.linked entry:focus, .osd .vertical.linked entry:last-child:focus {
-    box-shadow: 0 -1px shade(#335EA8, 1.3); }
-  .vertical.linked entry:first-child:focus, .osd .vertical.linked entry:first-child:focus {
-    box-shadow: none; }
-.vertical.linked combobox box.linked button, .osd .vertical.linked combobox box.linked button {
+  .linked.vertical entry:only-child, .primary-toolbar .linked.vertical entry:only-child {
+    border-width: 1px;
+    border-radius: 0px; }
+.linked.vertical combobox box.linked button, .primary-toolbar .linked.vertical combobox box.linked button {
   border-left-width: 1px;
   border-top-width: 0;
   border-radius: 0; }
-.vertical.linked combobox:first-child box.linked button, .osd .vertical.linked combobox:first-child box.linked button {
+.linked.vertical combobox:first-child box.linked button, .primary-toolbar .linked.vertical combobox:first-child box.linked button {
   border-top-width: 1px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
-.vertical.linked combobox:last-child box.linked button, .osd .vertical.linked combobox:last-child box.linked button {
+.linked.vertical combobox:last-child box.linked button, .primary-toolbar .linked.vertical combobox:last-child box.linked button {
   border-top-width: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px; }
-.vertical.linked combobox:only-child box.linked button, .osd .vertical.linked combobox:only-child box.linked button {
-  border-top-width: 1px; }
-.vertical.linked spinbutton button:first-child, .osd .vertical.linked spinbutton button:first-child {
+.linked.vertical combobox:only-child box.linked button, .primary-toolbar .linked.vertical combobox:only-child box.linked button {
   border-width: 1px;
-  border-top-width: 0;
-  border-left-width: 1px; }
-.vertical.linked spinbutton button:last-child, .osd .vertical.linked spinbutton button:last-child {
-  border-width: 0;
+  border-radius: 2px; }
+.linked.vertical spinbutton, .primary-toolbar .linked.vertical spinbutton {
   border-left-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; }
+  border-top-width: 0;
+  border-radius: 0; }
+  .linked.vertical spinbutton:first-child, .primary-toolbar .linked.vertical spinbutton:first-child {
+    border-top-width: 1px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .linked.vertical spinbutton:last-child, .primary-toolbar .linked.vertical spinbutton:last-child {
+    border-top-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .linked.vertical spinbutton:only-child, .primary-toolbar .linked.vertical spinbutton:only-child {
+    border-width: 1px;
+    border-radius: 2px; }
+  .linked.vertical spinbutton button:first-child, .linked.vertical spinbutton button:last-child, .primary-toolbar .linked.vertical spinbutton button:first-child, .primary-toolbar .linked.vertical spinbutton button:last-child {
+    border-radius: 0; }
 
-.stack-switcher button {
+toolbar.inline-toolbar toolbutton > button.flat, toolbar.inline-toolbar toolbutton:backdrop > button.flat {
+  border-radius: 0;
+  border-left-width: 0; }
+toolbar.inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat {
+  border-left-width: 1px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px; }
+toolbar.inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat {
+  border-left-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px; }
+toolbar.inline-toolbar toolbutton:only-child > button.flat, toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat {
+  border-width: 1px;
+  border-radius: 2px; }
+
+stackswitcher button.text-button {
   min-width: 80px; }
 
 tooltip {
@@ -2601,7 +2615,7 @@ decoration {
   margin: 10px; }
   decoration:backdrop {
     box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.25); }
-  .fullscreen decoration, .tiled decoration {
+  .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; }
   .popup decoration {
     box-shadow: 2px 2px 2px 1px alpha(black, 0.3);
@@ -2619,30 +2633,6 @@ decoration {
     border-radius: 0px;
     background-color: alpha(white, 0.95);
     box-shadow: none; }
-
-messagedialog .background.csd {
-  border-radius: 6px 6px 0 0;
-  color: #000000;
-  background-color: #EBE9ED; }
-messagedialog decoration {
-  border-radius: 6px 6px 0 0;
-  box-shadow: 0 1px 2px alpha(#000000, 0.2); }
-messagedialog .titlebar.horizontal {
-  background-color: #EBE9ED; }
-messagedialog.csd .dialog-action-area button {
-  margin: 0;
-  padding: 10px;
-  border-radius: 0;
-  border-bottom-style: none;
-  -gtk-outline-radius: 0; }
-  messagedialog.csd .dialog-action-area button:last-child {
-    border-right-width: 0;
-    border-radius: 0px; }
-  messagedialog.csd .dialog-action-area button:first-child {
-    border-left-width: 0;
-    border-radius: 0px; }
-  messagedialog.csd .dialog-action-area button:only-child {
-    border-radius: 0px; }
 
 .titlebar {
   border-bottom: none;
@@ -2732,6 +2722,30 @@ messagedialog.csd .dialog-action-area button {
     color: #000000;
     background-color: #EBE9ED;
     background-image: url("assets/titlebar-unfocused-middle.png"); }
+
+messagedialog .background.csd {
+  border-radius: 6px 6px 0 0;
+  color: #000000;
+  background-color: #EBE9ED; }
+messagedialog decoration {
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 1px 2px alpha(#000000, 0.2); }
+messagedialog .titlebar.horizontal {
+  background-color: #EBE9ED; }
+messagedialog.csd .dialog-action-area button {
+  margin: 0;
+  padding: 10px;
+  border-radius: 0;
+  border-bottom-style: none;
+  -gtk-outline-radius: 0; }
+  messagedialog.csd .dialog-action-area button:last-child {
+    border-right-width: 0;
+    border-radius: 0px; }
+  messagedialog.csd .dialog-action-area button:first-child {
+    border-left-width: 0;
+    border-radius: 0px; }
+  messagedialog.csd .dialog-action-area button:only-child {
+    border-radius: 0px; }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: #FFFFFF;
