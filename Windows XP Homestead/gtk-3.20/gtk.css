@@ -971,13 +971,13 @@ filechooserbutton:drop(active) {
 menu, .menu {
   margin: 4px;
   padding: 0;
-  border-radius: 2px;
+  border-radius: 0px;
   border-style: none;
   color: #000000;
   background-color: #FFFFFF; }
   .csd menu, .csd .menu {
     padding: 4px 0px;
-    border-radius: 2px;
+    border-radius: 0px;
     border: none; }
   menu > arrow, .menu > arrow {
     padding: 4px;
@@ -2602,15 +2602,17 @@ headerbar.selection-mode, toolbar.selection-mode {
 decoration {
   border-radius: 6px 6px 0 0;
   border-width: 0px;
-  box-shadow: 0 3px 9px 1px alpha(black, 0.3), 0 0 0 1px alpha(#000000, 0.25);
+  box-shadow: 0 3px 9px 1px alpha(#000000, 0.3), 0 0 0 1px alpha(#000000, 0.25);
   margin: 10px; }
   decoration:backdrop {
     box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.25); }
   .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; }
   .popup decoration {
-    box-shadow: 2px 2px 2px 1px alpha(shade(#ECE9D8, 0.9), 0.3), 0 0 0 1px shade(#ECE9D8, 0.9);
-    border-radius: 0; }
+    box-shadow: none; }
+  .csd.popup decoration {
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px 1px alpha(#000000, 0.3), 0 0 0 1px #000000; }
   .ssd decoration {
     border-radius: 6px 6px 0 0;
     box-shadow: 0 0 0 1px alpha(#000000, 0.1); }

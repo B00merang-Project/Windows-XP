@@ -974,13 +974,13 @@ filechooserbutton:drop(active) {
 menu, .menu {
   margin: 4px;
   padding: 0;
-  border-radius: 2px;
+  border-radius: 0px;
   border-style: none;
   color: #000000;
   background-color: #FFFFFF; }
   .csd menu, .csd .menu {
     padding: 4px 4px;
-    border-radius: 2px;
+    border-radius: 0px;
     border: 3px solid transparent;
     border-image: url("assets/menu-bg.png") 3 3 3 3; }
   menu > arrow, .menu > arrow {
@@ -2618,8 +2618,10 @@ decoration {
   .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; }
   .popup decoration {
-    box-shadow: 2px 2px 2px 1px alpha(#000000, 0.3);
-    border-radius: 0; }
+    box-shadow: none; }
+  .csd.popup decoration {
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px 1px alpha(#000000, 0.3); }
   .ssd decoration {
     border-radius: 6px 6px 0 0;
     box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
