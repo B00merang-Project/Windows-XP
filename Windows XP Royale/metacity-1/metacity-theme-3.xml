@@ -38,7 +38,7 @@ Frame Dimensions and stuff
   <distance name="bottom_height" value="3"/>
 </frame_geometry>
 
-<frame_geometry name="nobuttons" hide_buttons="true" parent="dialog">
+<frame_geometry name="nobuttons" hide_buttons="false" parent="dialog">
 </frame_geometry>
 
 <frame_geometry name="maximized" parent="normal" rounded_top_left="false" rounded_top_right="false">
