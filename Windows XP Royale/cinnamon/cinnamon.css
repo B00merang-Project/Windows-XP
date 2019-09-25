@@ -269,7 +269,7 @@ StScrollBar StButton#vhandle:hover {
 #panelRight {
     border-image: url('panel-right.png') 7 0 0 0;
     color: #000;
-    text-shadow: white 0px 1px 1px;
+    text-shadow: #444 0px 1px 1px;
 }
 
 #panelLeft .applet-box:first-child {
@@ -1962,6 +1962,12 @@ border-radius: 1px;
 
 .applet-label:not(:first-child) {
     font-weight: normal;
+}
+
+#panelRight .applet-label {
+    color: #6666cc;
+    font-weight: bold;
+    text-shadow: #000000;
 }
 
 .applet-label:hover,
