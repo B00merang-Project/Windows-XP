@@ -740,7 +740,7 @@ border-radius: 0px;
 }
 
 .calendar-month-label {
-    color: #cccccc;
+    color: #888;
     font-size: 7.5pt;
     padding-bottom: 8px;
     padding-top: 8px;
@@ -758,9 +758,9 @@ border-radius: 0px;
 .calendar-change-month-back:rtl {
     background-image: url("calendar-arrow-right.svg");
 }
-
+/*month/year left arrow*/
 .calendar-change-month-back:hover {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(96,96,96,0.5);
 }
 .calendar-change-month-back:active {
     background-color: rgba(255,255,255,0.5);
@@ -777,19 +777,19 @@ border-radius: 0px;
 .calendar-change-month-forward:rtl {
     background-image: url("calendar-arrow-left.svg");
 }
-
+/*month/year right arrow*/
 .calendar-change-month-forward:hover {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(96,96,96,0.5);
 }
 
 .calendar-change-month-forward:active {
     background-color: rgba(255,255,255,0.5);
 }
-
+/*day/date header*/
 .datemenu-date-label {
     padding: .4em 1.75em;
     font-size: 10.5pt;
-    color: #fff;
+    color: #444;
 }
 
 .calendar-day-base {
@@ -806,19 +806,22 @@ border-radius: 0px;
 
 .calendar-day-base:active {
 }
-
+/*day of week*/
 .calendar-day-heading {
-    color: #fff;
+    color: #888;
     padding-top: 1em;
+    font-weight: bold;
 }
 
 .calendar-week-number {
-    color: #fff;
+    background-color: #fff;
+    color: #888;
 }
 
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
-    color: #fff;
+    background-color: #f8f8f8;
+    color: #444;
     border-top-width: 0;
     border-left-width: 0;
 }
@@ -831,7 +834,8 @@ border-radius: 0px;
 }
 
 .calendar-nonwork-day {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #efefef;
+    color: #444;
 }
 
 .calendar-today {
@@ -842,7 +846,7 @@ border-radius: 0px;
 }
 
 .calendar-other-month-day {
-    color: #e4e4e4;
+    color: #888;
 }
 
 .calendar-day-with-events {
