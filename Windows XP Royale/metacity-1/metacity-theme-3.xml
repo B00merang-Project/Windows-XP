@@ -281,27 +281,44 @@ Buttons
   <image filename="minimize-unfocused-active.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
-<draw_ops name="menu_button_icon"> 
-  <icon  x="(width-mini_icon_width)/2"
-         y="(height-mini_icon_height)/2"
-         width="mini_icon_width" height="mini_icon_height"/>
+<!-- MENU -->
+
+<draw_ops name="menu_focused">
+	<image filename="menu-focus-normal.png"
+  x="0" 
+  y="0" 
+  width="object_width*1.25" 
+  height="object_height*1.25"
+  />
 </draw_ops>
 
-<draw_ops name="menu_button_icon_unfocused"> 
-  <icon  x="(width-mini_icon_width)/2"
-         y="(height-mini_icon_height)/2"
-         width="mini_icon_width" height="mini_icon_height"/>
+ <draw_ops name="menu_unfocused">
+    <image filename="menu-focus-none.png"
+  x="0" 
+  y="0" 
+  width="object_width*1.25" 
+  height="object_height*1.25"
+  />
+</draw_ops>
+
+<draw_ops name="menu_focused_prelight">
+    <image filename="menu-focus.png"
+  x="0" 
+  y="0" 
+  width="object_width*1.25" 
+  height="object_height*1.25"
+  />
 </draw_ops>
 
 <draw_ops name="menu_button_normal">
-  <include name="menu_button_icon"/>
+  <include name="menu_focused"/>
 </draw_ops>
 <draw_ops name="menu_button_pressed">
-  <include name="menu_button_icon"/>
+  <include name="menu_focused"/>
 </draw_ops>
-<draw_ops name="menu_button_unfocused">
-  <include name="menu_button_icon_unfocused"/>
-</draw_ops>
+ <draw_ops name="menu_button_unfocused">
+  <include name="menu_unfocused"/>
+</draw_ops> 
 
 <!--
 Frame Styles
@@ -313,17 +330,22 @@ Frame Styles
   <piece position="right_edge" draw_ops="frame_right_focused"/>
   <piece position="bottom_edge" draw_ops="frame_bottom_focused"/>
   <piece position="title" draw_ops="title_text_focused"/>
+
   <button function="close" state="normal" draw_ops="button_close_normal"/>
   <button function="close" state="prelight" draw_ops="button_close_prelight"/>
   <button function="close" state="pressed" draw_ops="button_close_pressed"/>
+
   <button function="minimize" state="normal" draw_ops="button_minimize_normal"/>
   <button function="minimize" state="prelight" draw_ops="button_minimize_prelight"/>
   <button function="minimize" state="pressed" draw_ops="button_minimize_pressed"/>
+
   <button function="maximize" state="normal" draw_ops="button_maximize_normal"/>
   <button function="maximize" state="prelight" draw_ops="button_maximize_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_maximize_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+
+  <button function="menu" state="normal" draw_ops="menu_focused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -353,17 +375,22 @@ Frame Styles
   <piece position="right_edge" draw_ops="frame_right_unfocused"/>
   <piece position="bottom_edge" draw_ops="frame_bottom_unfocused"/>
   <piece position="title" draw_ops="title_text_unfocused"/>
+
   <button function="close" state="normal" draw_ops="button_close_unfocused"/>
   <button function="close" state="prelight" draw_ops="button_close_unfocused_prelight"/>
   <button function="close" state="pressed" draw_ops="button_close_pressed"/>
+
   <button function="minimize" state="normal" draw_ops="button_minimize_unfocused"/>
   <button function="minimize" state="prelight" draw_ops="button_minimize_unfocused_prelight"/>
   <button function="minimize" state="pressed" draw_ops="button_minimize_pressed"/>
+
   <button function="maximize" state="normal" draw_ops="button_maximize_unfocused"/>
   <button function="maximize" state="prelight" draw_ops="button_maximize_unfocused_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_maximize_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -387,23 +414,29 @@ Frame Styles
   <button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
+
 <frame_style name="normal_maximized_focused" geometry="maximized">
   <piece position="titlebar" draw_ops="title_maximized"/>
   <piece position="left_edge" draw_ops="frame_left_focused"/>
   <piece position="right_edge" draw_ops="frame_right_focused"/>
   <piece position="bottom_edge" draw_ops="frame_bottom_focused"/>
   <piece position="title" draw_ops="title_text_max_focused"/>
+
   <button function="close" state="normal" draw_ops="button_close_normal"/>
   <button function="close" state="prelight" draw_ops="button_close_prelight"/>
   <button function="close" state="pressed" draw_ops="button_close_pressed"/>
+
   <button function="minimize" state="normal" draw_ops="button_minimize_normal"/>
   <button function="minimize" state="prelight" draw_ops="button_minimize_prelight"/>
   <button function="minimize" state="pressed" draw_ops="button_minimize_pressed"/>
+
   <button function="maximize" state="normal" draw_ops="button_restore_normal"/>
   <button function="maximize" state="prelight" draw_ops="button_restore_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_restore_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+
+  <button function="menu" state="normal" draw_ops="menu_focused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -433,17 +466,22 @@ Frame Styles
   <piece position="right_edge" draw_ops="frame_right_unfocused"/>
   <piece position="bottom_edge" draw_ops="frame_bottom_unfocused"/>
   <piece position="title" draw_ops="title_text_max_unfocused"/>
+
   <button function="close" state="normal" draw_ops="button_close_unfocused"/>
   <button function="close" state="prelight" draw_ops="button_close_unfocused_prelight"/>
   <button function="close" state="pressed" draw_ops="button_close_pressed"/>
+
   <button function="minimize" state="normal" draw_ops="button_minimize_unfocused"/>
   <button function="minimize" state="prelight" draw_ops="button_minimize_unfocused_prelight"/>
   <button function="minimize" state="pressed" draw_ops="button_minimize_pressed"/>
+
   <button function="maximize" state="normal" draw_ops="button_restore_unfocused"/>
   <button function="maximize" state="prelight" draw_ops="button_restore_unfocused_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_restore_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -467,6 +505,7 @@ Frame Styles
   <button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
+
 <frame_style name="tiled_left_focused" geometry="tiled_left">
   <piece position="titlebar" draw_ops="title_maximized"/>
   <piece position="left_edge" draw_ops="frame_left_focused"/>
@@ -482,8 +521,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_restore_normal"/>
   <button function="maximize" state="prelight" draw_ops="button_restore_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_restore_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -522,8 +562,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_restore_unfocused"/>
   <button function="maximize" state="prelight" draw_ops="button_restore_unfocused_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_restore_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -562,8 +603,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_restore_normal"/>
   <button function="maximize" state="prelight" draw_ops="button_restore_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_restore_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -602,8 +644,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_restore_unfocused"/>
   <button function="maximize" state="prelight" draw_ops="button_restore_unfocused_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_restore_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -642,8 +685,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_maximize_normal"/>
   <button function="maximize" state="prelight" draw_ops="button_maximize_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_maximize_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -682,8 +726,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_maximize_unfocused"/>
   <button function="maximize" state="prelight" draw_ops="button_maximize_unfocused_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_maximize_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -722,8 +767,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_maximize_normal"/>
   <button function="maximize" state="prelight" draw_ops="button_maximize_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_maximize_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
 
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -762,8 +808,9 @@ Frame Styles
   <button function="maximize" state="normal" draw_ops="button_maximize_unfocused"/>
   <button function="maximize" state="prelight" draw_ops="button_maximize_unfocused_prelight"/>
   <button function="maximize" state="pressed" draw_ops="button_maximize_pressed"/>
-  <button function="menu" state="normal" draw_ops="menu_button_normal"/>
-  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
@@ -794,8 +841,9 @@ Frame Styles
   <button function="maximize" state="pressed"><draw_ops></draw_ops></button>
   <button function="minimize" state="normal"><draw_ops></draw_ops></button>
   <button function="minimize" state="pressed"><draw_ops></draw_ops></button>
-  <button function="menu" state="normal"><draw_ops></draw_ops></button>
-  <button function="menu" state="pressed"><draw_ops></draw_ops></button>
+  <button function="menu" state="normal" draw_ops="menu_unfocused"/>
+  <button function="menu" state="prelight" draw_ops="menu_focused_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_focused"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
   <button function="shade" state="normal"><draw_ops></draw_ops></button>
