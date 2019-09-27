@@ -174,6 +174,122 @@
   <image filename="minimize-focused-pressed.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
+<!-- shade icon -->
+
+<draw_ops name="shade_focused">
+    <image filename="shade-focus-normal.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="shade_unfocused">
+    <image filename="shade-focus-none.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="shade_focused_prelight">
+    <image filename="shade-focus.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<!-- unshade icon -->
+
+<draw_ops name="unshade_focused">
+        <image filename="unshade-focus-normal.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="unshade_unfocused">
+        <image filename="unshade-focus-none.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="unshade_focused_prelight">
+        <image filename="unshade-focus.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<!-- stick icon -->
+
+<draw_ops name="stick_focused">
+	<image filename="stick-focus-normal.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="stick_unfocused">
+	<image filename="stick-focus-none.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="stick_focused_prelight">
+	<image filename="stick-focus.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<!-- unstick icon -->
+
+<draw_ops name="unstick_focused">
+	<image filename="unstick-focus-normal.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="unstick_unfocused">
+<image filename="unstick-focus-none.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
+<draw_ops name="unstick_focused_prelight">
+<image filename="unstick-focus.png"
+  x="0"
+  y="0"
+  width="object_width*1.5"
+  height="object_height*1.5"
+  />
+</draw_ops>
+
 <draw_ops name="menu_button_icon"> 
   <!--<icon  x="0"
          y="0"
@@ -227,13 +343,13 @@
   <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
-  <button function="shade" state="normal"><draw_ops></draw_ops></button>
-  <button function="shade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="shade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="shade" state="normal" draw_ops="shade_focused"></button>
+  <button function="shade" state="prelight" draw_ops="shade_focused_prelight"></button>
+  <button function="shade" state="pressed" draw_ops="shade_focused"></button>
 
-  <button function="unshade" state="normal"><draw_ops></draw_ops></button>
-  <button function="unshade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="unshade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unshade" state="normal" draw_ops="unshade_focused"></button>
+  <button function="unshade" state="prelight" draw_ops="unshade_focused_prelight"></button>
+  <button function="unshade" state="pressed" draw_ops="unshade_focused"></button>
 
   <button function="above" state="normal"><draw_ops></draw_ops></button>
   <button function="above" state="pressed"><draw_ops></draw_ops></button>
@@ -241,11 +357,13 @@
   <button function="unabove" state="normal"><draw_ops></draw_ops></button>
   <button function="unabove" state="pressed"><draw_ops></draw_ops></button>
 
-  <button function="stick" state="normal"><draw_ops></draw_ops></button>
-  <button function="stick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="stick" state="normal" draw_ops="stick_focused"></button>
+  <button function="stick" state="prelight" draw_ops="stick_focused_prelight"></button>
+  <button function="stick" state="pressed" draw_ops="stick_focused"></button>
 
-  <button function="unstick" state="normal"><draw_ops></draw_ops></button>
-  <button function="unstick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unstick" state="normal" draw_ops="unstick_focused"></button>
+  <button function="unstick" state="prelight" draw_ops="unstick_focused_prelight"></button>
+  <button function="unstick" state="pressed" draw_ops="unstick_focused"></button>
 </frame_style>
 
 <frame_style name="normal-unfocused" geometry="normal">
@@ -271,13 +389,13 @@
   <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
-  <button function="shade" state="normal"><draw_ops></draw_ops></button>
-  <button function="shade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="shade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="shade" state="normal" draw_ops="shade_unfocused"></button>
+  <button function="shade" state="prelight" draw_ops="shade_focused_prelight"></button>
+  <button function="shade" state="pressed" draw_ops="shade_focused"></button>
 
-  <button function="unshade" state="normal"><draw_ops></draw_ops></button>
-  <button function="unshade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="unshade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unshade" state="normal" draw_ops="unshade_unfocused"></button>
+  <button function="unshade" state="prelight" draw_ops="unshade_focused_prelight"></button>
+  <button function="unshade" state="pressed" draw_ops="unshade_focused"></button>
 
   <button function="above" state="normal"><draw_ops></draw_ops></button>
   <button function="above" state="pressed"><draw_ops></draw_ops></button>
@@ -285,11 +403,13 @@
   <button function="unabove" state="normal"><draw_ops></draw_ops></button>
   <button function="unabove" state="pressed"><draw_ops></draw_ops></button>
 
-  <button function="stick" state="normal"><draw_ops></draw_ops></button>
-  <button function="stick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="stick" state="normal" draw_ops="stick_unfocused"></button>
+  <button function="stick" state="prelight" draw_ops="stick_focused_prelight"></button>
+  <button function="stick" state="pressed" draw_ops="stick_focused"></button>
 
-  <button function="unstick" state="normal"><draw_ops></draw_ops></button>
-  <button function="unstick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unstick" state="normal" draw_ops="unstick_unfocused"></button>
+  <button function="unstick" state="prelight" draw_ops="unstick_focused_prelight"></button>
+  <button function="unstick" state="pressed" draw_ops="unstick_focused"></button>
 </frame_style>
 
 <frame_style name="normal-maximized-focused" geometry="maximized">
@@ -314,13 +434,13 @@
   <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
-  <button function="shade" state="normal"><draw_ops></draw_ops></button>
-  <button function="shade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="shade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="shade" state="normal" draw_ops="shade_focused"></button>
+  <button function="shade" state="prelight" draw_ops="shade_focused_prelight"></button>
+  <button function="shade" state="pressed" draw_ops="shade_focused"></button>
 
-  <button function="unshade" state="normal"><draw_ops></draw_ops></button>
-  <button function="unshade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="unshade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unshade" state="normal" draw_ops="unshade_focused"></button>
+  <button function="unshade" state="prelight" draw_ops="unshade_focused_prelight"></button>
+  <button function="unshade" state="pressed" draw_ops="unshade_focused"></button>
 
   <button function="above" state="normal"><draw_ops></draw_ops></button>
   <button function="above" state="pressed"><draw_ops></draw_ops></button>
@@ -328,11 +448,13 @@
   <button function="unabove" state="normal"><draw_ops></draw_ops></button>
   <button function="unabove" state="pressed"><draw_ops></draw_ops></button>
 
-  <button function="stick" state="normal"><draw_ops></draw_ops></button>
-  <button function="stick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="stick" state="normal" draw_ops="stick_focused"></button>
+  <button function="stick" state="prelight" draw_ops="stick_focused_prelight"></button>
+  <button function="stick" state="pressed" draw_ops="stick_focused"></button>
 
-  <button function="unstick" state="normal"><draw_ops></draw_ops></button>
-  <button function="unstick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unstick" state="normal" draw_ops="unstick_focused"></button>
+  <button function="unstick" state="prelight" draw_ops="unstick_focused_prelight"></button>
+  <button function="unstick" state="pressed" draw_ops="unstick_focused"></button>
 </frame_style>
 
 <frame_style name="normal-maximized-unfocused" geometry="maximized">
@@ -358,13 +480,13 @@
   <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
   
   <!-- Extra stuff Linux Mint wants for theme to work -->
-  <button function="shade" state="normal"><draw_ops></draw_ops></button>
-  <button function="shade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="shade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="shade" state="normal" draw_ops="shade_unfocused"></button>
+  <button function="shade" state="prelight" draw_ops="shade_focused_prelight"></button>
+  <button function="shade" state="pressed" draw_ops="shade_focused"></button>
 
-  <button function="unshade" state="normal"><draw_ops></draw_ops></button>
-  <button function="unshade" state="prelight"><draw_ops></draw_ops></button>
-  <button function="unshade" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unshade" state="normal" draw_ops="unshade_unfocused"></button>
+  <button function="unshade" state="prelight" draw_ops="unshade_focused_prelight"></button>
+  <button function="unshade" state="pressed" draw_ops="unshade_focused"></button>
 
   <button function="above" state="normal"><draw_ops></draw_ops></button>
   <button function="above" state="pressed"><draw_ops></draw_ops></button>
@@ -372,19 +494,69 @@
   <button function="unabove" state="normal"><draw_ops></draw_ops></button>
   <button function="unabove" state="pressed"><draw_ops></draw_ops></button>
 
-  <button function="stick" state="normal"><draw_ops></draw_ops></button>
-  <button function="stick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="stick" state="normal" draw_ops="stick_unfocused"></button>
+  <button function="stick" state="prelight" draw_ops="stick_focused_prelight"></button>
+  <button function="stick" state="pressed" draw_ops="stick_focused"></button>
 
-  <button function="unstick" state="normal"><draw_ops></draw_ops></button>
-  <button function="unstick" state="pressed"><draw_ops></draw_ops></button>
+  <button function="unstick" state="normal" draw_ops="unstick_unfocused"></button>
+  <button function="unstick" state="prelight" draw_ops="unstick_focused_prelight"></button>
+  <button function="unstick" state="pressed" draw_ops="unstick_focused"></button>
 </frame_style>
 
 <frame_style name="normal-shaded-focused" geometry="normal" parent="normal-focused">
   <piece position="titlebar" draw_ops="title-shaded"/>
+ 
+  <!-- Extra stuff Linux Mint wants for theme to work -->
+  <button function="shade" state="normal" draw_ops="shade_focused"></button>
+  <button function="shade" state="prelight" draw_ops="shade_focused_prelight"></button>
+  <button function="shade" state="pressed" draw_ops="shade_focused"></button>
+
+  <button function="unshade" state="normal" draw_ops="unshade_focused"></button>
+  <button function="unshade" state="prelight" draw_ops="unshade_focused_prelight"></button>
+  <button function="unshade" state="pressed" draw_ops="unshade_focused"></button>
+
+  <button function="above" state="normal"><draw_ops></draw_ops></button>
+  <button function="above" state="pressed"><draw_ops></draw_ops></button>
+
+  <button function="unabove" state="normal"><draw_ops></draw_ops></button>
+  <button function="unabove" state="pressed"><draw_ops></draw_ops></button>
+
+  <button function="stick" state="normal" draw_ops="stick_focused"></button>
+  <button function="stick" state="prelight" draw_ops="stick_focused_prelight"></button>
+  <button function="stick" state="pressed" draw_ops="stick_focused"></button>
+
+  <button function="unstick" state="normal" draw_ops="unstick_focused"></button>
+  <button function="unstick" state="prelight" draw_ops="unstick_focused_prelight"></button>
+  <button function="unstick" state="pressed" draw_ops="unstick_focused"></button>
+
 </frame_style>
 
 <frame_style name="normal-shaded-unfocused" geometry="normal" parent="normal-unfocused">
   <piece position="titlebar" draw_ops="title-shaded"/>
+  
+  <!-- Extra stuff Linux Mint wants for theme to work -->
+  <button function="shade" state="normal" draw_ops="shade_unfocused"></button>
+  <button function="shade" state="prelight" draw_ops="shade_focused_prelight"></button>
+  <button function="shade" state="pressed" draw_ops="shade_focused"></button>
+
+  <button function="unshade" state="normal" draw_ops="unshade_unfocused"></button>
+  <button function="unshade" state="prelight" draw_ops="unshade_focused_prelight"></button>
+  <button function="unshade" state="pressed" draw_ops="unshade_focused"></button>
+
+  <button function="above" state="normal"><draw_ops></draw_ops></button>
+  <button function="above" state="pressed"><draw_ops></draw_ops></button>
+
+  <button function="unabove" state="normal"><draw_ops></draw_ops></button>
+  <button function="unabove" state="pressed"><draw_ops></draw_ops></button>
+
+  <button function="stick" state="normal" draw_ops="stick_unfocused"></button>
+  <button function="stick" state="prelight" draw_ops="stick_focused_prelight"></button>
+  <button function="stick" state="pressed" draw_ops="stick_focused"></button>
+
+  <button function="unstick" state="normal" draw_ops="unstick_unfocused"></button>
+  <button function="unstick" state="prelight" draw_ops="unstick_focused_prelight"></button>
+  <button function="unstick" state="pressed" draw_ops="unstick_focused"></button>
+
 </frame_style>
 
 <frame_style_set name="normal">
