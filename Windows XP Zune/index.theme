@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=Windows XP Zune
-Comment=Windows XP Zune theme for Linux OSes; based on the MTAC architecture
-Comment=Author : Christian Medel (Elbullazul)
-Version=rolling
+Comment=Windows XP Zune theme for Linux OSes
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Windows XP Zune
 MetacityTheme=Windows XP Zune
+IconTheme=Windows XP
+CursorTheme=DMZ-White
 ButtonLayout=:minimize,maximize,close
