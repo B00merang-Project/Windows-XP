@@ -105,39 +105,28 @@ assistant .sidebar {
   color: #000000;
   background-color: #EBE9ED; }
 
-button:link > label, button:visited > label,
-*:link,
-button:link,
-button:visited {
+button:link > label, button:visited > label, *:link, button:link, button:visited {
   color: #1D72E9; }
-  button:link > label:visited, button:visited > label:visited,
-  *:link:visited,
-  button:visited {
+  button:link > label:visited, button:visited > label:visited, *:link:visited, button:visited {
     color: mix(#1D72E9, #000000, 0.2); }
-    *:selected button:link > label:visited, *:selected button:visited > label:visited, *:selected
-    *:link:visited, *:selected
-    button:visited:link, *:selected
-    button:visited {
+    *:selected button:link > label:visited, *:selected button:visited > label:visited,
+    *:selected *:link:visited,
+    *:selected button:visited:link,
+    *:selected button:visited {
       color: mix(#FFFFFF, #5B83BD, 0.4); }
-  button:link > label:hover, button:visited > label:hover,
-  *:link:hover,
-  button:hover:link,
-  button:hover:visited {
+  button:link > label:hover, button:visited > label:hover, *:link:hover, button:hover:link, button:hover:visited {
     color: shade(#1D72E9, 1.1); }
-    *:selected button:link > label:hover, *:selected button:visited > label:hover, *:selected
-    *:link:hover, *:selected
-    button:hover:link, *:selected
-    button:hover:visited {
+    *:selected button:link > label:hover, *:selected button:visited > label:hover,
+    *:selected *:link:hover,
+    *:selected button:hover:link,
+    *:selected button:hover:visited {
       color: mix(#FFFFFF, #5B83BD, 0.9); }
-  button:link > label:active, button:visited > label:active,
-  *:link:active,
-  button:active:link,
-  button:active:visited {
+  button:link > label:active, button:visited > label:active, *:link:active, button:active:link, button:active:visited {
     color: #1D72E9; }
-    *:selected button:link > label:active, *:selected button:visited > label:active, *:selected
-    *:link:active, *:selected
-    button:active:link, *:selected
-    button:active:visited {
+    *:selected button:link > label:active, *:selected button:visited > label:active,
+    *:selected *:link:active,
+    *:selected button:active:link,
+    *:selected button:active:visited {
       color: mix(#FFFFFF, #5B83BD, 0.8); }
   button:link > label:backdrop:backdrop:hover, button:visited > label:backdrop:backdrop:hover, button:link > label:backdrop:backdrop:hover:selected, button:visited > label:backdrop:backdrop:hover:selected, button:link > label:backdrop, button:visited > label:backdrop,
   *:link:backdrop:backdrop:hover,
@@ -153,10 +142,10 @@ button:visited {
   button:link > label:selected, button:visited > label:selected, *:selected button:link > label, *:selected button:visited > label,
   *:link:selected,
   button:selected:link,
-  button:selected:visited, *:selected
-  *:link, *:selected
-  button:link, *:selected
-  button:visited {
+  button:selected:visited,
+  *:selected *:link,
+  *:selected button:link,
+  *:selected button:visited {
     color: mix(#FFFFFF, #5B83BD, 0.8); }
 
 button:link, button:visited {
@@ -2760,11 +2749,11 @@ messagedialog.csd .dialog-action-area button {
 
 panel-toplevel.background, panel-toplevel.background menubar {
   background-color: #F6F6F6;
-  color: #000000; }
+  color: #FFFFFF; }
 panel-toplevel.background menubar, panel-toplevel.background #PanelApplet label, panel-toplevel.background #PanelApplet image {
-  color: #000000; }
+  color: #FFFFFF; }
 panel-toplevel.background menubar > menuitem, panel-toplevel.background menubar > menuitem label:backdrop {
-  color: #000000; }
+  color: #FFFFFF; }
 panel-toplevel.background menubar > menuitem:hover, panel-toplevel.background menubar > menuitem:hover label:backdrop {
   color: #FFFFFF; }
 panel-toplevel.background button {
@@ -2772,38 +2761,41 @@ panel-toplevel.background button {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  color: #000000; }
+  color: #FFFFFF; }
   panel-toplevel.background button:active, panel-toplevel.background button:checked {
     background-color: shade(#F6F6F6, 0.8);
     border: none;
     box-shadow: none;
-    color: #000000; }
+    color: #FFFFFF; }
 
 #tasklist-button, #tasklist-button label {
-  color: alpha(#000000, 0.7);
+  color: alpha(#FFFFFF, 0.7);
   border-radius: 0;
   border: none;
   box-shadow: none;
   background-color: transparent; }
   #tasklist-button:hover, #tasklist-button label:hover {
-    color: alpha(#000000, 0.7);
+    color: alpha(#FFFFFF, 0.7);
     background-color: transparent; }
   #tasklist-button:checked, #tasklist-button label:checked {
-    color: #000000; }
+    color: #FFFFFF; }
 
 panel-toplevel.background na-tray-applet {
   -NaTrayApplet-icon-padding: 0;
   -NaTrayApplet-icon-size: 16px; }
 
 .mate-panel-menu-bar menubar > menuitem {
-  color: #000000;
-  background-color: #F6F6F6; }
+  color: #FFFFFF;
+  background-color: #F6F6F6;
+  background-image: url("../cinnamon/panel.png");
+  background-size: 1px 100%; }
 
 .mate-panel-menu-bar {
-  color: #000000;
-  background-color: #F6F6F6; }
-  .mate-panel-menu-bar button, .mate-panel-menu-bar button.flat {
-    background-color: transparent; }
+  color: #FFFFFF;
+  background-color: #F6F6F6;
+  background-image: url("../cinnamon/panel.png");
+  background-size: 1px 100%;
+  border: none; }
   .mate-panel-menu-bar, .mate-panel-menu-bar .menubar {
     background-color: #F6F6F6; }
   .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar menuitem, .mate-panel-menu-bar togglebutton {
@@ -2820,20 +2812,38 @@ panel-toplevel.background na-tray-applet {
     font-style: normal; }
     .mate-panel-menu-bar GtkMenu .label:disabled {
       color: mix(#000000, #EBE9ED, 0.5); }
-  .mate-panel-menu-bar .button:not(#tasklist-button) {
-    color: #000000;
-    border-radius: 0;
+  .mate-panel-menu-bar button, .mate-panel-menu-bar button.flat {
+    color: #FFFFFF;
+    background-color: transparent;
+    background-image: url("../cinnamon/panel.png");
+    background-size: 1px 100%;
+    box-shadow: none;
     border: none;
-    background-color: #F6F6F6; }
+    margin: 0px;
+    border-radius: 0px; }
+    .mate-panel-menu-bar button:hover, .mate-panel-menu-bar button.flat:hover {
+      background-color: transparent;
+      background-image: url("../cinnamon/hover.png"); }
+    .mate-panel-menu-bar button:active, .mate-panel-menu-bar button:checked, .mate-panel-menu-bar button.flat:active, .mate-panel-menu-bar button.flat:checked {
+      background-color: transparent;
+      background-image: url("../cinnamon/active.png"); }
+  .mate-panel-menu-bar .button:not(#tasklist-button) {
+    color: #FFFFFF;
+    background-color: transparent;
+    background-image: url("../cinnamon/panel.png");
+    background-size: 1px 100%;
+    box-shadow: none;
+    border: none;
+    margin: 0px;
+    border-radius: 0px; }
     .mate-panel-menu-bar .button:not(#tasklist-button):hover {
-      border: none;
-      background-color: shade(#F6F6F6, 1.1); }
+      background-color: transparent;
+      background-image: url("../cinnamon/hover.png"); }
     .mate-panel-menu-bar .button:not(#tasklist-button):active, .mate-panel-menu-bar .button:not(#tasklist-button):checked {
-      color: #FFFFFF;
-      border: none;
-      background-color: #5B83BD; }
+      background-color: transparent;
+      background-image: url("../cinnamon/active.png"); }
   .mate-panel-menu-bar #tasklist-button {
-    color: #000000;
+    color: #FFFFFF;
     background-image: url("../cinnamon/normal.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; }
@@ -2850,7 +2860,7 @@ panel-toplevel.background na-tray-applet {
   .mate-panel-menu-bar NaTrayApplet {
     -NaTrayApplet-icon-padding: 2; }
   .mate-panel-menu-bar #PanelApplet label {
-    color: #000000; }
+    color: #FFFFFF; }
   .mate-panel-menu-bar .caja-desktop.entry, .mate-panel-menu-bar .caja-navigation-window .view.entry {
     background-image: none;
     border-radius: 0px;
@@ -2881,7 +2891,7 @@ panel-toplevel.background na-tray-applet {
   background-size: 1px 100%;
   border: none; }
   .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
-    color: #000000;
+    color: #FFFFFF;
     background-color: transparent;
     background-image: url("../cinnamon/panel.png");
     background-size: 1px 100%;
@@ -2896,7 +2906,7 @@ panel-toplevel.background na-tray-applet {
       background-color: transparent;
       background-image: url("../cinnamon/active.png"); }
   .xfce4-panel.panel .tasklist button {
-    color: #000000;
+    color: #FFFFFF;
     background-image: url("../cinnamon/normal.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; }
@@ -2990,10 +3000,10 @@ UnityPanelWidget, .unity-panel {
   border-style: solid;
   border-color: #F6F6F6;
   background-color: #F6F6F6;
-  color: #000000; }
+  color: #FFFFFF; }
   UnityPanelWidget.menuitem, UnityPanelWidget .menuitem, .unity-panel.menuitem, .unity-panel .menuitem {
     border-width: 0 1px;
-    color: #000000; }
+    color: #FFFFFF; }
 
 @keyframes playbackmenuitem_spinner {
   to {

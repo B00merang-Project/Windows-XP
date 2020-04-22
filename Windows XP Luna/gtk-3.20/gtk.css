@@ -105,39 +105,28 @@ assistant .sidebar {
   color: #000000;
   background-color: #ECE9D8; }
 
-button:link > label, button:visited > label,
-*:link,
-button:link,
-button:visited {
+button:link > label, button:visited > label, *:link, button:link, button:visited {
   color: #1D72E9; }
-  button:link > label:visited, button:visited > label:visited,
-  *:link:visited,
-  button:visited {
+  button:link > label:visited, button:visited > label:visited, *:link:visited, button:visited {
     color: mix(#1D72E9, #000000, 0.2); }
-    *:selected button:link > label:visited, *:selected button:visited > label:visited, *:selected
-    *:link:visited, *:selected
-    button:visited:link, *:selected
-    button:visited {
+    *:selected button:link > label:visited, *:selected button:visited > label:visited,
+    *:selected *:link:visited,
+    *:selected button:visited:link,
+    *:selected button:visited {
       color: mix(#FFFFFF, #1466C9, 0.4); }
-  button:link > label:hover, button:visited > label:hover,
-  *:link:hover,
-  button:hover:link,
-  button:hover:visited {
+  button:link > label:hover, button:visited > label:hover, *:link:hover, button:hover:link, button:hover:visited {
     color: shade(#1D72E9, 1.1); }
-    *:selected button:link > label:hover, *:selected button:visited > label:hover, *:selected
-    *:link:hover, *:selected
-    button:hover:link, *:selected
-    button:hover:visited {
+    *:selected button:link > label:hover, *:selected button:visited > label:hover,
+    *:selected *:link:hover,
+    *:selected button:hover:link,
+    *:selected button:hover:visited {
       color: mix(#FFFFFF, #1466C9, 0.9); }
-  button:link > label:active, button:visited > label:active,
-  *:link:active,
-  button:active:link,
-  button:active:visited {
+  button:link > label:active, button:visited > label:active, *:link:active, button:active:link, button:active:visited {
     color: #1D72E9; }
-    *:selected button:link > label:active, *:selected button:visited > label:active, *:selected
-    *:link:active, *:selected
-    button:active:link, *:selected
-    button:active:visited {
+    *:selected button:link > label:active, *:selected button:visited > label:active,
+    *:selected *:link:active,
+    *:selected button:active:link,
+    *:selected button:active:visited {
       color: mix(#FFFFFF, #1466C9, 0.8); }
   button:link > label:backdrop:backdrop:hover, button:visited > label:backdrop:backdrop:hover, button:link > label:backdrop:backdrop:hover:selected, button:visited > label:backdrop:backdrop:hover:selected, button:link > label:backdrop, button:visited > label:backdrop,
   *:link:backdrop:backdrop:hover,
@@ -153,10 +142,10 @@ button:visited {
   button:link > label:selected, button:visited > label:selected, *:selected button:link > label, *:selected button:visited > label,
   *:link:selected,
   button:selected:link,
-  button:selected:visited, *:selected
-  *:link, *:selected
-  button:link, *:selected
-  button:visited {
+  button:selected:visited,
+  *:selected *:link,
+  *:selected button:link,
+  *:selected button:visited {
     color: mix(#FFFFFF, #1466C9, 0.8); }
 
 button:link, button:visited {
@@ -2788,13 +2777,16 @@ panel-toplevel.background na-tray-applet {
 
 .mate-panel-menu-bar menubar > menuitem {
   color: #FFFFFF;
-  background-color: #235CDB; }
+  background-color: #235CDB;
+  background-image: url("../cinnamon/panel.png");
+  background-size: 1px 100%; }
 
 .mate-panel-menu-bar {
   color: #FFFFFF;
-  background-color: #235CDB; }
-  .mate-panel-menu-bar button, .mate-panel-menu-bar button.flat {
-    background-color: transparent; }
+  background-color: #235CDB;
+  background-image: url("../cinnamon/panel.png");
+  background-size: 1px 100%;
+  border: none; }
   .mate-panel-menu-bar, .mate-panel-menu-bar .menubar {
     background-color: #235CDB; }
   .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar menuitem, .mate-panel-menu-bar togglebutton {
@@ -2811,18 +2803,36 @@ panel-toplevel.background na-tray-applet {
     font-style: normal; }
     .mate-panel-menu-bar GtkMenu .label:disabled {
       color: mix(#000000, #ECE9D8, 0.5); }
+  .mate-panel-menu-bar button, .mate-panel-menu-bar button.flat {
+    color: #FFFFFF;
+    background-color: transparent;
+    background-image: url("../cinnamon/panel.png");
+    background-size: 1px 100%;
+    box-shadow: none;
+    border: none;
+    margin: 0px;
+    border-radius: 0px; }
+    .mate-panel-menu-bar button:hover, .mate-panel-menu-bar button.flat:hover {
+      background-color: transparent;
+      background-image: url("../cinnamon/hover.png"); }
+    .mate-panel-menu-bar button:active, .mate-panel-menu-bar button:checked, .mate-panel-menu-bar button.flat:active, .mate-panel-menu-bar button.flat:checked {
+      background-color: transparent;
+      background-image: url("../cinnamon/active.png"); }
   .mate-panel-menu-bar .button:not(#tasklist-button) {
     color: #FFFFFF;
-    border-radius: 0;
+    background-color: transparent;
+    background-image: url("../cinnamon/panel.png");
+    background-size: 1px 100%;
+    box-shadow: none;
     border: none;
-    background-color: #235CDB; }
+    margin: 0px;
+    border-radius: 0px; }
     .mate-panel-menu-bar .button:not(#tasklist-button):hover {
-      border: none;
-      background-color: shade(#235CDB, 1.1); }
+      background-color: transparent;
+      background-image: url("../cinnamon/hover.png"); }
     .mate-panel-menu-bar .button:not(#tasklist-button):active, .mate-panel-menu-bar .button:not(#tasklist-button):checked {
-      color: #FFFFFF;
-      border: none;
-      background-color: #1466C9; }
+      background-color: transparent;
+      background-image: url("../cinnamon/active.png"); }
   .mate-panel-menu-bar #tasklist-button {
     color: #FFFFFF;
     background-image: url("../cinnamon/normal.png");
