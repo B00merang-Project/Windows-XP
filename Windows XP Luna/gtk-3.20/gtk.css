@@ -2879,8 +2879,7 @@ panel-toplevel.background na-tray-applet {
 .xfce4-panel.panel {
   background-color: #235CDB;
   background-image: url("../cinnamon/panel.png");
-  background-size: 1px 100%;
-  border: none; }
+  background-size: 1px 100%; }
   .xfce4-panel.panel button.flat, .xfce4-panel.panel button.sidebar-button {
     color: #FFFFFF;
     background-color: transparent;
