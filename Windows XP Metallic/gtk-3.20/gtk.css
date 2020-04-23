@@ -2826,7 +2826,7 @@ panel-toplevel.background na-tray-applet {
     .mate-panel-menu-bar button:active, .mate-panel-menu-bar button:checked, .mate-panel-menu-bar button.flat:active, .mate-panel-menu-bar button.flat:checked {
       background-color: transparent;
       background-image: url("../cinnamon/active.png"); }
-  .mate-panel-menu-bar .button:not(#tasklist-button) {
+  .mate-panel-menu-bar > .button:not(#tasklist-button) {
     color: #000000;
     background-color: transparent;
     background-image: url("../cinnamon/panel.png");
@@ -2835,10 +2835,10 @@ panel-toplevel.background na-tray-applet {
     border: none;
     margin: 0px;
     border-radius: 0px; }
-    .mate-panel-menu-bar .button:not(#tasklist-button):hover {
+    .mate-panel-menu-bar > .button:not(#tasklist-button):hover {
       background-color: transparent;
       background-image: url("../cinnamon/hover.png"); }
-    .mate-panel-menu-bar .button:not(#tasklist-button):active, .mate-panel-menu-bar .button:not(#tasklist-button):checked {
+    .mate-panel-menu-bar > .button:not(#tasklist-button):active, .mate-panel-menu-bar > .button:not(#tasklist-button):checked {
       background-color: transparent;
       background-image: url("../cinnamon/active.png"); }
   .mate-panel-menu-bar #tasklist-button {
