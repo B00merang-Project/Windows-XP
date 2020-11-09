@@ -1729,7 +1729,6 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   border-image: url('normal.png') 5;
   padding: 1px;
   color: black;
-  margin: 5px;
   transition-duration: 100;
 }
 
