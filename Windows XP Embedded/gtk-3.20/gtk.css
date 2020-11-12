@@ -2942,6 +2942,35 @@ panel-toplevel.background na-tray-applet {
       border-color: shade(shade(#EBE9ED, 0.9), 0.75);
       background-color: mix(#000000, #EBE9ED, 0.95); }
 
+#whiskermenu-button {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 130%;
+  text-shadow: 2px 2px #000000;
+  background-image: url("../cinnamon/menu-box.png");
+  background-size: 100% 100%;
+  padding-right: 100px; }
+  #whiskermenu-button:hover {
+    background-image: url("../cinnamon/menu-hover.png"); }
+  #whiskermenu-button:active, #whiskermenu-button:checked {
+    background-image: url("../cinnamon/menu-active.png"); }
+
+#whiskermenu-window {
+  padding: 2px;
+  background-color: #2e75ad; }
+  #whiskermenu-window border {
+    border: 1px solid #010a12; }
+  #whiskermenu-window > frame > stack > box > box:first-child {
+    margin: -2px;
+    margin-bottom: -6px;
+    background-image: url("../cinnamon/menu-top.png");
+    background-size: 100% 100%; }
+  #whiskermenu-window > frame > stack > box > box:last-child {
+    background-image: url("../cinnamon/menu-bottom.png");
+    margin: -2px;
+    padding: 2px; }
+
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
   border-radius: 3px;
