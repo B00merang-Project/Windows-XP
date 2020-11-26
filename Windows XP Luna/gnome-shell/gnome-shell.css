@@ -150,6 +150,13 @@ StScrollBar StButton#vhandle:hover {
     -arrow-border-width: 0px;
 }
 
+StEntry {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 0;
+}
+
 /* Cinnamon 3.2 fix */
 .popup-menu,
 .menu {
