@@ -2970,9 +2970,19 @@ panel-toplevel.background na-tray-applet {
 
 #whiskermenu-window {
   padding: 2px;
-  background-color: #2e75ad; }
+  background-color: #013c6b; }
   #whiskermenu-window border {
     border: 1px solid #010a12; }
+  #whiskermenu-window .view {
+    color: #ffffff;
+    background-color: #2e75ad; }
+    #whiskermenu-window .view:hover, #whiskermenu-window .view:selected {
+      color: #FFFFFF;
+      background-color: #379AFF; }
+  #whiskermenu-window > frame > stack button {
+    color: #ffffff; }
+    #whiskermenu-window > frame > stack button:hover, #whiskermenu-window > frame > stack button:active, #whiskermenu-window > frame > stack button:checked {
+      color: #000000; }
   #whiskermenu-window > frame > stack > box > box:first-child {
     margin: -2px;
     margin-bottom: -6px;

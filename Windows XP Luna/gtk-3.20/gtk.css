@@ -2963,6 +2963,16 @@ panel-toplevel.background na-tray-applet {
   background-color: #d3e5fa; }
   #whiskermenu-window border {
     border: 1px solid #1854c2; }
+  #whiskermenu-window .view {
+    color: #000000;
+    background-color: #ffffff; }
+    #whiskermenu-window .view:hover, #whiskermenu-window .view:selected {
+      color: #FFFFFF;
+      background-color: #1466C9; }
+  #whiskermenu-window > frame > stack button {
+    color: #000000; }
+    #whiskermenu-window > frame > stack button:hover, #whiskermenu-window > frame > stack button:active, #whiskermenu-window > frame > stack button:checked {
+      color: #000000; }
   #whiskermenu-window > frame > stack > box > box:first-child {
     margin: -2px;
     margin-bottom: -6px;
