@@ -200,6 +200,8 @@ StScrollBar StButton#vhandle:hover {
   -gradient-height: 1px;
   -gradient-start: rgba(0,0,0,0);
   -gradient-end: rgba(255,255,255,0.2);
+  background-color: rgba(0,0,0,0.15);
+  box-shadow: 0 1px white;
   height: 1px;
 }
 .popup-alternating-menu-item:alternate {
@@ -2257,10 +2259,12 @@ The colour parameters are red, green, blue, and transparency or a name */
 .right-buttons-box {
   background-color: #D3E5FA;
   padding: 8px;
+  border: 0 solid #a7b8cc;
+  border-left-width: 1px;
 }
 .starkmenu-background {
   border: solid 1px transparent;
-  border-image: url("menu-bg.png") 8 8 56 41;
+  border-image: url("menu-bg.png") 8 8 67 42;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
   padding: 54px 1px 29px 1px;
 }
@@ -2271,6 +2275,11 @@ The colour parameters are red, green, blue, and transparency or a name */
   background-color: #ffffff;
   border: 0px solid #ffffff;
 }
+
+.starkmenu-favorites-box .menu-favorites-button {
+  padding: 4px;
+}
+
 .starkmenu-applications-box {
   padding: 0px 0px 0px 0px;
 }
