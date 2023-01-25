@@ -379,7 +379,7 @@ button {
     box-shadow: inset 0 0 1px 2px #ffc73c;
     border-color: #5b6248; }
   button:active, button:checked {
-    border-color: shade(#dbd7bb, 0.3);
+    border-color: #434137;
     background-color: #e4e0c9;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to bottom, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to top, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
     button:active:disabled, button:checked:disabled {
@@ -403,30 +403,14 @@ button {
     button.flat:active, button.flat:checked {
       border-color: #434137;
       background-color: #e4e0c9;
-      background-image: linear-gradient(to bottom, shade(#f5f5f5, 0.6), shade(#f5f5f5, 0.7), shade(#f5f5f5, 0.75)); }
+      background-image: linear-gradient(to bottom, #939393, #acacac, #b8b8b8); }
     button.flat:disabled {
       border-color: transparent;
       color: rgba(0, 0, 0, 0.8);
       background-color: transparent; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #a30000;
-  border-radius: 2px;
-  color: #fae6e6;
-  background-image: none;
-  background-color: #CC0000; }
-  button.destructive-action:hover {
-    border-color: #8f0000;
-    background-color: #d63333; }
-  button.destructive-action:active {
-    border-color: #8f0000;
-    background-color: #b80000; }
-  button.destructive-action:backdrop {
-    border-color: #a30000;
-    color: #140000;
-    background-color: #d64641; }
+  box-shadow: inset 0 0 2px 1px #E8C995; }
 
 button.suggested-action {
   box-shadow: inset 0 0 2px 1px #95b4e8; }
@@ -514,7 +498,7 @@ toolbar {
     toolbar button.flat:active, toolbar button.flat:checked {
       border-color: #434137;
       background-color: #e4e0c9;
-      background-image: linear-gradient(to bottom, shade(#f5f5f5, 0.6), shade(#f5f5f5, 0.7), shade(#f5f5f5, 0.75)); }
+      background-image: linear-gradient(to bottom, #939393, #acacac, #b8b8b8); }
     toolbar button.flat:disabled {
       border-color: transparent;
       color: rgba(0, 0, 0, 0.8);
@@ -544,7 +528,7 @@ toolbar {
       box-shadow: inset 0 0 1px 2px #ffc73c;
       border-color: #5b6248; }
     .primary-toolbar button:active, .primary-toolbar button:checked, .primary-toolbar .raised button:active, .primary-toolbar .raised button:checked {
-      border-color: shade(#dbd7bb, 0.3);
+      border-color: #434137;
       background-color: #e4e0c9;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to bottom, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to top, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
       .primary-toolbar button:active:disabled, .primary-toolbar button:checked:disabled, .primary-toolbar .raised button:active:disabled, .primary-toolbar .raised button:checked:disabled {
@@ -579,7 +563,7 @@ toolbar {
       box-shadow: inset 0 0 1px 2px #ffc73c;
       border-color: #5b6248; }
     .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
-      border-color: shade(#dbd7bb, 0.3);
+      border-color: #434137;
       background-color: #e4e0c9;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to bottom, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to top, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
       .inline-toolbar toolbutton > button:active:disabled, .inline-toolbar toolbutton > button:checked:disabled {
@@ -762,7 +746,7 @@ headerbar {
       box-shadow: inset 0 0 1px 2px #ffc73c;
       border-color: #5b6248; }
     headerbar button:active, headerbar button:checked {
-      border-color: shade(#dbd7bb, 0.3);
+      border-color: #434137;
       background-color: #e4e0c9;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to bottom, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to top, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
       headerbar button:active:disabled, headerbar button:checked:disabled {
@@ -2165,7 +2149,6 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
     border: none; }
 
 calendar {
-  padding: 2px;
   border-width: 1px;
   border-radius: 2px;
   border-style: solid;
@@ -2173,17 +2156,32 @@ calendar {
   color: #000000; }
   calendar.header {
     border: none;
-    color: #94B06F; }
+    border-bottom: 1px solid #eae7d5;
+    color: #000000; }
   calendar.button {
-    color: #94B06F; }
+    color: rgba(0, 0, 0, 0.45); }
+    calendar.button:hover {
+      color: #000000; }
+    calendar.button:backdrop {
+      color: rgba(0, 0, 0, 0.45); }
+    calendar.button:disabled {
+      color: rgba(118, 117, 108, 0.45); }
   calendar:selected {
-    border-radius: 0;
+    border-radius: 3px;
     color: #FFFFFF;
     background-color: #94B06F; }
+    calendar:selected:backdrop {
+      color: #000000;
+      background-color: #94B06F; }
   calendar:indeterminate {
-    color: alpha(currentColor, 0.55); }
+    color: alpha(currentColor, 0.1); }
   calendar.highlight {
-    color: #94B06F; }
+    color: #76756c; }
+    calendar.highlight:backdrop {
+      color: #b1afa2; }
+  calendar:backdrop {
+    color: #000000;
+    border-color: #dbd7bb; }
 
 messagedialog .background.csd {
   border-radius: 6px 6px 0 0;
