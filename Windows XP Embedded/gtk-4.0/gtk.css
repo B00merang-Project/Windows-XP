@@ -17,9 +17,6 @@ dnd {
 image:disabled {
   -gtk-icon-filter: opacity(0.5); }
 
-image, label, box {
-  background-color: transparent; }
-
 .view {
   color: #000000;
   background-color: #FFFFFF; }
@@ -69,11 +66,9 @@ rubberband, flowbox rubberband, treeview.view rubberband, .content-view rubberba
   background: none;
   background-color: rgba(55, 154, 255, 0.3); }
 
-flowbox flowboxchild {
-  padding: 3px;
-  border-radius: 2px; }
-  flowbox flowboxchild:selected {
-    outline-offset: -2px;
+flowbox > flowboxchild {
+  padding: 3px; }
+  flowbox > flowboxchild:selected {
     color: #FFFFFF;
     background-color: #379AFF; }
 
@@ -82,9 +77,28 @@ coverflow cover {
   background-color: #FFFFFF;
   border: 1px solid #7f7886; }
 
-label selection {
-  background-color: #379AFF;
+label:selected {
   color: #FFFFFF; }
+
+label > selection {
+  color: #FFFFFF;
+  background-color: #379AFF; }
+  label > selection:focus-within {
+    color: #379AFF; }
+
+label:disabled {
+  color: #767577; }
+  button label:disabled {
+    color: inherit; }
+  > selection label:disabled {
+    color: #5687bb; }
+    > selection label:disabled:backdrop {
+      color: #74a4d8; }
+
+label.error {
+  color: #CC0000; }
+  label.error:disabled {
+    color: rgba(204, 0, 0, 0.5); }
 
 .dim-label {
   opacity: 0.6;
@@ -138,7 +152,6 @@ window.assistant .sidebar > label {
   padding: 6px 12px; }
 
 window.assistant .sidebar > label.highlight {
-  color: #FFFFFF;
   background-color: #379AFF;
   border-radius: 0px; }
 
@@ -1846,38 +1859,20 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-.frame, frame > border {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d4d0d7;
-  border-radius: 0;
-  box-shadow: none;
-  background: none; }
+frame,
+.frame {
+  border: 1px solid #d4d0d7; }
 
-frame.flat > border, frame > border.flat, .frame.flat {
-  border-style: none; }
+frame {
+  border-radius: 2px; }
+  frame > label {
+    margin: 4px; }
 
-actionbar {
-  padding: 4px;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  border-color: #d4d0d7;
-  color: #000000;
-  background-color: #EBE9ED; }
-  actionbar:backdrop {
-    border-color: #d4d0d7;
-    color: #000000;
-    background-color: #EBE9ED; }
-  actionbar button.text-button {
-    padding: 4px; }
-  actionbar button .image-button {
-    padding: 6px; }
-  actionbar .title {
-    font-weight: bold;
-    padding: 0 12px; }
-  actionbar .subtitle {
-    font-size: smaller;
-    padding: 0 12px; }
+actionbar > revealer > box {
+  padding: 6px;
+  border-top: 1px solid #d4d0d7; }
+  actionbar > revealer > box, actionbar > revealer > box > box.start, actionbar > revealer > box > box.end {
+    border-spacing: 6px; }
 
 scrolledwindow > overshoot.top {
   background-image: radial-gradient(farthest-side at top, rgba(0, 0, 0, 0.5), transparent);
@@ -2041,6 +2036,22 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
   margin: 5px; }
   .app-notification border {
     border: none; }
+
+expander {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  expander:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+  expander:disabled {
+    color: #767577; }
+  expander:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+
+expander-widget > box > title {
+  border-radius: 2px; }
+  expander-widget > box > title:hover > expander {
+    color: #4d4d4d; }
 
 calendar {
   border-width: 1px;
@@ -2225,16 +2236,48 @@ button.sidebar-button:not(:hover):not(:active) > image {
   opacity: 0.5; }
 
 paned > separator {
-  border: none;
-  color: transparent;
-  background-color: #d4d0d7; }
-  paned > separator:backdrop {
-    background-color: #d4d0d7; }
+  min-width: 1px;
+  min-height: 1px;
+  -gtk-icon-source: none;
+  border-style: none;
+  background-color: transparent;
+  background-image: image(#d4d0d7);
+  background-size: 1px 1px; }
   paned > separator:selected {
-    background-color: #d4d0d7; }
+    background-image: image(#379AFF); }
+  paned > separator.wide {
+    min-width: 5px;
+    min-height: 5px;
+    background-color: #EBE9ED;
+    background-image: image(#d4d0d7), image(#d4d0d7);
+    background-size: 1px 1px, 1px 1px; }
 
-paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
-  border-style: none; }
+paned.horizontal > separator {
+  background-repeat: repeat-y; }
+  paned.horizontal > separator:dir(ltr) {
+    margin: 0 -8px 0 0;
+    padding: 0 8px 0 0;
+    background-position: left; }
+  paned.horizontal > separator:dir(rtl) {
+    margin: 0 0 0 -8px;
+    padding: 0 0 0 8px;
+    background-position: right; }
+  paned.horizontal > separator.wide {
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat-y, repeat-y;
+    background-position: left, right; }
+
+paned.vertical > separator {
+  margin: 0 0 -8px 0;
+  padding: 0 0 8px 0;
+  background-repeat: repeat-x;
+  background-position: top; }
+  paned.vertical > separator.wide {
+    margin: 0;
+    padding: 0;
+    background-repeat: repeat-x, repeat-x;
+    background-position: bottom, top; }
 
 video {
   background: black; }
@@ -2243,19 +2286,15 @@ video {
     min-height: 64px;
     border-radius: 32px; }
 
-tooltip {
+tooltip.background {
+  border: 1px solid #d4d0d7;
   border-radius: 2px;
+  background-color: #E9E9E9;
+  padding: 4px;
   box-shadow: none; }
-  tooltip.background {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #d4d0d7;
-    background-color: #E9E9E9; }
-    tooltip.background label {
-      padding: 1px; }
-  tooltip * {
-    background-color: transparent;
-    color: #000000; }
+
+tooltip > box {
+  border-spacing: 6px; }
 
 colorswatch.top {
   border-top-left-radius: 2.5px;
@@ -2385,39 +2424,11 @@ button.color {
     border-style: none;
     border-radius: 5px; }
 
-.nautilus-window notebook,
-.nautilus-window notebook > stack:not(:only-child) searchbar {
-  background-color: #FFFFFF; }
-  .nautilus-window notebook:backdrop,
-  .nautilus-window notebook > stack:not(:only-child) searchbar:backdrop {
-    background-color: #FFFFFF; }
-
-.caja-location-entry {
-  padding: 3px 5px; }
-
-.gedit-search-entry-occurrences-tag {
-  color: alpha(currentColor, 0.7);
-  border: none;
-  margin: 2px;
-  padding: 2px; }
-
-.gedit-search-slider {
-  border-color: #d4d0d7;
-  padding: 6px;
-  border-radius: 0 0 2px 2px;
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  background-color: #EBE9ED; }
-
 arrow, combobox arrow {
   color: alpha(currentColor, 0.75);
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   min-height: 16px;
   min-width: 16px; }
-
-.context-menu, popover.touch-selection, .csd popover.touch-selection,
-popover.background.touch-selection, .csd popover.background.touch-selection {
-  font: initial; }
 
 .monospace {
   font-family: monospace; }
@@ -2589,12 +2600,11 @@ menubutton arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 .floating-bar {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d9d9d9;
+  border: 1px solid #d4d0d7;
   border-radius: 2px;
   background-color: #FFFFFF;
-  color: #000000; }
+  color: #000000;
+  box-shadow: none; }
   .floating-bar.top {
     border-top-width: 0px;
     border-top-right-radius: 0px;
@@ -2611,9 +2621,6 @@ menubutton arrow {
     border-right-width: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }
-  .floating-bar button {
-    border-style: none;
-    background-color: transparent; }
 
 .terminal-screen, terminal-window, vte-terminal {
   background-color: #000000;
