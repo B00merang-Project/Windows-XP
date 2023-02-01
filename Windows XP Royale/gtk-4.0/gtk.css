@@ -48,10 +48,8 @@ textview {
     textview text:backdrop {
       background-color: #FFFFFF; }
 
-iconview:selected, iconview:selected:focus, iconview text:selected, iconview text selection, iconview text:selected:focus, iconview text selection:focus {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #335EA8;
+iconview:selected, iconview:selected:focus, iconview text:selected, iconview text:selected:focus, iconview text selection, iconview text selection:focus {
+  border: 1px solid #335EA8;
   color: #FFFFFF;
   background-color: #335EA8; }
 
@@ -59,11 +57,16 @@ iconview:selected:backdrop, iconview selection:backdrop, iconview text:selected:
   color: #000000;
   background-color: #335EA8; }
 
-rubberband, flowbox rubberband, treeview.view rubberband, .content-view rubberband, .rubberband, view rubberband, .view.rubberband, .rubberband {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #335EA8;
-  background: none;
+rubberband {
+  border: 1px solid #335692;
+  background-color: rgba(51, 94, 168, 0.3); }
+
+rubberband {
+  border: 1px solid #335692;
+  background-color: rgba(51, 94, 168, 0.3); }
+
+flowbox > rubberband {
+  border: 1px solid #335692;
   background-color: rgba(51, 94, 168, 0.3); }
 
 flowbox > flowboxchild {
@@ -106,41 +109,82 @@ label.error {
   text-shadow: none; }
 
 button {
-  transition: border 100ms ease-in-out; }
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  button:backdrop {
+    transition: 200ms ease-out; }
+  button.flat {
+    transition: none; }
+    button.flat:hover, button.flat:checked {
+      transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 entry {
-  transition: border 100ms ease-out; }
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   entry:focus {
-    transition: border 100ms ease-in; }
+    transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
-notebook tab label, notebook .prelight-page, notebook .prelight-page label, notebook .active-page, notebook .active-page label {
-  transition: all 200ms ease-in; }
+flowbox > flowboxchild {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
-scale, progressbar {
+gridview > child {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+searchbar > revealer > box:backdrop {
   transition: 200ms ease-out; }
-  scale:backdrop, progressbar:backdrop {
-    transition: 200ms ease-out; }
 
-scale slider, switch slider {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-property: background, border, box-shadow; }
-  scale slider:backdrop, switch slider:backdrop {
-    transition: 200ms ease-out; }
-
-scale:backdrop slider, switch:backdrop slider {
+headerbar:backdrop {
   transition: 200ms ease-out; }
+
+treeview > header > button, treeview > header > button:hover, treeview > header > button:active {
+  transition: none; }
+
+treeview > header > button button.dnd:active, treeview > header > button button.dnd:selected, treeview > header > button button.dnd:hover, treeview > header > button button.dnd, treeview > header > button header.button.dnd:active, treeview > header > button header.button.dnd:selected, treeview > header > button header.button.dnd:hover, treeview > header > button header.button.dnd {
+  transition: none; }
+
+popover.menu box.inline-buttons button.image-button.model {
+  transition: none; }
+
+notebook > header > tabs > tab {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 scrollbar {
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   scrollbar:backdrop {
     transition: 200ms ease-out; }
-  scrollbar slider {
-    transition: 200ms ease-out; }
+  scrollbar > range > trough > slider {
+    transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  scrollbar > range.fine-tune > trough > slider {
+    transition: none; }
 
-decoration {
+switch {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  switch > slider {
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.view.content-view.check:not(list),
+.content-view .tile check:not(list) {
+  transition: 200ms; }
+
+checkbutton {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+scale > through {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  scale > through > slider {
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-property: background, border, box-shadow; }
+
+placesview .server-list-button > image,
+placesview .server-list-button:checked > image {
+  transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+colorswatch {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+plane {
+  transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+window.csd:backdrop {
   transition: 200ms ease-out; }
-  decoration:backdrop {
-    transition: 200ms ease-out; }
 
 window.assistant .sidebar {
   padding: 4px;
@@ -865,20 +909,36 @@ popover:backdrop {
 magnifier {
   background-color: #FFFFFF; }
 
-modelbutton.flat, menuitem.button.flat, .menuitem.button.flat {
-  padding: 2px 8px;
+modelbutton.flat {
+  min-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   border: none;
-  color: #000000;
-  background-color: transparent; }
-  modelbutton.flat:hover, modelbutton.flat:selected, modelbutton.flat:active:hover, menuitem.button.flat:hover, menuitem.button.flat:selected, menuitem.button.flat:active:hover, .menuitem.button.flat:hover, .menuitem.button.flat:selected, .menuitem.button.flat:active:hover {
+  border-radius: 0px;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  modelbutton.flat:hover {
     color: #FFFFFF;
     background-color: #335EA8; }
-  modelbutton.flat > image, menuitem.button.flat > image, .menuitem.button.flat > image {
+  modelbutton.flat:selected {
+    color: #FFFFFF;
+    background-color: #335EA8; }
+  modelbutton.flat:disabled {
+    color: #767577; }
+  modelbutton.flat > image {
     padding-right: 4px; }
-  modelbutton.flat arrow.left, menuitem.button.flat arrow.left, .menuitem.button.flat arrow.left {
-    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  modelbutton.flat arrow.right, menuitem.button.flat arrow.right, .menuitem.button.flat arrow.right {
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  modelbutton.flat arrow {
+    background: none;
+    min-width: 16px;
+    min-height: 16px;
+    opacity: 0.3; }
+    modelbutton.flat arrow:hover {
+      background: none; }
+    modelbutton.flat arrow.left {
+      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+    modelbutton.flat arrow.right {
+      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 menu, .menu {
   margin: 4px;
@@ -2407,7 +2467,8 @@ button.color {
     .content-view .tile:disabled {
       background-color: #dfdde1; }
   .content-view > rubberband {
-    /*@extend rubberband;*/ }
+    border: 1px solid #335692;
+    background-color: rgba(51, 94, 168, 0.3); }
 
 .scale-popup {
   /* SAMPLE
@@ -2781,25 +2842,67 @@ menubutton arrow {
   .linked.vertical spinbutton button:first-child, .linked.vertical spinbutton button:last-child, .primary-toolbar .linked.vertical spinbutton button:first-child, .primary-toolbar .linked.vertical spinbutton button:last-child {
     border-radius: 0; }
 
-toolbar.inline-toolbar toolbutton > button.flat, toolbar.inline-toolbar toolbutton:backdrop > button.flat {
-  border-radius: 0;
-  border-left-width: 0; }
-
-toolbar.inline-toolbar toolbutton:first-child > button.flat, toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat {
-  border-left-width: 1px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px; }
-
-toolbar.inline-toolbar toolbutton:last-child > button.flat, toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat {
-  border-left-width: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px; }
-
-toolbar.inline-toolbar toolbutton:only-child > button.flat, toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat {
-  border-width: 1px;
-  border-radius: 2px; }
+.toolbar > button,
+.toolbar > :not(.linked) > button,
+.toolbar :not(.linked) > menubutton > button,
+.toolbar :not(.linked) > scalebutton > button,
+.toolbar :not(.linked) > dropdown > button,
+.toolbar :not(.linked) > colorbutton > button,
+.toolbar :not(.linked) > fontbutton > button,
+.toolbar :not(.linked) > appchooserbutton > button,
+.toolbar :not(.linked) > combobox > box > button {
+  margin: 1px;
+  border-color: transparent;
+  border-radius: 2px;
+  color: #000000;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  .toolbar > button:hover,
+  .toolbar > :not(.linked) > button:hover,
+  .toolbar :not(.linked) > menubutton > button:hover,
+  .toolbar :not(.linked) > scalebutton > button:hover,
+  .toolbar :not(.linked) > dropdown > button:hover,
+  .toolbar :not(.linked) > colorbutton > button:hover,
+  .toolbar :not(.linked) > fontbutton > button:hover,
+  .toolbar :not(.linked) > appchooserbutton > button:hover,
+  .toolbar :not(.linked) > combobox > box > button:hover {
+    border-color: #3c4760;
+    background-color: #EBE9ED;
+    background-image: linear-gradient(to top, #90acd0, #90acd0 1px, transparent 1px), linear-gradient(to right, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to left, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, 4 rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to bottom, #d4dfed 1px, #f9fbfd 1px, #f9fbfd 2px, #f3f6fa 2px, #f3f6fa 3px, transparent 3px), linear-gradient(to top, #91add0 1px, #d0dceb 40%, #e3eaf3 45%, #e9eff6 50%, #f1f5f9 60%, #fdfdfe);
+    box-shadow: 0px 1px rgba(255, 255, 255, 0.6), 1px 0px rgba(255, 255, 255, 0.2), 0px -1px rgba(0, 0, 0, 0.04), -1px 0px rgba(0, 0, 0, 0.03); }
+  .toolbar > button:active, .toolbar > button:checked,
+  .toolbar > :not(.linked) > button:active,
+  .toolbar > :not(.linked) > button:checked,
+  .toolbar :not(.linked) > menubutton > button:active,
+  .toolbar :not(.linked) > menubutton > button:checked,
+  .toolbar :not(.linked) > scalebutton > button:active,
+  .toolbar :not(.linked) > scalebutton > button:checked,
+  .toolbar :not(.linked) > dropdown > button:active,
+  .toolbar :not(.linked) > dropdown > button:checked,
+  .toolbar :not(.linked) > colorbutton > button:active,
+  .toolbar :not(.linked) > colorbutton > button:checked,
+  .toolbar :not(.linked) > fontbutton > button:active,
+  .toolbar :not(.linked) > fontbutton > button:checked,
+  .toolbar :not(.linked) > appchooserbutton > button:active,
+  .toolbar :not(.linked) > appchooserbutton > button:checked,
+  .toolbar :not(.linked) > combobox > box > button:active,
+  .toolbar :not(.linked) > combobox > box > button:checked {
+    border-color: #3f3e41;
+    background-color: #dfdce2;
+    background-image: linear-gradient(to bottom, #d4dfed 1px, #6f94c2 1px, #6f94c2 2px, transparent 2px), linear-gradient(to right, #6f94c2 1px, transparent 1px), linear-gradient(to left, #6f94c2 1px, transparent 1px), linear-gradient(to top, #f9fbfd 1px, #f3f6fa 1px, #f3f6fa 2px, #fdfdfe 2px, #e3eaf3 50%, #91add0 95%); }
+  .toolbar > button:disabled,
+  .toolbar > :not(.linked) > button:disabled,
+  .toolbar :not(.linked) > menubutton > button:disabled,
+  .toolbar :not(.linked) > scalebutton > button:disabled,
+  .toolbar :not(.linked) > dropdown > button:disabled,
+  .toolbar :not(.linked) > colorbutton > button:disabled,
+  .toolbar :not(.linked) > fontbutton > button:disabled,
+  .toolbar :not(.linked) > appchooserbutton > button:disabled,
+  .toolbar :not(.linked) > combobox > box > button:disabled {
+    border-color: transparent;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: transparent; }
 
 stackswitcher button.text-button {
   min-width: 80px; }
