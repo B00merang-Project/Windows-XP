@@ -1,28 +1,9 @@
 [![built-with-azurra-framework](https://github.com/Elbullazul/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/Elbullazul/Azurra_framework)
 
 # Windows XP themes for Linux
+Most visual styles from Windows XP brought back to life for Linux desktops
 
-### All 7 of Windows XP themes available for Linux
-- Luna
-- Homestead
-- Metallic
-- Royale
-- Royale Dark
-- Embedded
-- Zune
-
-you may also be interested in our [Windows 95](https://github.com/B00merang-Project/Windows-95) theme
-
-**Maintainer :** [Elbullazul](https://github.com/Elbullazul)
-
-**Distributor :** [B00merang Project](https://github.com/B00merang-Project)
-
-**License :** GPL v3
-
-**More info :** https://b00merang.weebly.com/windows-xp.html
-
-# Screenshots
-
+### Previews
 Embedded
 ![embedded](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Embedded%20(3).png)
 
@@ -43,3 +24,13 @@ Royale Dark (Noir)
 
 Zune
 ![zune](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Zune%20(2).png)
+
+### Supported platforms
+- Any GTK-based desktop
+- Cinnamon
+- Gnome
+- MATE
+- Xfce (partial)
+
+### Manual installation
+Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
