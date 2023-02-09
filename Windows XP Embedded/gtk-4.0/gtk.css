@@ -920,24 +920,30 @@ treeview entry, treeview entry.flat {
     border-color: #379AFF; }
 
 popover.background {
-  padding: 2px;
-  background-color: #EBE9ED;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .csd popover.background, popover.background {
+  background-color: transparent;
+  font: initial; }
+  popover.background > arrow,
+  popover.background > contents {
+    background-color: #FFFFFF;
+    background-clip: padding-box;
     border: 1px solid #d4d0d7;
-    border-radius: 0px; }
-    .csd popover.background:backdrop, popover.background:backdrop {
-      border-color: #d4d0d7; }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
   popover.background:backdrop {
-    background-color: #EBE9ED;
-    box-shadow: none; }
-  popover.background > list, popover.background > .view, popover.background > iconview, popover.background > toolbar, popover.background > .inline-toolbar {
-    border-style: none;
     background-color: transparent; }
-  popover.background separator {
-    margin: 3px; }
-  popover.background list separator {
-    margin: 0px; }
+  popover.background > contents {
+    padding: 8px;
+    border-radius: 0px; }
+    popover.background > contents > list,
+    popover.background > contents > .view,
+    popover.background > contents > iconview,
+    popover.background > contents > .toolbar {
+      border-style: none;
+      background-color: transparent; }
+    popover.background > contents separator {
+      background-color: #d4d0d7;
+      margin: 3px; }
+    popover.background > contents list separator {
+      margin: 0; }
 
 magnifier {
   background-color: #FFFFFF; }
