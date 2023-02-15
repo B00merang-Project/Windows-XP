@@ -1282,78 +1282,6 @@ switch {
     border-color: #c7c5c9;
     background-color: #eae9ec; }
 
-.view.content-view.check:not(list), iconview.content-view.check:not(list),
-.content-view .tile check:not(list) {
-  -gtk-icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"));
-  background-color: transparent;
-  min-width: 41px;
-  min-height: 41px;
-  background-image: none;
-  transition: none;
-  box-shadow: none;
-  border-width: 0; }
-
-.view.content-view.check:hover:not(list), iconview.content-view.check:hover:not(list),
-.content-view .tile check:hover:not(list) {
-  -gtk-icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-hover-selectionmode.png"));
-  background-color: transparent;
-  min-width: 41px;
-  min-height: 41px;
-  background-image: none;
-  transition: none;
-  box-shadow: none;
-  border-width: 0; }
-
-.view.content-view.check:active:not(list), iconview.content-view.check:active:not(list),
-.content-view .tile check:active:not(list) {
-  -gtk-icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-active-selectionmode.png"));
-  background-color: transparent;
-  min-width: 41px;
-  min-height: 41px;
-  background-image: none;
-  transition: none;
-  box-shadow: none;
-  border-width: 0; }
-
-.view.content-view.check:checked:not(list), iconview.content-view.check:checked:not(list),
-.content-view .tile check:checked:not(list) {
-  -gtk-icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode.png"));
-  background-color: transparent;
-  min-width: 41px;
-  min-height: 41px;
-  background-image: none;
-  transition: none;
-  box-shadow: none;
-  border-width: 0; }
-
-.view.content-view.check:checked:hover:not(list), iconview.content-view.check:checked:hover:not(list),
-.content-view .tile check:checked:hover:not(list) {
-  -gtk-icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-selectionmode.png"));
-  background-color: transparent;
-  min-width: 41px;
-  min-height: 41px;
-  background-image: none;
-  transition: none;
-  box-shadow: none;
-  border-width: 0; }
-
-.view.content-view.check:checked:active:not(list), iconview.content-view.check:checked:active:not(list),
-.content-view .tile check:checked:active:not(list) {
-  -gtk-icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active-selectionmode.png"));
-  background-color: transparent;
-  min-width: 41px;
-  min-height: 41px;
-  background-image: none;
-  transition: none;
-  box-shadow: none;
-  border-width: 0; }
-
 checkbutton.text-button, radiobutton.text-button {
   padding: 2px 0;
   outline-offset: 0; }
@@ -1503,21 +1431,21 @@ row:selected check:checked:active {
   row:selected check:checked:active:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-active.png")); }
 
-menu menuitem check {
+popover.menu check {
   -gtk-icon-shadow: none; }
-  menu menuitem check:hover, menu menuitem check:disabled, menu menuitem check {
+  popover.menu check:hover, popover.menu check:disabled, popover.menu check {
     -gtk-icon-source: none; }
-  menu menuitem check:active, menu menuitem check:checked {
+  popover.menu check:active, popover.menu check:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/menu-check-checked.png")); }
-    menu menuitem check:active:hover, menu menuitem check:checked:hover {
+    popover.menu check:active:hover, popover.menu check:checked:hover {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-check-checked-hover.png")); }
-    menu menuitem check:active:disabled, menu menuitem check:checked:disabled {
+    popover.menu check:active:disabled, popover.menu check:checked:disabled {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-check-checked-insensitive.png")); }
-  menu menuitem check:indeterminate {
+  popover.menu check:indeterminate {
     -gtk-icon-source: -gtk-scaled(url("assets/menu-check-mixed.png")); }
-    menu menuitem check:indeterminate:hover {
+    popover.menu check:indeterminate:hover {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-check-mixed-hover.png")); }
-    menu menuitem check:indeterminate:disabled {
+    popover.menu check:indeterminate:disabled {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-check-mixed-insensitive.png")); }
 
 radio {
@@ -1652,21 +1580,21 @@ row:selected radio:checked:active {
   row:selected radio:checked:active:backdrop {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-active.png")); }
 
-menu menuitem radio {
+popover.menu radio {
   -gtk-icon-shadow: none; }
-  menu menuitem radio:hover, menu menuitem radio:disabled, menu menuitem radio {
+  popover.menu radio:hover, popover.menu radio:disabled, popover.menu radio {
     -gtk-icon-source: none; }
-  menu menuitem radio:active, menu menuitem radio:checked {
+  popover.menu radio:active, popover.menu radio:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-checked.png")); }
-    menu menuitem radio:active:hover, menu menuitem radio:checked:hover {
+    popover.menu radio:active:hover, popover.menu radio:checked:hover {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-checked-hover.png")); }
-    menu menuitem radio:active:disabled, menu menuitem radio:checked:disabled {
+    popover.menu radio:active:disabled, popover.menu radio:checked:disabled {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-checked-insensitive.png")); }
-  menu menuitem radio:indeterminate {
+  popover.menu radio:indeterminate {
     -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-mixed.png")); }
-    menu menuitem radio:indeterminate:hover {
+    popover.menu radio:indeterminate:hover {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-mixed-hover.png")); }
-    menu menuitem radio:indeterminate:disabled {
+    popover.menu radio:indeterminate:disabled {
       -gtk-icon-source: -gtk-scaled(url("assets/menu-radio-mixed-insensitive.png")); }
 
 scale {
