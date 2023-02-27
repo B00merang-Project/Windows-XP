@@ -1600,181 +1600,143 @@ scale {
   min-height: 10px;
   min-width: 10px;
   padding: 12px; }
-  scale fill, scale highlight {
-    margin: -1px; }
-  scale trough, scale fill {
+  scale > fill,
+  scale > trough {
     border: 2px solid transparent;
-    border-radius: 0;
+    border-radius: 0px;
     background-color: transparent;
-    box-shadow: none;
-    outline-offset: 11px; }
-    scale trough:disabled, scale fill:disabled {
+    box-shadow: none; }
+    scale > fill:disabled,
+    scale > trough:disabled {
       border-color: transparent;
       background-color: transparent; }
-  row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill {
-    box-shadow: none; }
-    row:selected scale trough, row:selected scale trough:disabled, scale row:selected trough, scale row:selected trough:disabled, row:selected scale fill, row:selected scale fill:disabled, scale row:selected fill, scale row:selected fill:disabled {
-      border-color: #061f3e; }
-  scale.horizontal trough {
-    border-image: url("assets/trough-horz.png");
-    border-image-repeat: stretch;
-    border-width: 1px 2px;
-    border-image-slice: 1 2 1 2;
-    background-image: linear-gradient(to bottom, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.horizontal slider {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-horz.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-    scale.horizontal slider:hover {
-      background-image: -gtk-scaled(url("assets/slider-horz-hover.png")); }
-    scale.horizontal slider:active {
-      background-image: -gtk-scaled(url("assets/slider-horz-active.png")); }
-    scale.horizontal slider:disabled {
-      background-image: -gtk-scaled(url("assets/slider-horz-insensitive.png")); }
-  scale.vertical trough {
-    border-image: url("assets/trough-vert.png");
-    border-image-repeat: stretch;
-    border-width: 2px 1px;
-    border-image-slice: 2 1 2 1;
-    background-image: linear-gradient(to right, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.vertical slider {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-vert.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
+    scale.horizontal > trough {
+      border-image: url("assets/trough-horz.png");
+      border-image-repeat: stretch;
+      border-width: 1px 2px;
+      border-image-slice: 1 2 1 2;
+      background-image: linear-gradient(to bottom, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
+    scale.vertical > trough {
+      border-image: url("assets/trough-vert.png");
+      border-image-repeat: stretch;
+      border-width: 2px 1px;
+      border-image-slice: 2 1 2 1;
+      background-image: linear-gradient(to right, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
+  scale > trough > highlight {
+    border-color: transparent;
+    background-color: transparent; }
+  scale > trough > slider {
     min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-    scale.vertical slider:hover {
-      background-image: -gtk-scaled(url("assets/slider-vert-hover.png")); }
-    scale.vertical slider:active {
-      background-image: -gtk-scaled(url("assets/slider-vert-active.png")); }
-    scale.vertical slider:disabled {
-      background-image: -gtk-scaled(url("assets/slider-vert-insensitive.png")); }
-  scale value {
-    color: alpha(currentColor, 0.4); }
-  scale marks {
-    color: alpha(currentColor, 0.4); }
-    scale marks.top {
-      margin-bottom: 11px;
-      margin-top: -15px; }
-    scale marks.bottom {
-      margin-top: 11px;
-      margin-bottom: -15px; }
-    scale marks.top {
-      margin-right: 11px;
-      margin-left: -15px; }
-    scale marks.bottom {
-      margin-left: 11px;
-      margin-right: -15px; }
-  scale.fine-tune fill, scale.fine-tune highlight, scale.fine-tune trough {
-    outline-offset: 4px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 11px;
-    margin-top: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 11px;
-    margin-bottom: -12px; }
-  scale.fine-tune marks.top {
-    margin-right: 11px;
-    margin-left: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 11px;
-    margin-right: -12px; }
-  scale.horizontal indicator {
-    min-height: 4px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 1px; }
-  scale.vertical indicator {
-    min-height: 1px;
-    min-width: 4px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 1px; }
-  scale.color.horizontal slider, scale.horizontal contents:last-child:not(:only-child) > trough > slider {
-    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above.png")); }
-    scale.color.horizontal slider:hover, scale.horizontal contents:last-child:not(:only-child) > trough > slider:hover {
-      background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-hover.png")); }
-    scale.color.horizontal slider:active, scale.horizontal contents:last-child:not(:only-child) > trough > slider:active {
-      background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-active.png")); }
-    scale.color.horizontal slider:disabled, scale.horizontal contents:last-child:not(:only-child) > trough > slider:disabled {
-      background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-insensitive.png")); }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider {
+    min-height: 22px;
+    margin: -10px;
+    border-radius: 0px;
+    border: none;
+    padding: 0px;
+    box-shadow: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  scale.horizontal > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-horz.png")); }
+    scale.horizontal > trough > slider:hover {
+      background-image: -gtk-scaled(url("assets/slider-horz-hover.png")); }
+    scale.horizontal > trough > slider:active {
+      background-image: -gtk-scaled(url("assets/slider-horz-active.png")); }
+    scale.horizontal > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-horz-insensitive.png")); }
+  scale.horizontal.marks-after:not(.marks-before) > trough > slider {
     background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below.png")); }
-    scale.horizontal contents:first-child:not(:only-child) > trough > slider:hover {
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:hover {
       background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-hover.png")); }
-    scale.horizontal contents:first-child:not(:only-child) > trough > slider:active {
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:active {
       background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-active.png")); }
-    scale.horizontal contents:first-child:not(:only-child) > trough > slider:disabled {
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled {
       background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-below-insensitive.png")); }
-  scale.color.vertical:dir(rtl) slider, scale.vertical contents:last-child:not(:only-child) > trough > slider {
-    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above.png")); }
-    scale.color.vertical:dir(rtl) slider:hover, scale.vertical contents:last-child:not(:only-child) > trough > slider:hover {
-      background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-hover.png")); }
-    scale.color.vertical:dir(rtl) slider:active, scale.vertical contents:last-child:not(:only-child) > trough > slider:active {
-      background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-active.png")); }
-    scale.color.vertical:dir(rtl) slider:disabled, scale.vertical contents:last-child:not(:only-child) > trough > slider:disabled {
-      background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-insensitive.png")); }
-  scale.color.vertical:dir(ltr) slider, scale.vertical contents:first-child:not(:only-child) > trough > slider {
+  scale.horizontal.color > trough > slider, scale.horizontal.marks-before:not(.marks-after) > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above.png")); }
+    scale.horizontal.color > trough > slider:hover, scale.horizontal.marks-before:not(.marks-after) > trough > slider:hover {
+      background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-hover.png")); }
+    scale.horizontal.color > trough > slider:active, scale.horizontal.marks-before:not(.marks-after) > trough > slider:active {
+      background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-active.png")); }
+    scale.horizontal.color > trough > slider:disabled, scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-horz-scale-has-marks-above-insensitive.png")); }
+  scale.vertical > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-vert.png")); }
+    scale.vertical > trough > slider:hover {
+      background-image: -gtk-scaled(url("assets/slider-vert-hover.png")); }
+    scale.vertical > trough > slider:active {
+      background-image: -gtk-scaled(url("assets/slider-vert-active.png")); }
+    scale.vertical > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-vert-insensitive.png")); }
+  scale.vertical.color:dir(ltr) > trough > slider, scale.vertical.marks-after:not(.marks-before) > trough > slider {
     background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below.png")); }
-    scale.color.vertical:dir(ltr) slider:hover, scale.vertical contents:first-child:not(:only-child) > trough > slider:hover {
+    scale.vertical.color:dir(ltr) > trough > slider:hover, scale.vertical.marks-after:not(.marks-before) > trough > slider:hover {
       background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-hover.png")); }
-    scale.color.vertical:dir(ltr) slider:active, scale.vertical contents:first-child:not(:only-child) > trough > slider:active {
+    scale.vertical.color:dir(ltr) > trough > slider:active, scale.vertical.marks-after:not(.marks-before) > trough > slider:active {
       background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-active.png")); }
-    scale.color.vertical:dir(ltr) slider:disabled, scale.vertical contents:first-child:not(:only-child) > trough > slider:disabled {
+    scale.vertical.color:dir(ltr) > trough > slider:disabled, scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled {
       background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-below-insensitive.png")); }
-  scale.color {
-    min-height: 0;
-    min-width: 0; }
-    scale.color trough {
-      border: none;
-      background-image: none;
-      background-repeat: no-repeat; }
-    scale.color.horizontal {
-      padding: 0 0 15px 0; }
-      scale.color.horizontal trough {
-        padding-bottom: 4px;
-        background-position: 0 -3px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.horizontal slider:dir(ltr):hover, scale.color.horizontal slider:dir(ltr), scale.color.horizontal slider:dir(rtl):hover, scale.color.horizontal slider:dir(rtl) {
-        margin-bottom: -10px;
-        margin-top: 0; }
-    scale.color.vertical:dir(ltr) {
-      padding: 0 0 0 15px; }
-      scale.color.vertical:dir(ltr) trough {
-        padding-left: 4px;
-        background-position: 3px 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider {
-        margin-left: -10px;
-        margin-right: 0; }
-    scale.color.vertical:dir(rtl) {
-      padding: 0 15px 0 0; }
-      scale.color.vertical:dir(rtl) trough {
-        padding-right: 4px;
-        background-position: -3px 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0; }
-      scale.color.vertical:dir(rtl) slider {
-        margin-right: -10px;
-        margin-left: 0; }
-        scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled {
-          margin-right: -10px;
-          margin-left: 0; }
+  scale.vertical.color:dir(rtl) > trough > slider, scale.vertical.marks-before:not(.marks-after) > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above.png")); }
+    scale.vertical.color:dir(rtl) > trough > slider:hover, scale.vertical.marks-before:not(.marks-after) > trough > slider:hover {
+      background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-hover.png")); }
+    scale.vertical.color:dir(rtl) > trough > slider:active, scale.vertical.marks-before:not(.marks-after) > trough > slider:active {
+      background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-active.png")); }
+    scale.vertical.color:dir(rtl) > trough > slider:disabled, scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-vert-scale-has-marks-above-insensitive.png")); }
+  scale.fine-tune.horizontal {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    min-height: 16px; }
+  scale.fine-tune.vertical {
+    min-width: 16px; }
+  scale.fine-tune > trough,
+  scale.fine-tune > trough > fill,
+  scale.fine-tune > trough > highlight {
+    border-radius: 0px; }
+  scale.fine-tune > trough > slider {
+    margin: -4px; }
+  scale > value {
+    color: alpha(currentColor, 0.55);
+    font-feature-settings: "tnum"; }
+  scale > marks {
+    color: alpha(currentColor, 0.55); }
+  scale.horizontal > marks.top {
+    margin-bottom: 6px; }
+  scale.horizontal > marks.bottom {
+    margin-top: 6px; }
+  scale.horizontal > marks indicator {
+    min-width: 1px;
+    min-height: 6px;
+    background-color: currentColor; }
+  scale.horizontal > value.left {
+    margin-right: 9px; }
+  scale.horizontal > value.right {
+    margin-left: 9px; }
+  scale.horizontal.fine-tune > marks.top {
+    margin-top: 3px; }
+  scale.horizontal.fine-tune > marks.bottom {
+    margin-bottom: 3px; }
+  scale.horizontal.fine-tune > marks indicator {
+    min-height: 3px; }
+  scale.vertical > marks.top {
+    margin-right: 6px; }
+  scale.vertical > marks.bottom {
+    margin-left: 6px; }
+  scale.vertical > marks indicator {
+    min-height: 1px;
+    min-width: 6px;
+    background-color: currentColor; }
+  scale.vertical > value.top {
+    margin-bottom: 9px; }
+  scale.vertical > value.bottom {
+    margin-top: 9px; }
+  scale.vertical.fine-tune > marks.top {
+    margin-left: 3px; }
+  scale.vertical.fine-tune > marks.bottom {
+    margin-right: 3px; }
+  scale.vertical.fine-tune > marks indicator {
+    min-height: 3px; }
 
 progressbar {
   font-size: smaller;
@@ -2053,34 +2015,40 @@ calendar {
   border-style: solid;
   border-color: #d4d0d7;
   color: #000000; }
-  calendar.header {
+  calendar > header {
     border: none;
     border-bottom: 1px solid #e9e6eb;
     color: #000000; }
-  calendar.button {
-    color: rgba(0, 0, 0, 0.45); }
-    calendar.button:hover {
-      color: #000000; }
-    calendar.button:backdrop {
-      color: rgba(0, 0, 0, 0.45); }
-    calendar.button:disabled {
-      color: rgba(118, 117, 119, 0.45); }
-  calendar:selected {
-    border-radius: 3px;
-    color: #FFFFFF;
-    background-color: #5B83BD; }
-    calendar:selected:backdrop {
-      color: #000000;
-      background-color: #5B83BD; }
-  calendar:indeterminate {
-    color: alpha(currentColor, 0.1); }
-  calendar.highlight {
-    color: #767577; }
-    calendar.highlight:backdrop {
-      color: #b0afb2; }
-  calendar:backdrop {
-    color: #000000;
-    border-color: #d4d0d7; }
+    calendar > header > button {
+      border: none;
+      box-shadow: none;
+      background: none;
+      border-radius: 0; }
+      calendar > header > button:hover {
+        color: #000000; }
+      calendar > header > button:backdrop {
+        color: #000000; }
+      calendar > header > button:disabled {
+        color: #767577; }
+  calendar > grid > label.today {
+    box-shadow: inset 0px -2px #d4d0d7; }
+    calendar > grid > label.today:selected {
+      box-shadow: none; }
+  calendar > grid > label:focus {
+    outline-color: #d4d0d7;
+    outline-offset: -2px;
+    outline-width: 2px;
+    outline-style: solid; }
+  calendar > grid > label.day-number {
+    padding: 3px; }
+    calendar > grid > label.day-number:selected {
+      color: #FFFFFF;
+      background-color: #5B83BD;
+      border-radius: 0px; }
+    calendar > grid > label.day-number:checked {
+      background-color: rgba(91, 131, 189, 0.3); }
+  calendar > grid > label.day-number.other-month {
+    color: alpha(currentColor, 0.3); }
 
 window.dialog.message .titlebar {
   min-height: 20px;
