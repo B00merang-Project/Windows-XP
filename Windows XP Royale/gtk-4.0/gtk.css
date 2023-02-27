@@ -442,11 +442,9 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 6px 6px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 2px;
+  border: 1px solid #3c465b;
   color: #000000;
-  border-color: #3c465b;
   background-color: #EBE9ED;
   background-image: linear-gradient(to top, #90acd0, #90acd0 1px, transparent 1px), linear-gradient(to right, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to left, rgba(147, 175, 209, 0.75), rgba(147, 175, 209, 0.75) 1px, rgba(249, 251, 253, 0.45) 1px, 4 rgba(249, 251, 253, 0.45) 2px, transparent 2px), linear-gradient(to bottom, #d4dfed 1px, #f9fbfd 1px, #f9fbfd 2px, #f3f6fa 2px, #f3f6fa 3px, transparent 3px), linear-gradient(to top, #91add0 1px, #d0dceb 40%, #e3eaf3 45%, #e9eff6 50%, #f1f5f9 60%, #fdfdfe);
   box-shadow: 0px 1px rgba(255, 255, 255, 0.6), 1px 0px rgba(255, 255, 255, 0.2), 0px -1px rgba(0, 0, 0, 0.04), -1px 0px rgba(0, 0, 0, 0.03); }
