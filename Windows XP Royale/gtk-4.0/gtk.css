@@ -1170,88 +1170,78 @@ notebook {
       color: #8d8694; }
 
 scrollbar {
+  border: none;
   background-color: transparent;
-  border: 0 none transparent;
-  margin: 0;
-  padding: 0; }
+  /*
+  &.horizontal button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+  }
+
+  &.vertical button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  }
+  */ }
+  scrollbar > range > trough > slider {
+    margin: 0px;
+    border: 5px solid transparent; }
   scrollbar.horizontal {
-    background: url("assets/trough-scrollbar-horz.png"); }
-  scrollbar.horizontal slider {
-    border: 5px solid transparent;
-    border-image: url("assets/scrollbar-slider-horz.png");
-    border-image-slice: 5 5 5 5;
-    border-image-repeat: stretch;
-    background: url("assets/handle-horz.png") no-repeat center center, url("assets/slider-bg-horz.png"); }
-    scrollbar.horizontal slider:hover {
-      border-image: url("assets/scrollbar-slider-horz-hover.png");
-      border-image-slice: 5 5 5 5;
-      border-image-repeat: stretch;
-      background: url("assets/handle-horz-hover.png") no-repeat center center, url("assets/slider-bg-horz-hover.png"); }
-    scrollbar.horizontal slider:hover:active {
-      border-image: url("assets/scrollbar-slider-horz-active.png");
-      border-image-slice: 5 5 5 5;
-      border-image-repeat: stretch;
-      background: url("assets/handle-horz-active.png") no-repeat center center, url("assets/slider-bg-horz-active.png"); }
+    background-image: url("assets/trough-scrollbar-horz.png"); }
+    scrollbar.horizontal > range > trough > slider {
+      min-width: 8px;
+      min-height: 7px;
+      border-image: url("assets/scrollbar-slider-horz.png") 5 5 5 5 stretch;
+      background: url("assets/handle-horz.png") no-repeat center center, url("assets/slider-bg-horz.png"); }
+      scrollbar.horizontal > range > trough > slider:hover {
+        border-image: url("assets/scrollbar-slider-horz-hover.png") 5 5 5 5 stretch;
+        background: url("assets/handle-horz-hover.png") no-repeat center center, url("assets/slider-bg-horz-hover.png"); }
+      scrollbar.horizontal > range > trough > slider:hover:active {
+        border-image: url("assets/scrollbar-slider-horz-active.png") 5 5 5 5 stretch;
+        background: url("assets/handle-horz-active.png") no-repeat center center, url("assets/slider-bg-horz-active.png"); }
   scrollbar.vertical {
-    background: url("assets/trough-scrollbar-vert.png"); }
-  scrollbar.vertical slider {
-    border: 5px solid transparent;
-    border-image: url("assets/scrollbar-slider-vert.png");
-    border-image-slice: 5 5 5 5;
-    border-image-repeat: stretch;
-    background: url("assets/handle-vert.png") no-repeat center center, url("assets/slider-bg-vert.png"); }
-    scrollbar.vertical slider:hover {
-      border-image: url("assets/scrollbar-slider-vert-hover.png");
-      border-image-slice: 5 5 5 5;
-      border-image-repeat: stretch;
-      background: url("assets/handle-vert-hover.png") no-repeat center center, url("assets/slider-bg-vert-hover.png"); }
-    scrollbar.vertical slider:hover:active {
-      border-image: url("assets/scrollbar-slider-vert-active.png");
-      border-image-slice: 5 5 5 5;
-      border-image-repeat: stretch;
-      background: url("assets/handle-vert-active.png") no-repeat center center, url("assets/slider-bg-vert-active.png"); }
-  scrollbar.horizontal slider {
-    min-width: 8px;
-    min-height: 7px; }
-  scrollbar.vertical slider {
+    background-image: url("assets/trough-scrollbar-vert.png"); }
+    scrollbar.vertical > range > trough > slider {
+      min-width: 8px;
+      min-height: 7px;
+      border-image: url("assets/scrollbar-slider-vert.png") 5 5 5 5 stretch;
+      background: url("assets/handle-vert.png") no-repeat center center, url("assets/slider-bg-vert.png"); }
+      scrollbar.vertical > range > trough > slider:hover {
+        border-image: url("assets/scrollbar-slider-vert-hover.png") 5 5 5 5 stretch;
+        background: url("assets/handle-vert-hover.png") no-repeat center center, url("assets/slider-bg-vert-hover.png"); }
+      scrollbar.vertical > range > trough > slider:hover:active {
+        border-image: url("assets/scrollbar-slider-vert-active.png") 5 5 5 5 stretch;
+        background: url("assets/handle-vert-active.png") no-repeat center center, url("assets/slider-bg-vert-active.png"); }
+  scrollbar.horizontal > range > trough > slider {
+    min-width: 45px; }
+  scrollbar.vertical > range > trough > slider {
+    min-height: 45px; }
+  scrollbar > range.fine-tune > trough > slider {
     min-width: 7px;
-    min-height: 8px; }
-  scrollbar.fine-tune slider {
-    margin: 1px;
-    min-width: 5px;
-    min-height: 5px; }
-  scrollbar button:active, scrollbar button:hover, scrollbar button:disabled, scrollbar button {
-    padding: 0;
-    min-width: 17px;
-    min-height: 17px;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    -gtk-icon-source: none; }
-  scrollbar.horizontal button.up {
-    background: url("assets/left-stepper.png"); }
-    scrollbar.horizontal button.up:hover {
-      background: url("assets/left-stepper-hover.png"); }
-    scrollbar.horizontal button.up:hover:active {
-      background: url("assets/left-stepper-active.png"); }
-  scrollbar.horizontal button.down {
-    background: url("assets/right-stepper.png"); }
-    scrollbar.horizontal button.down:hover {
-      background: url("assets/right-stepper-hover.png"); }
-    scrollbar.horizontal button.down:hover:active {
-      background: url("assets/right-stepper-active.png"); }
-  scrollbar.vertical button.up {
-    background: url("assets/top-stepper.png"); }
-    scrollbar.vertical button.up:hover {
-      background: url("assets/top-stepper-hover.png"); }
-    scrollbar.vertical button.up:hover:active {
-      background: url("assets/top-stepper-active.png"); }
-  scrollbar.vertical button.down {
-    background: url("assets/bottom-stepper.png"); }
-    scrollbar.vertical button.down:hover {
-      background: url("assets/bottom-stepper-hover.png"); }
-    scrollbar.vertical button.down:hover:active {
-      background: url("assets/bottom-stepper-active.png"); }
+    min-height: 7px;
+    border-radius: 0px; }
+  scrollbar > range.fine-tune.horizontal > trough > slider {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  scrollbar > range.fine-tune.vertical > trough > slider {
+    margin-left: 0px;
+    margin-right: 0px; }
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+    opacity: 1.0; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) > range > trough > slider {
+      margin: 0px; }
+    scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) > range > trough > slider {
+      min-width: 45px;
+      min-height: 7px; }
+    scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) > range > trough > slider {
+      min-width: 7px;
+      min-height: 45px; }
+  scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+    opacity: 1; }
+
+treeview ~ scrollbar.vertical {
+  border-top: 1px solid #d4d0d7;
+  margin-top: -1px; }
 
 switch {
   font-size: 0;
