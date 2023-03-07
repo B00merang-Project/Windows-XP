@@ -1240,29 +1240,27 @@ treeview ~ scrollbar.vertical {
   margin-top: -1px; }
 
 switch {
-  font-size: 0;
-  color: transparent;
-  outline-offset: -4px;
   margin: 4px;
-  border: 1px solid #575d45;
+  font-size: 0;
   border-radius: 3px;
+  border: 1px solid #575d45;
+  color: transparent;
   background-color: #dbd7bb; }
   switch:checked {
     background-color: #94B06F; }
   switch:disabled {
     border-color: #c9c6b7;
     background-color: #e0ddcd; }
-  switch slider {
-    min-width: 20px;
-    min-height: 20px;
+  switch > slider {
     margin: -1px;
-    border-style: solid;
-    border-width: 1px;
+    min-width: 28px;
+    min-height: 22px;
     border-radius: 2px;
-    border-color: #575d45;
+    border: 1px solid #575d45;
     background-color: #ECE9D8;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
-  switch:disabled slider {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    box-shadow: none; }
+  switch:disabled > slider {
     border-color: #c9c6b7;
     background-color: #e9e7da; }
 
