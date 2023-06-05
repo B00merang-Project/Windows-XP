@@ -1754,6 +1754,14 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   border-image: url('urgent.png') 5;
 }
 
+/* https://github.com/B00merang-Project/Windows-XP/issues/44 */
+.grouped-window-list-thumbnail-menu {
+  spacing: 6px;
+  padding: 6px 12px 12px 12px;
+  border-image: url("menu-bottom.png") 6;
+  color: #000000;
+}
+
 /* experimental support for grouped window list */
 .grouped-window-list-item-box {
   color: #ffffff;
