@@ -476,7 +476,9 @@ editablelabel > stack > text > selection {
 
 
 button {
-  padding: 2px 6px;
+  padding: 4px 6px;
+  min-width: 14px;
+  min-height: 18px;
   border-radius: 3px;
   border: 1px solid #838093;
   color: #000000;
@@ -490,7 +492,7 @@ button {
   button:hover:focus {
     border-color: #838093;
     background-image: linear-gradient(to bottom, white, #f1f1f5 25%, #e8e8ee 50%, #d9d9e3 75%, #ccccd9 95%);
-    box-shadow: inset 0px 1px 0px 3px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
   
   button:active {
     border-color: #838093;
@@ -541,7 +543,7 @@ button.flat {
   button.flat:hover:focus {
     border-color: #838093;
     background-image: linear-gradient(to bottom, white, #f1f1f5 25%, #e8e8ee 50%, #d9d9e3 75%, #ccccd9 95%);
-    box-shadow: inset 0px 1px 0px 3px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
   toolbar button:active,
   .toolbar button:active,
   button.flat:active {
@@ -564,8 +566,6 @@ button.flat {
     background-color: #c3c3cd; }
 
 button.destructive-action {
-  padding: 2px 6px;
-  border-radius: 3px;
   border: 1px solid #838093;
   color: #000000;
   background-color: #E6E6ED;
@@ -576,7 +576,7 @@ button.destructive-action {
   button.destructive-action:hover, button.destructive-action:hover:focus {
     border-color: #838093;
     background-image: linear-gradient(to bottom, white, #f1f1f5 25%, #e8e8ee 50%, #d9d9e3 75%, #ccccd9 95%);
-    box-shadow: inset 0px 1px 0px 3px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
   button.destructive-action:active {
     border-color: #838093;
     background-color: #d9d9e3;
@@ -589,8 +589,6 @@ button.destructive-action {
     box-shadow: none; }
 
 button.suggested-action {
-  padding: 2px 6px;
-  border-radius: 3px;
   border: 1px solid #838093;
   color: #000000;
   background-color: #E6E6ED;
@@ -604,7 +602,7 @@ button.suggested-action {
     button.suggested-action:hover, button.suggested-action:hover:focus {
       border-color: #838093;
       background-image: linear-gradient(to bottom, white, #f1f1f5 25%, #e8e8ee 50%, #d9d9e3 75%, #ccccd9 95%);
-      box-shadow: inset 0px 1px 0px 3px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
   button.suggested-action:active {
     border-color: #838093;
     background-color: #d9d9e3;
@@ -868,7 +866,7 @@ headerbar {
     headerbar button:hover, headerbar button:hover:focus {
       border-color: #838093;
       background-image: linear-gradient(to bottom, white, #f1f1f5 25%, #e8e8ee 50%, #d9d9e3 75%, #ccccd9 95%);
-      box-shadow: inset 0px 1px 0px 3px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #ffc73c; }
     headerbar button:active {
       border-color: #838093;
       background-color: #d9d9e3;
