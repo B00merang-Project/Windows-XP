@@ -1301,7 +1301,7 @@ notebook > header {
   notebook > header.top > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
-    border-radius: 2px;
+    border-radius: 4px;
     border: 1px solid #948d9b;
     color: #000000;
     background-color: transparent;
@@ -1322,7 +1322,7 @@ notebook > header {
   notebook > header.bottom > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
-    border-radius: 2px;
+    border-radius: 4px;
     border: 1px solid #948d9b;
     color: #000000;
     background-color: transparent;
@@ -1343,7 +1343,7 @@ notebook > header {
   notebook > header.left > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
-    border-radius: 2px;
+    border-radius: 4px;
     border: 1px solid #948d9b;
     color: #000000;
     background-color: transparent;
@@ -1364,7 +1364,7 @@ notebook > header {
   notebook > header.right > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
-    border-radius: 2px;
+    border-radius: 4px;
     border: 1px solid #948d9b;
     color: #000000;
     background-color: transparent;
@@ -1434,13 +1434,13 @@ tabbar tabbox {
       opacity: 0; }
   tabbar tabbox > revealer > indicator {
     min-width: 2px;
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 3px 6px; }
 
 tabbar tab {
   margin: 1px;
   padding: 6px 20px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid #948d9b;
   color: #000000;
   background-color: transparent;

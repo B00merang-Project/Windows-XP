@@ -1290,7 +1290,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #a7a076;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
@@ -1311,7 +1311,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #a7a076;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
@@ -1332,7 +1332,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #a7a076;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
@@ -1353,7 +1353,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #a7a076;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
@@ -1422,14 +1422,14 @@ tabbar tabbox {
       opacity: 0; }
   tabbar tabbox > revealer > indicator {
     min-width: 2px;
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 3px 6px; }
 
 tabbar tab {
   margin: 1px;
   padding: 6px 20px;
   border: 1px solid #a7a076;
-  border-radius: 2px;
+  border-radius: 4px;
   color: #000000;
   background-color: transparent;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);

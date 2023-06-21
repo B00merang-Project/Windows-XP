@@ -1282,7 +1282,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #88889e;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to bottom, #fff, #f1f4fb 25%, #e8eaf6 50%, #d9dbe8 75%, #cccbd9 95%);
@@ -1303,7 +1303,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #88889e;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to bottom, #fff, #f1f4fb 25%, #e8eaf6 50%, #d9dbe8 75%, #cccbd9 95%);
@@ -1324,7 +1324,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #88889e;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to bottom, #fff, #f1f4fb 25%, #e8eaf6 50%, #d9dbe8 75%, #cccbd9 95%);
@@ -1345,7 +1345,7 @@ notebook > header {
     margin: 1px;
     padding: 6px 20px;
     border: 1px solid #88889e;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #000000;
     background-color: transparent;
     background-image: linear-gradient(to bottom, #fff, #f1f4fb 25%, #e8eaf6 50%, #d9dbe8 75%, #cccbd9 95%);
@@ -1414,14 +1414,14 @@ tabbar tabbox {
       opacity: 0; }
   tabbar tabbox > revealer > indicator {
     min-width: 2px;
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 3px 6px; }
 
 tabbar tab {
   margin: 1px;
   padding: 6px 20px;
   border: 1px solid #88889e;
-  border-radius: 2px;
+  border-radius: 4px;
   color: #000000;
   background-color: transparent;
   background-image: linear-gradient(to bottom, #fff, #f1f4fb 25%, #e8eaf6 50%, #d9dbe8 75%, #cccbd9 95%);
