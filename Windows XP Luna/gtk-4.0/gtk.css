@@ -762,36 +762,36 @@ infobar > revealer > box {
   box-shadow: none; }
 
 infobar.info > revealer > box {
-  border: 1px solid #0055FF;
+  border: 1px solid #7fa9ec;
   color: #FFFFFF;
   background-image: none;
-  background-color: #0055FF; }
+  background-color: #7fa9ec; }
   infobar.info > revealer > box button:not(.close) {
     border-color: transparent;
     color: #FFFFFF;
     background-image: none;
-    background-color: #1463ff;
+    background-color: #95b9f3;
     box-shadow: none; }
     infobar.info > revealer > box button:not(.close):hover {
-      background-color: #1a66ff; }
+      background-color: #9bbdf5; }
     infobar.info > revealer > box button:not(.close):active {
-      background-color: #0653ec; }
+      background-color: #729fe7; }
 
 infobar.warning > revealer > box {
-  border: 1px solid #FF9900;
+  border: 1px solid #ffc73c;
   color: #FFFFFF;
   background-image: none;
-  background-color: #FF9900; }
+  background-color: #ffc73c; }
   infobar.warning > revealer > box button:not(.close) {
     border-color: transparent;
     color: #FFFFFF;
     background-image: none;
-    background-color: #ffa114;
+    background-color: #ffce55;
     box-shadow: none; }
     infobar.warning > revealer > box button:not(.close):hover {
-      background-color: #ffa31a; }
+      background-color: #ffd05c; }
     infobar.warning > revealer > box button:not(.close):active {
-      background-color: #ec9006; }
+      background-color: #fac032; }
 
 infobar.question > revealer > box {
   border: 1px solid #2C2C2C;
@@ -2055,7 +2055,7 @@ levelbar block {
   levelbar block.high {
     background-color: #2ad795; }
   levelbar block.low {
-    background-color: #da870b; }
+    background-color: #f4b928; }
   levelbar block.empty {
     background-color: rgba(0, 0, 0, 0.1); }
 
@@ -2989,7 +2989,7 @@ stackswitcher button.text-button {
 /* widgets main borders color on backdrop windows */
 @define-color unfocused_borders #dbd7bb;
 /* these are pretty self explicative */
-@define-color warning_color #FF9900;
+@define-color warning_color #ffc73c;
 @define-color error_color #CC0000;
 @define-color success_color #39E4A3;
 /* these colors are exported for the window manager and shouldn't be used in applications,

@@ -491,7 +491,7 @@ button {
     border-color: #6f8354;
     color: #000000;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcf9 3px, #f8f6ef 7px, #f6f4ec 50%, #f4f3e8);
-    box-shadow: inset 0 0 0 2px #90c152; }
+    box-shadow: inset 0 0 0 2px #ffc73c; }
   
   button:active {
     border-color: #6f8354;
@@ -543,7 +543,7 @@ button.flat {
     border-color: #6f8354;
     color: #000000;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcf9 3px, #f8f6ef 7px, #f6f4ec 50%, #f4f3e8);
-    box-shadow: inset 0 0 0 2px #90c152; }
+    box-shadow: inset 0 0 0 2px #ffc73c; }
   toolbar button:active,
   .toolbar button:active,
   button.flat:active {
@@ -579,7 +579,7 @@ button.destructive-action {
     border-color: #6f8354;
     color: #000000;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, #f4f2e7, #ECE9D8 3px, #e7e4cf 7px, #e6e2cc 50%, #e4e0c9);
-    box-shadow: inset 0 0 0 2px #90c152; }
+    box-shadow: inset 0 0 0 2px #ffc73c; }
   button.destructive-action:active {
     border-color: #6f8354;
     color: #000000;
@@ -608,7 +608,7 @@ button.suggested-action {
       border-color: #6f8354;
       color: #000000;
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, #f4f2e7, #ECE9D8 3px, #e7e4cf 7px, #e6e2cc 50%, #e4e0c9);
-      box-shadow: inset 0 0 0 2px #90c152; }
+      box-shadow: inset 0 0 0 2px #ffc73c; }
   button.suggested-action:active {
     border-color: #6f8354;
     color: #000000;
@@ -762,36 +762,36 @@ infobar > revealer > box {
   box-shadow: none; }
 
 infobar.info > revealer > box {
-  border: 1px solid #0055FF;
+  border: 1px solid #7fa9ec;
   color: #FFFFFF;
   background-image: none;
-  background-color: #0055FF; }
+  background-color: #7fa9ec; }
   infobar.info > revealer > box button:not(.close) {
     border-color: transparent;
     color: #FFFFFF;
     background-image: none;
-    background-color: #1463ff;
+    background-color: #95b9f3;
     box-shadow: none; }
     infobar.info > revealer > box button:not(.close):hover {
-      background-color: #1a66ff; }
+      background-color: #9bbdf5; }
     infobar.info > revealer > box button:not(.close):active {
-      background-color: #0653ec; }
+      background-color: #729fe7; }
 
 infobar.warning > revealer > box {
-  border: 1px solid #FF9900;
+  border: 1px solid #ffc73c;
   color: #FFFFFF;
   background-image: none;
-  background-color: #FF9900; }
+  background-color: #ffc73c; }
   infobar.warning > revealer > box button:not(.close) {
     border-color: transparent;
     color: #FFFFFF;
     background-image: none;
-    background-color: #ffa114;
+    background-color: #ffce55;
     box-shadow: none; }
     infobar.warning > revealer > box button:not(.close):hover {
-      background-color: #ffa31a; }
+      background-color: #ffd05c; }
     infobar.warning > revealer > box button:not(.close):active {
-      background-color: #ec9006; }
+      background-color: #fac032; }
 
 infobar.question > revealer > box {
   border: 1px solid #2C2C2C;
@@ -873,7 +873,7 @@ headerbar {
       border-color: #6f8354;
       color: #000000;
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, #f4f2e7, #ECE9D8 3px, #e7e4cf 7px, #e6e2cc 50%, #e4e0c9);
-      box-shadow: inset 0 0 0 2px #90c152; }
+      box-shadow: inset 0 0 0 2px #ffc73c; }
     headerbar button:active {
       border-color: #6f8354;
       color: #000000;
@@ -1298,14 +1298,14 @@ notebook > header {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px; }
     notebook > header.top > tabs > tab:hover {
-      box-shadow: inset 0 2px #90c152; }
+      box-shadow: inset 0 2px #ffc73c; }
     notebook > header.top > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-top: -1px;
       margin-bottom: -2px;
-      box-shadow: inset 0 2px #90c152; }
+      box-shadow: inset 0 2px #ffc73c; }
   notebook > header.bottom > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
@@ -1319,14 +1319,14 @@ notebook > header {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px; }
     notebook > header.bottom > tabs > tab:hover {
-      box-shadow: inset 0 -2px #90c152; }
+      box-shadow: inset 0 -2px #ffc73c; }
     notebook > header.bottom > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-bottom: -1px;
       margin-top: -2px;
-      box-shadow: inset 0 -2px #90c152; }
+      box-shadow: inset 0 -2px #ffc73c; }
   notebook > header.left > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
@@ -1340,14 +1340,14 @@ notebook > header {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }
     notebook > header.left > tabs > tab:hover {
-      box-shadow: inset 2px 0 #90c152; }
+      box-shadow: inset 2px 0 #ffc73c; }
     notebook > header.left > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-left: -1px;
       margin-right: -2px;
-      box-shadow: inset 2px 0 #90c152; }
+      box-shadow: inset 2px 0 #ffc73c; }
   notebook > header.right > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
@@ -1361,14 +1361,14 @@ notebook > header {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px; }
     notebook > header.right > tabs > tab:hover {
-      box-shadow: inset -2px 0 #90c152; }
+      box-shadow: inset -2px 0 #ffc73c; }
     notebook > header.right > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-right: -1px;
       margin-left: -2px;
-      box-shadow: inset -2px 0 #90c152; }
+      box-shadow: inset -2px 0 #ffc73c; }
   notebook > header.bottom > tabs > arrow, notebook > header.top > tabs > arrow {
     margin-left: -5px;
     margin-right: -5px;
@@ -1434,14 +1434,14 @@ tabbar tab {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
   margin-bottom: -1px; }
   tabbar tab:hover {
-    box-shadow: inset 0 2px #90c152; }
+    box-shadow: inset 0 2px #ffc73c; }
   tabbar tab:selected {
     margin: 0;
     background-image: none;
     background-color: #FFFFFF;
     margin-top: -1px;
     margin-bottom: -2px;
-    box-shadow: inset 0 2px #90c152; }
+    box-shadow: inset 0 2px #ffc73c; }
 
 tabbar tabbox.single-tab tab, tabbar tabbox.single-tab tab:hover, tabbar tabbox.single-tab tab:active {
   background: none; }
@@ -2055,7 +2055,7 @@ levelbar block {
   levelbar block.high {
     background-color: #3ec755; }
   levelbar block.low {
-    background-color: #da870b; }
+    background-color: #f4b928; }
   levelbar block.empty {
     background-color: rgba(0, 0, 0, 0.1); }
 
@@ -2989,7 +2989,7 @@ stackswitcher button.text-button {
 /* widgets main borders color on backdrop windows */
 @define-color unfocused_borders #dbd7bb;
 /* these are pretty self explicative */
-@define-color warning_color #FF9900;
+@define-color warning_color #ffc73c;
 @define-color error_color #CC0000;
 @define-color success_color #4ED464;
 /* these colors are exported for the window manager and shouldn't be used in applications,
