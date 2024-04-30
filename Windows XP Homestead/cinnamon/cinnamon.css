@@ -822,7 +822,7 @@ StScrollBar StButton#vhandle:hover {
 
   border-radius: 6px;
   font-size: 8.5pt;
-  background-color: black;
+  background-color: #ffffe1;
   border: 1px solid #000;
   padding: 6px 6px 6px 6px;
   spacing-rows: 10px;
